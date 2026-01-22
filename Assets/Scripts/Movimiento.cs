@@ -15,20 +15,24 @@ public class Movimiento : MonoBehaviour
 
     private void Update()
     {
-        
+
         direccionX = Input.GetAxisRaw("Horizontal");
         direccionY = Input.GetAxisRaw("Vertical");
         if (direccionX != 0)
         {
             direccion = new Vector2(direccionX, 0);
         }
-        else
+        else if (direccionY != 0)
         {
             direccion = new Vector2(0, direccionY);
+        }
+        else
+        {
+            direccion = Vector2.zero;
         }
     }
     private void FixedUpdate()
     {
-        rbg.MovePosition(rbg.position + direccion * movimiento * Time.deltaTime);
+        rbg.MovePosition(rbg.position + direccion * movimiento * Time.fixedDeltaTime);
     }
 }
