@@ -1,19 +1,37 @@
 using UnityEngine;
 
-public class InteractuarObjetos : MonoBehaviour
+public class InteraccionJugador : MonoBehaviour
 {
-   
+    private Objeto interactuar; 
+
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (interactuar != null && Input.GetKeyDown(KeyCode.E))
         {
-            Interactuar();
+            interactuar.Interactuar();
+            
         }
     }
 
-    public void Interactuar()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        Objeto obj = collision.GetComponent<Objeto>();
+        if (obj != null)
+        {
+            interactuar = obj;
+        }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Objeto obj = collision.GetComponent<Objeto>();
+        if (obj != null && obj == interactuar)
+        {
+            interactuar = null;
+        }
+    }
 }
+
+
+
+

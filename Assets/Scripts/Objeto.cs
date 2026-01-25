@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
 
 public class Objeto : MonoBehaviour
 {
-   public void Interactuar()
+    public GameObject objeto;
+    public void Interactuar()
     {
-        Destroy(gameObject);
+        objeto.SetActive(true);
+        Destroy(this.gameObject);
+        Time.timeScale = 0;
     }
 }

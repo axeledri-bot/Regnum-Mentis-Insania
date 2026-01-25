@@ -25,6 +25,7 @@ public class Menu : MonoBehaviour
     public void Regresar()
     {
         selector.SetActive(false);
+        creditos.SetActive(false);
     }
     public void Nivel2()
     {
