@@ -2,69 +2,66 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    public float velocidad = 5f;
-    public float radius = 2f;
+    public float velocidad = 3f;
+    public float radius = 3f;
     public LayerMask whatIsPlayer;
-    public Transform[] puntos;
-    public float stopDistance = 0.1f;
+
     private Rigidbody2D rb;
-    private SpriteRenderer sprite;
-    private Transform player;
-    private Vector2 direccion;
-    private int puntoActual;
+    private Vector3 objetivo;
+    private bool moving;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
-        Collider2D detect = Physics2D.OverlapCircle(rb.position, radius, whatIsPlayer);
-
-        Vector2 objetivo;
-
-        if (detect != null)
-        {
-            player = detect.transform;
-            objetivo = player.position;
-        }
-        else
-        {
-            objetivo = puntos[puntoActual].position;
-        }
-
-
-        Vector2 delta = objetivo - rb.position;
-
-        
-        if (delta.magnitude < stopDistance)
-        {
-            direccion = Vector2.zero;
-            return;
-        }
-
-        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
-        {
-            direccion = new Vector2(Mathf.Sign(delta.x), 0);
-        }
-        else
-        {
-            direccion = new Vector2(0, Mathf.Sign(delta.y));
-        }
+        objetivo = transform.position;
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direccion * velocidad * Time.fixedDeltaTime);
+        if (!moving)
+        {
+            Vector3 targetPos = GetTargetPosition();
+            if (targetPos != transform.position)
+            {
+                objetivo = targetPos;
+                moving = true;
+            }
+        }
+
+        if (moving)
+        {
+            rb.MovePosition(Vector3.MoveTowards(rb.position, objetivo, velocidad * Time.fixedDeltaTime));
+
+            if (Vector3.Distance(rb.position, objetivo) < 0.01f)
+            {
+                rb.position = objetivo;
+                moving = false;
+            }
+        }
+    }
+    private void OnDrawGizmosSelected()
+    { 
+        Gizmos.color = Color.red; Gizmos.DrawWireSphere(transform.position, radius); 
     }
 
-    private void OnDrawGizmosSelected()
+Vector3 GetTargetPosition()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Collider2D detect = Physics2D.OverlapCircle(rb.position, radius, whatIsPlayer);
+        Vector3 destino = detect ? detect.transform.position : transform.position;
+        Vector3 delta = destino - transform.position;
+
+        if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
+        {
+            return transform.position + new Vector3(Mathf.Sign(delta.x), 0, 0);
+        }
+        else if (Mathf.Abs(delta.y) > 0)
+        {
+            return transform.position + new Vector3(0, Mathf.Sign(delta.y), 0);
+        }
+
+        return transform.position;
     }
 }
+
 
 

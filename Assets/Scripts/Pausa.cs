@@ -13,7 +13,7 @@ public class Pausa : MonoBehaviour
 
     private void Start()
     {
-        pauser = transform.GetChild(2).gameObject;
+        pauser = transform.GetChild(3).gameObject;
     }
 
     private void Update()
