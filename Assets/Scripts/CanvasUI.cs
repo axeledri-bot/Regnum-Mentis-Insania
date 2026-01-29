@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class CanvasUI : MonoBehaviour
 {
-    private GameObject pauser;
-    //private GameObject pauser1;
-    private GameObject pauser2;
+   
+    private GameObject[] pauser;
+
     void Start()
     {
-        pauser = transform.GetChild(0).gameObject;
-        //pauser1 = transform.GetChild(3).gameObject;
-        pauser2 = transform.GetChild(4).gameObject;
+     
+
     }
-
-    public void Regresar()
+    public void Puzzles(int cantidad)
     {
-        pauser.SetActive(false);
-        //pauser1.SetActive(false);
-        pauser2.SetActive(false);
+        pauser[cantidad].SetActive(true);
+        
+    }
+    public void Regresar(int cantidad)
+    {
+        pauser[cantidad].SetActive(false);
         Time.timeScale = 1;
-
     }
 }

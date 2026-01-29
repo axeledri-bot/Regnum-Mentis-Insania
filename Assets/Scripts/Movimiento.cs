@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Movimiento : MonoBehaviour
@@ -7,6 +8,10 @@ public class Movimiento : MonoBehaviour
     private Rigidbody2D rbg;
     private float direccionX;
     private float direccionY;
+
+    public float tiempoInvencible = 0.5f;
+    public float fuerzaRebote = 6f;
+    private bool damage;
 
     private void Start()
     {
@@ -24,6 +29,7 @@ public class Movimiento : MonoBehaviour
         }
         else if (direccionY != 0)
         {
+
             direccion = new Vector2(0, direccionY);
         }
         else
@@ -36,3 +42,21 @@ public class Movimiento : MonoBehaviour
         rbg.MovePosition(rbg.position + direccion * movimiento * Time.fixedDeltaTime);
     }
 }
+//    public void Vida(Vector2 direccion, int cantidad)
+//    {
+//        if (!damage)
+//        {
+//            Vector2 rebote = new Vector2(transform.position.x - direccion.x, 1).normalized;
+
+//            rbg.linearVelocity = Vector2.zero;
+//            rbg.AddForce(rebote * fuerzaRebote, ForceMode2D.Impulse);
+//            StartCoroutine(Invencibilidad());
+//        }
+//    }
+//    IEnumerator Invencibilidad()
+//    {
+//        yield return new WaitForSeconds(tiempoInvencible);
+//        damage = false;
+//    }
+
+//}
