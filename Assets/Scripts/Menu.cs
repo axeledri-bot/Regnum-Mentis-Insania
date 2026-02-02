@@ -3,12 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    private GameObject menu;
     private GameObject selector;
     private GameObject creditos;
     private void Start()
     {
-        selector = transform.GetChild(7).gameObject;
-        creditos = transform.GetChild(8).gameObject;
+        menu = transform.GetChild(1).gameObject;
+        selector = transform.GetChild(2).gameObject;
+        creditos = transform.GetChild(3).gameObject;
     }
     public void Inicio()
     {
@@ -16,14 +18,17 @@ public class Menu : MonoBehaviour
     }
     public void Seleccion()
     {
+        menu.SetActive(false);
         selector.SetActive(true);
     }
     public void Creditos()
     {
+        menu.SetActive(false);
         creditos.SetActive(true);
     }
     public void Regresar()
     {
+        menu.SetActive(true);
         selector.SetActive(false);
         creditos.SetActive(false);
     }
