@@ -23736,7 +23736,7 @@ PrefabInstance:
       objectReference: {fileID: 269021252}
     - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: escena
-      value: Nivel2
+      value: Nivel1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35968,7 +35968,7 @@ Transform:
   m_GameObject: {fileID: 1947081563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9456854, y: 11.87, z: -5}
+  m_LocalPosition: {x: -6.945543, y: 11.87, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
