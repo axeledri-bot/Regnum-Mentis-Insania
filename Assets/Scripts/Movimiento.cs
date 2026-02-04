@@ -8,14 +8,15 @@ public class Movimiento : MonoBehaviour
     private Rigidbody2D rbg;
     private float direccionX;
     private float direccionY;
+    [SerializeField]private Animator anim;
+    [SerializeField]private SpriteRenderer sprite;
 
-    public float tiempoInvencible = 0.5f;
-    public float fuerzaRebote = 6f;
-    //private bool damage;
     public bool puedeMoverse = true;
     private void Start()
     {
         rbg = GetComponent<Rigidbody2D>();
+        //anim = GetComponent<Animator>();
+        //sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -23,6 +24,7 @@ public class Movimiento : MonoBehaviour
         if (!puedeMoverse)
         {
             direccion = Vector2.zero;
+            anim.SetBool("Moving", false);
             return;
         }
 
@@ -41,6 +43,29 @@ public class Movimiento : MonoBehaviour
         {
             direccion = Vector2.zero;
         }
+        anim.SetBool("Moving", direccion != Vector2.zero);
+        if (direccion != Vector2.zero)
+        {
+            if(direccion.x != 0)
+            {
+                anim.SetFloat("MovX", 1);
+                anim.SetFloat("MovY", 0);
+                sprite.flipX = direccion.x < 0;
+            }
+            else if(direccion.y != 0) 
+            {
+                anim.SetFloat("MovX", 0);
+                anim.SetFloat("MovY", direccion.y);
+            }
+        }
+        if (GameManager.instance.TieneVidasSuficientes(1))
+        {
+            movimiento = 10f;
+        }
+        else
+        {
+            movimiento = 5f;
+        }
     }
     private void FixedUpdate()
     {
@@ -48,21 +73,3 @@ public class Movimiento : MonoBehaviour
         rbg.MovePosition(rbg.position + direccion * movimiento * Time.fixedDeltaTime);
     }
 }
-//    public void Vida(Vector2 direccion, int cantidad)
-//    {
-//        if (!damage)
-//        {
-//            Vector2 rebote = new Vector2(transform.position.x - direccion.x, 1).normalized;
-
-//            rbg.linearVelocity = Vector2.zero;
-//            rbg.AddForce(rebote * fuerzaRebote, ForceMode2D.Impulse);
-//            StartCoroutine(Invencibilidad());
-//        }
-//    }
-//    IEnumerator Invencibilidad()
-//    {
-//        yield return new WaitForSeconds(tiempoInvencible);
-//        damage = false;
-//    }
-
-//}

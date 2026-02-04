@@ -1167,6 +1167,7 @@ GameObject:
   - component: {fileID: 50711867}
   - component: {fileID: 50711871}
   - component: {fileID: 50711872}
+  - component: {fileID: 50711873}
   m_Layer: 6
   m_Name: jugador
   m_TagString: Player
@@ -1334,8 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movimiento: 5
-  tiempoInvencible: 0.5
-  fuerzaRebote: 6
+  anim: {fileID: 50711873}
+  sprite: {fileID: 50711869}
   puedeMoverse: 1
 --- !u!114 &50711872
 MonoBehaviour:
@@ -1349,6 +1350,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3067911bfb2d0df4c8ac78c5113f83aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractuarObjetos
+--- !u!95 &50711873
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50711866}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bc3876ab2c16d64bb223fd7c53e48db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &51291573
 GameObject:
   m_ObjectHideFlags: 0
@@ -35968,7 +35991,7 @@ Transform:
   m_GameObject: {fileID: 1947081563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.945543, y: 11.87, z: -5}
+  m_LocalPosition: {x: -6.9458656, y: 11.87, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

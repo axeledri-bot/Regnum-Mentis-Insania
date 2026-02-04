@@ -6,11 +6,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private int vidas = 4;
     public Hud hud;
-
     [SerializeField] private string escena;
 
     private void Awake()
     {
+        
         if (instance == null)
         {
             instance = this;
@@ -24,11 +24,16 @@ public class GameManager : MonoBehaviour
     public void PerderVida()
     {
         vidas -= 1;
+        
         if (vidas == 0)
         {
             SceneManager.LoadScene(escena);
         }
         hud.DesactivarVida(vidas);
+    }
+    public bool TieneVidasSuficientes(int cantidad)
+    {
+        return vidas <= cantidad;
     }
     public bool RecuperarVida()
     {
