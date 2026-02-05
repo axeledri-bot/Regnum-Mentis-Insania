@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     public Hud hud;
     [SerializeField] private string escena;
 
+    private void Start()
+    {
+        
+    }
     private void Awake()
     {
         
@@ -27,7 +31,8 @@ public class GameManager : MonoBehaviour
         
         if (vidas == 0)
         {
-            SceneManager.LoadScene(escena);
+            hud.transform.GetChild(2).gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
         hud.DesactivarVida(vidas);
     }

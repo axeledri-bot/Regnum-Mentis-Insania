@@ -13,6 +13,7 @@ public class Pausa : MonoBehaviour
     private void Start()
     {
         //pauser = transform.GetChild(1).gameObject;
+
     }
 
     private void Update()
@@ -48,9 +49,10 @@ public class Pausa : MonoBehaviour
         Cursor.visible = false;
     }
     public void Reiniciar()
-    {
+    { 
         Time.timeScale = 1;
         SceneManager.LoadScene(escena);
+    
     }
 
     public void Menu()
