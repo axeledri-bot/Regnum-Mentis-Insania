@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Objeto
   - Enemigo
-  - 
-  - 
+  - Ground
+  - Wall
   - 
   - 
   - 
@@ -40,14 +40,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Ground
+    uniqueID: 3081204587
     locked: 0
   - name: Objetos
     uniqueID: 3191026183
     locked: 0
   - name: Player
     uniqueID: 2245149961
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   m_RenderingLayers:
   - Default

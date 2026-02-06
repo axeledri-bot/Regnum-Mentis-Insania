@@ -7,11 +7,9 @@ public class GameManager : MonoBehaviour
     private int vidas = 4;
     public Hud hud;
     [SerializeField] private string escena;
+    [SerializeField]private Movimiento mov;
 
-    private void Start()
-    {
-        
-    }
+   
     private void Awake()
     {
         
@@ -27,13 +25,22 @@ public class GameManager : MonoBehaviour
     }
     public void PerderVida()
     {
-        vidas -= 1;
-        
+        if (vidas <= 0) return;
+
+        vidas--;
+
+        if (vidas == 1)
+        {
+            mov.movimiento = 10f;
+        }
+
         if (vidas == 0)
         {
             hud.transform.GetChild(2).gameObject.SetActive(true);
             Time.timeScale = 0;
+            mov.movimiento = 5f;
         }
+
         hud.DesactivarVida(vidas);
     }
     public bool TieneVidasSuficientes(int cantidad)
