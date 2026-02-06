@@ -60,15 +60,7 @@ public class Movimiento : MonoBehaviour
                 anim.SetFloat("MovX", 0);
                 anim.SetFloat("MovY", direccion.y);
             }
-        }
-        //if (GameManager.instance.TieneVidasSuficientes(1))
-        //{
-        //    movimiento = 10f;
-        //}
-        //else
-        //{
-        //    movimiento = 5f;
-        //}
+        } 
         if (puedeMoverse)
         {
             if (theWorld)
@@ -82,15 +74,15 @@ public class Movimiento : MonoBehaviour
                     transform.position += movimientoFrame;
                 }
             }
-            else
-            {
-                rbg.MovePosition(rbg.position + direccion * movimiento * Time.unscaledDeltaTime);
-            }
+            
         }
     }
     private void FixedUpdate()
     {
-
+        if(!theWorld)
+        {
+            rbg.MovePosition(rbg.position + direccion * movimiento * Time.unscaledDeltaTime);
+        }
     }
 }
 

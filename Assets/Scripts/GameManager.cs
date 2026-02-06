@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         }
         hud.ActivarVida(vidas);
         vidas += 1;
+        mov.movimiento = 5f;
         return true;
     }
 }
