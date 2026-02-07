@@ -51,6 +51,7 @@ public class Pausa : MonoBehaviour
     public void Reiniciar()
     { 
         Time.timeScale = 1;
+        GameManager.instance.ResetGame();
         SceneManager.LoadScene(escena);
     
     }

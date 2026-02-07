@@ -34,11 +34,11 @@ public class Menu : MonoBehaviour
     }
     public void Nivel2()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Nivel2");
     }
     public void Nivel3()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Nivel3");
     }
     public void Salir()
     {

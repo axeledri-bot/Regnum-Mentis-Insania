@@ -1218,17 +1218,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7061941627918033422, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
   m_PrefabInstance: {fileID: 4230744097253512918}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &50711871 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 98196608510403326, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
-  m_PrefabInstance: {fileID: 4230744097253512918}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75f36b89a6c526648adc503f536342ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &51291573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,6 +3510,17 @@ Transform:
   - {fileID: 2001401778}
   m_Father: {fileID: 877934365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198734777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 98196608510403326, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
+  m_PrefabInstance: {fileID: 4230744097253512918}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f36b89a6c526648adc503f536342ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &202444055
 GameObject:
   m_ObjectHideFlags: 0
@@ -23308,7 +23308,7 @@ PrefabInstance:
     - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: mov
       value: 
-      objectReference: {fileID: 50711871}
+      objectReference: {fileID: 198734777}
     - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: escena
       value: Nivel1
@@ -35142,7 +35142,7 @@ Transform:
   m_GameObject: {fileID: 1947081563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9450836, y: 11.87, z: -5}
+  m_LocalPosition: {x: -6.9458656, y: 11.87, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38470,6 +38470,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98196608510403326, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
+      propertyPath: movimiento
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7061941627918033422, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.65

@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -7,21 +9,35 @@ public class GameManager : MonoBehaviour
     private int vidas = 4;
     public Hud hud;
     [SerializeField] private string escena;
-    [SerializeField]private Movimiento mov;
+    [SerializeField] private Movimiento mov;
 
-   
-    private void Awake()
+
+    private void OnEnable()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+private void OnDisable()
+{
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+}
+
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    hud = FindFirstObjectByType<Hud>();
+    mov = FindFirstObjectByType<Movimiento>();
+}
+
+private void Awake()
     {
-        
-        if (instance == null)
+        if (instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
     public void PerderVida()
     {
@@ -43,10 +59,7 @@ public class GameManager : MonoBehaviour
 
         hud.DesactivarVida(vidas);
     }
-    public bool TieneVidasSuficientes(int cantidad)
-    {
-        return vidas <= cantidad;
-    }
+   
     public bool RecuperarVida()
     {
         if (vidas == 4)
@@ -57,6 +70,16 @@ public class GameManager : MonoBehaviour
         vidas += 1;
         mov.movimiento = 5f;
         return true;
+    }
+    public void ResetGame()
+    {
+        vidas = 4;
+
+        if (mov != null)
+            mov.movimiento = 5f;
+
+        if (hud != null)
+            hud.ResetHUD(); 
     }
 }
 

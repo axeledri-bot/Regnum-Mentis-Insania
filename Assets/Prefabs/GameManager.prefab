@@ -45,3 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   hud: {fileID: 0}
+  escena: Nivel2
+  mov: {fileID: 0}

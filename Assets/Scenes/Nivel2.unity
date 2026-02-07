@@ -2655,6 +2655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4810327858637479179, guid: 1d48e452666bec9438053279b942e905, type: 3}
+      propertyPath: escena
+      value: Nivel2
+      objectReference: {fileID: 0}
     - target: {fileID: 6961905395962802846, guid: 1d48e452666bec9438053279b942e905, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2673,6 +2677,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d48e452666bec9438053279b942e905, type: 3}
+--- !u!114 &72528941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2322934426413809084, guid: 1d48e452666bec9438053279b942e905, type: 3}
+  m_PrefabInstance: {fileID: 72528940}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3358553354d18a845854888d6932f708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hud
 --- !u!1 &77493549
 GameObject:
   m_ObjectHideFlags: 0
@@ -39197,10 +39212,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 754185441014495941, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2560094973828749593, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7842398
@@ -39244,15 +39255,11 @@ PrefabInstance:
     - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: hud
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 72528941}
     - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
       propertyPath: mov
       value: 
       objectReference: {fileID: 337065194}
-    - target: {fileID: 2569355079981276919, guid: 1cbf376ba1f11b54b9c813d5f6dd92b5, type: 3}
-      propertyPath: escena
-      value: Nivel2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

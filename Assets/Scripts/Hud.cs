@@ -12,5 +12,12 @@ public class Hud : MonoBehaviour
     public void ActivarVida( int damage )
     {
         vidas[damage].SetActive(true);
-    }    
+    }
+    public void ResetHUD()
+    {
+        for (int i = 0; i < vidas.Length; i++)
+        {
+            vidas[i].SetActive(true);
+        }
+    }
 }
