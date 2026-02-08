@@ -8,8 +8,7 @@ public class InteraccionJugador : MonoBehaviour
     {
         if (interactuar != null && Input.GetKeyDown(KeyCode.E))
         {
-            interactuar.Interactuar();
-            
+            interactuar.Interactuar();  
         }
     }
 

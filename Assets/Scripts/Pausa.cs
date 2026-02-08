@@ -18,7 +18,7 @@ public class Pausa : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) /*&& !paused*/)
+        if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
         {
             //pauser.SetActive(true);
             paused = !paused;
@@ -53,7 +53,9 @@ public class Pausa : MonoBehaviour
         Time.timeScale = 1;
         GameManager.instance.ResetGame();
         SceneManager.LoadScene(escena);
-    
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = paused;
+
     }
 
     public void Menu()

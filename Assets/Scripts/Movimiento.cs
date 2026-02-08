@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Movimiento : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class Movimiento : MonoBehaviour
     [HideInInspector]
     public bool theWorld;
 
+    [SerializeField] private float fuerzaEmpuje = 8f;
+    [SerializeField] private float tiempoEmpuje = 0.2f;
+
+    [HideInInspector]
     public bool puedeMoverse = true;
+    private bool invulnerable;
     private void Start()
     {
         rbg = GetComponent<Rigidbody2D>();
@@ -73,9 +79,39 @@ public class Movimiento : MonoBehaviour
                 {
                     transform.position += movimientoFrame;
                 }
-            }
-            
+            }       
         }
+    }
+    public void RecibirDaño(Vector2 origen)
+    {
+        if (invulnerable) return;
+
+        invulnerable = true;
+        GameManager.instance.PerderVida();
+
+        Vector2 direccion = (Vector2)transform.position - origen;
+        direccion.Normalize();
+
+        StartCoroutine(Empuje(direccion));
+    }
+    IEnumerator Empuje(Vector2 direccion)
+    {
+        puedeMoverse = false;
+
+        float tiempo = 0f;
+        Vector2 inicio = transform.position;
+        Vector2 destino = inicio + direccion * fuerzaEmpuje; 
+
+        while (tiempo < tiempoEmpuje)
+        {
+            tiempo += Time.unscaledDeltaTime;
+            transform.position = Vector2.Lerp(inicio, destino, tiempo / tiempoEmpuje);
+            yield return null;
+        }
+        puedeMoverse = true;
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        invulnerable = false;
     }
     private void FixedUpdate()
     {

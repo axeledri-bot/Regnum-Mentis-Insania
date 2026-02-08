@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     public void Inicio()
     {
         SceneManager.LoadScene("Nivel1");
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public void Seleccion()
     {

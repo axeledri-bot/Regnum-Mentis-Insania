@@ -7,6 +7,8 @@ public class ObjetosMouse : MonoBehaviour,
     private RectTransform rectTransform;
     private Canvas canvas;
 
+    public string nombreIngrediente;
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();

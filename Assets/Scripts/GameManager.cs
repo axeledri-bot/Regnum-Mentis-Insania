@@ -1,34 +1,34 @@
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    private int vidas = 4;
+    [HideInInspector]
+    public int vidas = 4;
     public Hud hud;
     [SerializeField] private string escena;
     [SerializeField] private Movimiento mov;
 
 
     private void OnEnable()
-{
-    SceneManager.sceneLoaded += OnSceneLoaded;
-}
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-private void OnDisable()
-{
-    SceneManager.sceneLoaded -= OnSceneLoaded;
-}
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
-private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-{
-    hud = FindFirstObjectByType<Hud>();
-    mov = FindFirstObjectByType<Movimiento>();
-}
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        hud = FindFirstObjectByType<Hud>();
+        mov = FindFirstObjectByType<Movimiento>();
+    }
 
-private void Awake()
+    private void Awake()
     {
         if (instance != null && instance != this)
         {
@@ -53,13 +53,14 @@ private void Awake()
         if (vidas == 0)
         {
             hud.transform.GetChild(2).gameObject.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             mov.movimiento = 5f;
         }
 
         hud.DesactivarVida(vidas);
     }
-   
+
     public bool RecuperarVida()
     {
         if (vidas == 4)
@@ -79,7 +80,7 @@ private void Awake()
             mov.movimiento = 5f;
 
         if (hud != null)
-            hud.ResetHUD(); 
+            hud.ResetHUD();
     }
 }
 

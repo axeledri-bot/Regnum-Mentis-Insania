@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TimeStop : MonoBehaviour
 {
+    [SerializeField] private GameObject efecto;
     [SerializeField] private float duracion;
     private bool activo;
 
@@ -15,7 +16,8 @@ public class TimeStop : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && !activo)
         {
-         StartCoroutine(DetenerTiempo());
+        
+            StartCoroutine(DetenerTiempo());
         }
     }
     IEnumerator DetenerTiempo()
@@ -24,6 +26,7 @@ public class TimeStop : MonoBehaviour
 
         jugador.theWorld = true;
         Time.timeScale = 0f;
+        efecto.SetActive(true);
 
         float limite = 0f;
         while (limite < duracion)
@@ -31,6 +34,7 @@ public class TimeStop : MonoBehaviour
             limite += Time.unscaledDeltaTime;
             yield return null;
         }
+        efecto.SetActive(false);
         Time.timeScale = 1f;
         jugador.theWorld = false;
 

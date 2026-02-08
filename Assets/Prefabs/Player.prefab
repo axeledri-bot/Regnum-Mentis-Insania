@@ -185,6 +185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimiento: 5
   theWorld: 0
+  fuerzaEmpuje: 2
+  tiempoEmpuje: 0.2
   puedeMoverse: 1
 --- !u!114 &2533310238571649625
 MonoBehaviour:
@@ -210,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd49f232d96781449c0d74402f02c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeStop
+  efecto: {fileID: 0}
   duracion: 5
 --- !u!95 &4022050951067502646
 Animator:

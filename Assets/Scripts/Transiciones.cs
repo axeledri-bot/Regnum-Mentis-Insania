@@ -13,6 +13,11 @@ public class Transiciones : MonoBehaviour
     private bool isOpen;
     private bool enTransicion;
 
+    [SerializeField] private bool requiereCodigo = false;
+    [SerializeField] private bool requiereLlave = false;
+    //[SerializeField] private string codigoCorrecto = "1234";
+    [SerializeField] private GameObject panelCodigo;
+
     private void Awake()
     {
         confiner = Object.FindFirstObjectByType<CinemachineConfiner2D>();
@@ -23,6 +28,16 @@ public class Transiciones : MonoBehaviour
     {
         if (isOpen && Input.GetKeyDown(KeyCode.E) && !enTransicion)
         {
+            if (requiereLlave)
+            {
+                return;
+            }
+            if (requiereCodigo)
+            {
+                panelCodigo.SetActive(true);
+                player.GetComponent<Movimiento>().puedeMoverse = false;
+                return;
+            }
             StartCoroutine(Transicion());
         }
     }
@@ -39,6 +54,10 @@ public class Transiciones : MonoBehaviour
         {
             isOpen = false;
         }
+    }
+    public void AbrirConCodigo()
+    {
+        StartCoroutine(Transicion());
     }
     IEnumerator Transicion()
     {

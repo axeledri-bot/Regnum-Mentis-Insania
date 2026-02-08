@@ -12,6 +12,7 @@ public class CanvasPuzzles : MonoBehaviour
     public void Regresar()
     {
         puzzle.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
     }
 }
