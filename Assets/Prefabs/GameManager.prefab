@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d2310cc2f8e904ea043296824852fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  vidas: 4
   hud: {fileID: 0}
-  escena: Nivel2
+  escena: Nivel1
   mov: {fileID: 0}

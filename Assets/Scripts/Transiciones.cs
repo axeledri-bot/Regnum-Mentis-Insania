@@ -13,10 +13,14 @@ public class Transiciones : MonoBehaviour
     private bool isOpen;
     private bool enTransicion;
 
-    [SerializeField] private bool requiereCodigo = false;
     [SerializeField] private bool requiereLlave = false;
-    //[SerializeField] private string codigoCorrecto = "1234";
+
+    [SerializeField] private bool requiereCodigo = false;
+    [SerializeField] private bool desbloqueada;
+    [SerializeField] private string codigoCorrecto = "1234";
     [SerializeField] private GameObject panelCodigo;
+    private bool panelAbierto;
+    public string CodigoCorrecto => codigoCorrecto;
 
     private void Awake()
     {
@@ -32,9 +36,13 @@ public class Transiciones : MonoBehaviour
             {
                 return;
             }
-            if (requiereCodigo)
+            if (requiereCodigo && !desbloqueada)
             {
+                if (panelAbierto) return;
+                
+                panelAbierto = true;
                 panelCodigo.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
                 player.GetComponent<Movimiento>().puedeMoverse = false;
                 return;
             }
@@ -54,10 +62,6 @@ public class Transiciones : MonoBehaviour
         {
             isOpen = false;
         }
-    }
-    public void AbrirConCodigo()
-    {
-        StartCoroutine(Transicion());
     }
     IEnumerator Transicion()
     {
@@ -88,6 +92,18 @@ public class Transiciones : MonoBehaviour
         yield return FadeController.Instance.FadeIn();
 
         movimiento.puedeMoverse = true;
+        enTransicion = false;
+    }
+    public void AbrirConCodigo()
+    {
+        desbloqueada = true;
+        panelAbierto = false;
+        StartCoroutine(Transicion());
+    }
+    public void CancelarCodigo()
+    {
+        panelAbierto = false;
+        player.GetComponent<Movimiento>().puedeMoverse = true;
         enTransicion = false;
     }
 }

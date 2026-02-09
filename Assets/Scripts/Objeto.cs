@@ -4,11 +4,15 @@ using UnityEngine;
 public class Objeto : MonoBehaviour
 {
     public GameObject objeto;
+    [SerializeField] private bool destruir;
     public void Interactuar()
     {
         objeto.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-        Destroy(this.gameObject);
+        if (destruir)
+        {
+            Destroy(this.gameObject);
+        }
         Time.timeScale = 0;
     }
 }

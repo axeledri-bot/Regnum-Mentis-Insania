@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 55595038}
   - component: {fileID: 55595039}
   - component: {fileID: 55595040}
+  - component: {fileID: 55595041}
   m_Layer: 0
   m_Name: correcto (4)
   m_TagString: Untagged
@@ -628,6 +629,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &55595041
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55595036}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &58127232
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +970,7 @@ GameObject:
   - component: {fileID: 73322898}
   - component: {fileID: 73322899}
   - component: {fileID: 73322901}
-  - component: {fileID: 73322900}
+  - component: {fileID: 73322902}
   m_Layer: 0
   m_Name: correcto (10)
   m_TagString: Untagged
@@ -1070,7 +1098,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &73322900
+--- !u!114 &73322901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73322896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &73322902
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -1084,7 +1124,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 20
   m_LinearDamping: 12
-  m_AngularDamping: 110.21
+  m_AngularDamping: 110
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1097,18 +1137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &73322901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73322896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Layers
 --- !u!1 &74411612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1240,7 @@ GameObject:
   - component: {fileID: 87011569}
   - component: {fileID: 87011570}
   - component: {fileID: 87011571}
+  - component: {fileID: 87011572}
   m_Layer: 0
   m_Name: correcto (11)
   m_TagString: Untagged
@@ -1351,6 +1380,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &87011572
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87011567}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &88503808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1419,6 @@ GameObject:
   - component: {fileID: 88503810}
   - component: {fileID: 88503811}
   - component: {fileID: 88503813}
-  - component: {fileID: 88503812}
   m_Layer: 0
   m_Name: Tronco clar (2)
   m_TagString: Untagged
@@ -1491,33 +1546,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &88503812
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88503808}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 12
-  m_AngularDamping: 110.21
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &88503813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2445,6 +2473,7 @@ GameObject:
   - component: {fileID: 190372381}
   - component: {fileID: 190372382}
   - component: {fileID: 190372383}
+  - component: {fileID: 190372384}
   m_Layer: 0
   m_Name: correcto (7)
   m_TagString: Untagged
@@ -2584,6 +2613,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &190372384
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190372379}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &208960216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,6 +4283,8 @@ GameObject:
   m_Component:
   - component: {fileID: 434959316}
   - component: {fileID: 434959317}
+  - component: {fileID: 434959319}
+  - component: {fileID: 434959318}
   m_Layer: 0
   m_Name: Square (10)
   m_TagString: Untagged
@@ -4308,6 +4366,64 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &434959318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434959315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!61 &434959319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434959315}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &442143572
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +5077,7 @@ GameObject:
   - component: {fileID: 525168200}
   - component: {fileID: 525168201}
   - component: {fileID: 525168202}
+  - component: {fileID: 525168203}
   m_Layer: 0
   m_Name: correcto (13)
   m_TagString: Untagged
@@ -5100,6 +5217,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &525168203
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525168198}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &540099075
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,7 +5536,7 @@ Transform:
   m_GameObject: {fileID: 540283984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.954933, y: 0.049999997, z: -5}
+  m_LocalPosition: {x: -23.953577, y: 0.049999997, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7890,6 +8034,7 @@ GameObject:
   - component: {fileID: 851642812}
   - component: {fileID: 851642813}
   - component: {fileID: 851642814}
+  - component: {fileID: 851642815}
   m_Layer: 0
   m_Name: correcto (9)
   m_TagString: Untagged
@@ -8029,6 +8174,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &851642815
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851642810}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &885250771
 GameObject:
   m_ObjectHideFlags: 0
@@ -8343,7 +8515,7 @@ GameObject:
   - component: {fileID: 896088782}
   - component: {fileID: 896088783}
   - component: {fileID: 896088785}
-  - component: {fileID: 896088784}
+  - component: {fileID: 896088786}
   m_Layer: 0
   m_Name: correcto (12)
   m_TagString: Untagged
@@ -8471,7 +8643,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &896088784
+--- !u!114 &896088785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896088780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &896088786
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -8485,7 +8669,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 20
   m_LinearDamping: 12
-  m_AngularDamping: 110.21
+  m_AngularDamping: 110
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -8498,18 +8682,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &896088785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896088780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Layers
 --- !u!1 &921876281
 GameObject:
   m_ObjectHideFlags: 0
@@ -8614,7 +8786,6 @@ GameObject:
   - component: {fileID: 930904085}
   - component: {fileID: 930904086}
   - component: {fileID: 930904088}
-  - component: {fileID: 930904087}
   m_Layer: 0
   m_Name: Tronco clar (18)
   m_TagString: Untagged
@@ -8742,33 +8913,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &930904087
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930904083}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 12
-  m_AngularDamping: 110.21
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &930904088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9363,6 +9507,7 @@ GameObject:
   - component: {fileID: 1018517394}
   - component: {fileID: 1018517395}
   - component: {fileID: 1018517396}
+  - component: {fileID: 1018517397}
   m_Layer: 0
   m_Name: correcto (2)
   m_TagString: Untagged
@@ -9502,6 +9647,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &1018517397
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018517392}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1022540509
 GameObject:
   m_ObjectHideFlags: 0
@@ -10891,6 +11063,7 @@ GameObject:
   - component: {fileID: 1147054860}
   - component: {fileID: 1147054861}
   - component: {fileID: 1147054862}
+  - component: {fileID: 1147054863}
   m_Layer: 0
   m_Name: correcto (5)
   m_TagString: Untagged
@@ -11030,6 +11203,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &1147054863
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147054858}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1186390347
 GameObject:
   m_ObjectHideFlags: 0
@@ -12142,7 +12342,6 @@ GameObject:
   - component: {fileID: 1309113257}
   - component: {fileID: 1309113258}
   - component: {fileID: 1309113260}
-  - component: {fileID: 1309113259}
   m_Layer: 0
   m_Name: Tronco oscu (3)
   m_TagString: Untagged
@@ -12270,33 +12469,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1309113259
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309113255}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 20
-  m_LinearDamping: 12
-  m_AngularDamping: 110.21
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &1309113260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15516,7 +15688,7 @@ GameObject:
   - component: {fileID: 1586981526}
   - component: {fileID: 1586981527}
   - component: {fileID: 1586981529}
-  - component: {fileID: 1586981528}
+  - component: {fileID: 1586981530}
   m_Layer: 0
   m_Name: correcto (1)
   m_TagString: Untagged
@@ -15644,7 +15816,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1586981528
+--- !u!114 &1586981529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586981524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &1586981530
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -15658,7 +15842,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 20
   m_LinearDamping: 12
-  m_AngularDamping: 110.21
+  m_AngularDamping: 110
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -15671,18 +15855,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1586981529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1586981524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Layers
 --- !u!1 &1598427626
 GameObject:
   m_ObjectHideFlags: 0
@@ -15849,7 +16021,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1598427631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16334,6 +16506,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1689232155}
   - component: {fileID: 1689232156}
+  - component: {fileID: 1689232158}
+  - component: {fileID: 1689232157}
   m_Layer: 0
   m_Name: Tronco clar (7)
   m_TagString: Untagged
@@ -16415,6 +16589,64 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1689232157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689232154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!61 &1689232158
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689232154}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1727871010
 GameObject:
   m_ObjectHideFlags: 0
@@ -16706,6 +16938,7 @@ GameObject:
   - component: {fileID: 1738343060}
   - component: {fileID: 1738343061}
   - component: {fileID: 1738343062}
+  - component: {fileID: 1738343063}
   m_Layer: 0
   m_Name: correcto (8)
   m_TagString: Untagged
@@ -16845,6 +17078,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &1738343063
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738343058}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1746776907
 GameObject:
   m_ObjectHideFlags: 0
@@ -18347,6 +18607,7 @@ GameObject:
   - component: {fileID: 1911604153}
   - component: {fileID: 1911604154}
   - component: {fileID: 1911604155}
+  - component: {fileID: 1911604156}
   m_Layer: 0
   m_Name: correcto (3)
   m_TagString: Untagged
@@ -18486,6 +18747,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &1911604156
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911604151}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1968446931
 GameObject:
   m_ObjectHideFlags: 0
@@ -19222,6 +19510,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2041624446}
   - component: {fileID: 2041624447}
+  - component: {fileID: 2041624449}
+  - component: {fileID: 2041624448}
   m_Layer: 0
   m_Name: Tronco clar (9)
   m_TagString: Untagged
@@ -19303,6 +19593,64 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2041624448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041624445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!61 &2041624449
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041624445}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2042403260
 GameObject:
   m_ObjectHideFlags: 0
@@ -20488,6 +20836,7 @@ GameObject:
   - component: {fileID: 2131999338}
   - component: {fileID: 2131999339}
   - component: {fileID: 2131999340}
+  - component: {fileID: 2131999341}
   m_Layer: 0
   m_Name: correcto (6)
   m_TagString: Untagged
@@ -20627,6 +20976,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Layers
+--- !u!50 &2131999341
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131999336}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 20
+  m_LinearDamping: 12
+  m_AngularDamping: 110
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2136035505
 GameObject:
   m_ObjectHideFlags: 0
