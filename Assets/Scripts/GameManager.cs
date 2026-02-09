@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int vidas = 4;
     public Hud hud;
     [SerializeField] private string escena;
-    [SerializeField] private Movimiento mov;
+    [SerializeField] private Player mov;
 
 
     private void OnEnable()
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         hud = FindFirstObjectByType<Hud>();
-        mov = FindFirstObjectByType<Movimiento>();
+        mov = FindFirstObjectByType<Player>();
     }
 
     private void Awake()

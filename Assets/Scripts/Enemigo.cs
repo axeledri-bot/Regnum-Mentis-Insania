@@ -43,7 +43,7 @@ public class Enemigo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Movimiento>().RecibirDaño(transform.position);
+            collision.gameObject.GetComponent<Player>().RecibirDaño(transform.position);
         }
     }
     private void OnDrawGizmosSelected()

@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RompecabezasBase : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
+public class RompecabezasBase : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private Canvas Canvas;
 
@@ -29,11 +29,5 @@ public class RompecabezasBase : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-
-    }
-
-    
+    }   
 }

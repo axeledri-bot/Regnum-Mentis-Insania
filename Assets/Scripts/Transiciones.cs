@@ -9,13 +9,16 @@ public class Transiciones : MonoBehaviour
 
     private CinemachineConfiner2D confiner;
     private GameObject player;
-    private Movimiento movimiento;
+    private Player movimiento;
     private bool isOpen;
     private bool enTransicion;
 
-    [SerializeField] private bool requiereLlave = false;
+    [SerializeField] private bool requiereLlave;
 
-    [SerializeField] private bool requiereCodigo = false;
+    [HideInInspector]
+    public bool tieneLlave;
+
+    [SerializeField] private bool requiereCodigo;
     [SerializeField] private bool desbloqueada;
     [SerializeField] private string codigoCorrecto = "1234";
     [SerializeField] private GameObject panelCodigo;
@@ -26,7 +29,7 @@ public class Transiciones : MonoBehaviour
     {
         confiner = Object.FindFirstObjectByType<CinemachineConfiner2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        movimiento = player.GetComponent<Movimiento>();
+        movimiento = player.GetComponent<Player>();
     }
     private void Update()
     {
@@ -38,12 +41,15 @@ public class Transiciones : MonoBehaviour
             }
             if (requiereCodigo && !desbloqueada)
             {
-                if (panelAbierto) return;
+                if (panelAbierto)
+                {
+                    return;
+                }
                 
                 panelAbierto = true;
                 panelCodigo.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
-                player.GetComponent<Movimiento>().puedeMoverse = false;
+                player.GetComponent<Player>().puedeMoverse = false;
                 return;
             }
             StartCoroutine(Transicion());
@@ -103,7 +109,7 @@ public class Transiciones : MonoBehaviour
     public void CancelarCodigo()
     {
         panelAbierto = false;
-        player.GetComponent<Movimiento>().puedeMoverse = true;
+        player.GetComponent<Player>().puedeMoverse = true;
         enTransicion = false;
     }
 }

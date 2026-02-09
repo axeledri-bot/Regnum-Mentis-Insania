@@ -7,10 +7,10 @@ public class TimeStop : MonoBehaviour
     [SerializeField] private float duracion;
     private bool activo;
 
-    private Movimiento jugador;
+    private Player jugador;
     private void Start()
     {
-        jugador = GetComponent<Movimiento>();
+        jugador = GetComponent<Player>();
     }
     private void Update()
     {

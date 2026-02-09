@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Movimiento : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float movimiento = 5f;
     private Vector2 direccion;

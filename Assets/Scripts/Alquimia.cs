@@ -40,7 +40,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
         Debug.Log("¡Poción creada!");
         CerrarPuzzle();
     }
-    private void CerrarPuzzle()
+    public void CerrarPuzzle()
     {
         this.gameObject.SetActive(false);
         Time.timeScale = 1f;

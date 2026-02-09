@@ -2,7 +2,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Base : MonoBehaviour, IDropHandler
-{
+{ 
+
+    private void Start()
+    {
+        
+    }
     public void OnDrop(PointerEventData eventData)
     {
 
@@ -12,6 +17,11 @@ public class Base : MonoBehaviour, IDropHandler
             this.gameObject.SetActive(false);
             Time.timeScale = 1f;    
         }
-      
+
+    }
+    public void Cerrar()
+    {
+        this.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
