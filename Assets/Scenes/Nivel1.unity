@@ -29634,8 +29634,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1356224788}
   - component: {fileID: 1356224789}
-  - component: {fileID: 1356224790}
   - component: {fileID: 1356224791}
+  - component: {fileID: 1356224790}
   m_Layer: 0
   m_Name: Borde
   m_TagString: Untagged
@@ -36461,7 +36461,7 @@ Transform:
   m_GameObject: {fileID: 1653551390}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6, y: -3.17, z: 0}
+  m_LocalPosition: {x: -6.66, y: -3.17, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36682,7 +36682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1674815299}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42903,7 +42903,7 @@ Transform:
   m_GameObject: {fileID: 1947081563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.725027, y: 10.2, z: -5}
+  m_LocalPosition: {x: -7.7260957, y: 10.2, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44539,7 +44539,7 @@ GameObject:
   - component: {fileID: 2028823122}
   - component: {fileID: 2028823124}
   - component: {fileID: 2028823123}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pared (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

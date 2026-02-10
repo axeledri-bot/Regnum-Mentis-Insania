@@ -18,6 +18,7 @@ public class Enemigo : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         objetivo = transform.position;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -29,7 +30,23 @@ public class Enemigo : MonoBehaviour
             {
                 objetivo = targetPos;
                 moving = true;
-                //animator.SetBool("Moving", false);
+
+                Vector2 direccion = (objetivo - transform.position).normalized;
+
+                animator.SetBool("Moving", true);
+
+                if(Mathf.Abs(direccion.x) > Mathf.Abs(direccion.y))
+                {
+                    animator.SetFloat("MovX", 1);
+                    animator.SetFloat("MovY", 0);
+                    sprite.flipX = direccion.x < 0;
+                }
+                else
+                {
+                    animator.SetFloat("MovX", 0);
+                    animator.SetFloat("MovY", Mathf.Sign(direccion.y));
+                }
+
             }
         }
 
@@ -41,21 +58,9 @@ public class Enemigo : MonoBehaviour
             {
                 rb.position = objetivo;
                 moving = false;
-                //animator.SetBool("Moving", objetivo != Vector3.zero);
-                //if (objetivo != Vector3.zero)
-                //{
-                //    if (objetivo.x != 0)
-                //    {
-                //        animator.SetFloat("MovX", 1);
-                //        animator.SetFloat("MovY", 0);
-                //        //sprite.flipX = objetivo.x < 0;
-                //    }
-                //    else if (objetivo.y != 0)
-                //    {
-                //        animator.SetFloat("MovX", 0);
-                //        animator.SetFloat("MovY", objetivo.y);
-                //    }
-                //}
+
+                animator.SetBool("Moving", false);
+
             }
         }
     }
