@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
         if (vidas == 1)
         {
-            mov.movimiento = 10f;
+            mov.movimiento = 6f;
         }
 
         if (vidas == 0)
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             hud.transform.GetChild(2).gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
-            mov.movimiento = 5f;
+            mov.movimiento = 3f;
         }
 
         hud.DesactivarVida(vidas);
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         }
         hud.ActivarVida(vidas);
         vidas += 1;
-        mov.movimiento = 5f;
+        mov.movimiento = 3f;
         return true;
     }
     public void ResetGame()
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         vidas = 4;
 
         if (mov != null)
-            mov.movimiento = 5f;
+            mov.movimiento = 3f;
 
         if (hud != null)
             hud.ResetHUD();

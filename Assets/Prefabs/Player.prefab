@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.65, y: 11.87, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -183,9 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f36b89a6c526648adc503f536342ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movimiento: 5
+  movimiento: 3
   theWorld: 0
-  fuerzaEmpuje: 2
+  fuerzaEmpuje: 1
   tiempoEmpuje: 0.2
   puedeMoverse: 1
 --- !u!114 &2533310238571649625

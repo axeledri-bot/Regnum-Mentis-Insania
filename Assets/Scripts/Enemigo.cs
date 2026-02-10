@@ -10,9 +10,13 @@ public class Enemigo : MonoBehaviour
     private Vector3 objetivo;
     private bool moving;
 
+    private SpriteRenderer sprite;
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         objetivo = transform.position;
     }
 
@@ -25,6 +29,7 @@ public class Enemigo : MonoBehaviour
             {
                 objetivo = targetPos;
                 moving = true;
+                //animator.SetBool("Moving", false);
             }
         }
 
@@ -36,6 +41,21 @@ public class Enemigo : MonoBehaviour
             {
                 rb.position = objetivo;
                 moving = false;
+                //animator.SetBool("Moving", objetivo != Vector3.zero);
+                //if (objetivo != Vector3.zero)
+                //{
+                //    if (objetivo.x != 0)
+                //    {
+                //        animator.SetFloat("MovX", 1);
+                //        animator.SetFloat("MovY", 0);
+                //        //sprite.flipX = objetivo.x < 0;
+                //    }
+                //    else if (objetivo.y != 0)
+                //    {
+                //        animator.SetFloat("MovX", 0);
+                //        animator.SetFloat("MovY", objetivo.y);
+                //    }
+                //}
             }
         }
     }
