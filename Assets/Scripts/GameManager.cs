@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         if (vidas == 1)
         {
             mov.movimiento = 6f;
+            AudioManager.instance.Play("Latidos");
         }
 
         if (vidas == 0)
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             mov.movimiento = 3f;
+            AudioManager.instance.Stop("Latidos");
         }
 
         hud.DesactivarVida(vidas);
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
         hud.ActivarVida(vidas);
         vidas += 1;
         mov.movimiento = 3f;
+        AudioManager.instance.Stop("Latidos");
         return true;
     }
     public void ResetGame()

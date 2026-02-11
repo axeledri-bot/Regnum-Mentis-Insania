@@ -28,6 +28,8 @@ public class TimeStop : MonoBehaviour
         Time.timeScale = 0f;
         efecto.SetActive(true);
 
+        AudioManager.instance.Play("Reloj");
+
         float limite = 0f;
         while (limite < duracion)
         {
@@ -39,5 +41,6 @@ public class TimeStop : MonoBehaviour
         jugador.theWorld = false;
 
         activo = false;
+        AudioManager.instance.Stop("Reloj");
     }
 }
