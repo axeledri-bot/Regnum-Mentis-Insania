@@ -35,7 +35,7 @@ public class Enemigo : MonoBehaviour
 
                 animator.SetBool("Moving", true);
 
-                if(Mathf.Abs(direccion.x) > Mathf.Abs(direccion.y))
+                if (Mathf.Abs(direccion.x) > Mathf.Abs(direccion.y))
                 {
                     animator.SetFloat("MovX", 1);
                     animator.SetFloat("MovY", 0);
@@ -72,11 +72,11 @@ public class Enemigo : MonoBehaviour
         }
     }
     private void OnDrawGizmosSelected()
-    { 
-        Gizmos.color = Color.red; Gizmos.DrawWireSphere(transform.position, radius); 
+    {
+        Gizmos.color = Color.red; Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-Vector3 GetTargetPosition()
+    Vector3 GetTargetPosition()
     {
         Collider2D detect = Physics2D.OverlapCircle(rb.position, radius, whatIsPlayer);
         Vector3 destino = detect ? detect.transform.position : transform.position;

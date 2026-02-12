@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,11 +9,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] public float velocidad;
     //[SerializeField] private float minDistance;
     [SerializeField] private float radius;
-    private bool detect;
+    private bool detect = true;
     private Rigidbody2D rb;
     private bool flip = true;
-
     private Animator animator;
+
+    [HideInInspector]
+    public bool aturdido;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +28,7 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (detect)
+        if (detect && !aturdido)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -50,6 +53,19 @@ public class Enemy : MonoBehaviour
 
          
         }
+       if(aturdido)
+        {
+            StartCoroutine(Aturdir());
+        }
+    }
+
+    IEnumerator Aturdir()
+    {
+        detect = false;
+        yield return new WaitForSeconds(5f);
+        detect = true;
+        aturdido = false;
+
     }
     private void Flip(bool playerRight)
     {

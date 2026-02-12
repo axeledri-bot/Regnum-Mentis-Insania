@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1535058048}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
         m_MethodName: Regresar
         m_Mode: 1
@@ -12315,7 +12315,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.45772517, g: 0.5058028, b: 0.6981132, a: 1}
+  m_Color: {r: 0.14337842, g: 0.14857833, b: 0.16981131, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -23630,7 +23630,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7061941627918033422, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1466128717}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da1bb94d2fc434641ac6ca19afad02a1, type: 3}
 --- !u!1 &1337300201
@@ -26090,7 +26093,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.3290762, g: 0.44136858, b: 0.8018868, a: 1}
-  m_Intensity: 3.63
+  m_Intensity: 3.5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 6b73a7b7073233be0945d28500000000
@@ -26114,7 +26117,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 56.58
+  m_PointLightOuterRadius: 3
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -26133,12 +26136,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466128715}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.9989075, w: -0.046731286}
-  m_LocalPosition: {x: -31.6, y: 22.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9989075, w: -0.04673127}
+  m_LocalPosition: {x: 0.07401276, y: -0.0027894995, z: 0}
+  m_LocalScale: {x: 0.9469699, y: 0.9469699, z: 0.94697}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 337065202}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468232765
 GameObject:
@@ -27308,7 +27311,6 @@ GameObject:
   - component: {fileID: 1535058051}
   - component: {fileID: 1535058050}
   - component: {fileID: 1535058049}
-  - component: {fileID: 1535058048}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -27316,18 +27318,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1535058048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535058047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33e5646aff96f7a49ab2ce5db3518335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CanvasUI
 --- !u!114 &1535058049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39654,5 +39644,4 @@ SceneRoots:
   - {fileID: 623361967}
   - {fileID: 37795856}
   - {fileID: 574578775}
-  - {fileID: 1466128717}
   - {fileID: 1177720350}
