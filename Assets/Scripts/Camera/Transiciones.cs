@@ -48,7 +48,7 @@ public class Transiciones : MonoBehaviour
                 
                 panelAbierto = true;
                 panelCodigo.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
+                GameManager.instance.ActivarUI();
                 player.GetComponent<Player>().puedeMoverse = false;
                 return;
             }
@@ -104,12 +104,14 @@ public class Transiciones : MonoBehaviour
     {
         desbloqueada = true;
         panelAbierto = false;
+        GameManager.instance.ActivarGameplay();
         StartCoroutine(Transicion());
     }
     public void CancelarCodigo()
     {
         panelAbierto = false;
         player.GetComponent<Player>().puedeMoverse = true;
+        GameManager.instance.ActivarGameplay();
         enTransicion = false;
     }
 }

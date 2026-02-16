@@ -1,5 +1,7 @@
+
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ObjetosMouse : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -8,6 +10,8 @@ public class ObjetosMouse : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndD
 
     public string nombreIngrediente;
     private CanvasGroup canvasGroup;
+
+    public Image imagen;
 
     private void Awake()
     {
@@ -38,6 +42,13 @@ public class ObjetosMouse : MonoBehaviour,IBeginDragHandler, IDragHandler, IEndD
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-    } 
+    }
+   
+
+    public void Configurar(string nombre)
+    {
+        nombreIngrediente = nombre;
+        imagen.sprite = BaseDatosIngredientes.instance.ObtenerSprite(nombre);
+    }
 
 }

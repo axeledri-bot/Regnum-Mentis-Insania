@@ -20,15 +20,19 @@ public class Pausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
         {
+            if (GameManager.instance.EnUI) return;
             //pauser.SetActive(true);
             paused = !paused;
             animator.SetBool("MostrarMenu", paused);
             //paused = true;
-            Time.timeScale = paused ? 0 : 1;
-
-            Cursor.lockState = paused ? CursorLockMode.None : CursorLockMode.Locked;
-
-            Cursor.visible = paused;
+          if( paused )
+            {
+                GameManager.instance.ActivarUI();
+            }
+          else
+            {
+                GameManager.instance.ActivarGameplay();
+            }
         }
         //else if (Input.GetKeyDown(KeyCode.Return) /*&& paused*/)
         //{
@@ -44,17 +48,13 @@ public class Pausa : MonoBehaviour
         //pauser.SetActive(false);
         paused = false;
         animator.SetBool("MostrarMenu", false);
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        GameManager.instance.ActivarGameplay();
     }
     public void Reiniciar()
     { 
-        Time.timeScale = 1;
         GameManager.instance.ResetGame();
         SceneManager.LoadScene(escena);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = paused;
+        GameManager.instance.ActivarGameplay();
 
     }
 

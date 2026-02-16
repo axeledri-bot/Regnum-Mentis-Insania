@@ -26,7 +26,6 @@ public class Notas : MonoBehaviour
         Nota3.SetActive(false);
         Nota4.SetActive(false);
         Nota5.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
-        Time.timeScale = 1;
+        GameManager.instance.ActivarGameplay();
     }
 }

@@ -16,6 +16,8 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Nivel1");
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
     public void Seleccion()
     {

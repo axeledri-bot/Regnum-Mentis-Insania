@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string escena;
     [SerializeField] private Player mov;
 
+    private Efectos efectos;
 
+
+    public bool EnUI { get; private set; }
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        efectos = FindFirstObjectByType<Efectos>();
         if (instance != null && instance != this)
         {
             Destroy(gameObject);
@@ -49,15 +53,16 @@ public class GameManager : MonoBehaviour
         {
             mov.movimiento = 6f;
             AudioManager.instance.Play("Latidos");
+            efectos.Activar();
         }
 
         if (vidas == 0)
         {
             hud.transform.GetChild(2).gameObject.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 0;
+            ActivarUI();
             mov.movimiento = 3f;
             AudioManager.instance.Stop("Latidos");
+            efectos.Desactivar();
         }
 
         hud.DesactivarVida(vidas);
@@ -73,6 +78,8 @@ public class GameManager : MonoBehaviour
         vidas += 1;
         mov.movimiento = 3f;
         AudioManager.instance.Stop("Latidos");
+
+        efectos.Desactivar();
         return true;
     }
     public void ResetGame()
@@ -84,6 +91,21 @@ public class GameManager : MonoBehaviour
 
         if (hud != null)
             hud.ResetHUD();
+    }
+    public void ActivarUI()
+    {
+        EnUI = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+    }
+
+    public void ActivarGameplay()
+    {
+        EnUI = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
     }
 }
 

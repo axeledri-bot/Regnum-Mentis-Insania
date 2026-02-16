@@ -63,6 +63,7 @@ public class CodigoDePuerta : MonoBehaviour
 
         transform.parent.gameObject.SetActive(false);
         puerta.CancelarCodigo();
+        GameManager.instance.ActivarGameplay();
     }
 }
 

@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
 
+
     [HideInInspector]
     public bool theWorld;
+    [SerializeField] private TrailRenderer trail;
 
     [SerializeField] private float fuerzaEmpuje = 8f;
     [SerializeField] private float tiempoEmpuje = 0.2f;
@@ -20,12 +22,18 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool puedeMoverse = true;
     private bool invulnerable;
+
+    [SerializeField] private float tiempoParpadeo = 0.5f;
+    [SerializeField] private float intervaloParpadeo = 0.1f;
+    private Color colorOriginal;
+
     private void Start()
     {
         rbg = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+        colorOriginal = sprite.color;
     }
 
     private void Update()
@@ -66,21 +74,60 @@ public class Player : MonoBehaviour
                 anim.SetFloat("MovX", 0);
                 anim.SetFloat("MovY", direccion.y);
             }
-        } 
-        if (puedeMoverse)
-        {
-            if (theWorld)
-            {
-                Vector3 movimientoFrame = (Vector3)(direccion * movimiento * Time.unscaledDeltaTime);
-
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, direccion, movimientoFrame.magnitude, LayerMask.GetMask("Wall"));
-
-                if (!hit)
-                {
-                    transform.position += movimientoFrame;
-                }
-            }       
         }
+        if (theWorld && puedeMoverse)
+        {
+
+            float delta = Time.unscaledDeltaTime;
+
+            Vector2 movimientoFrame = direccion * movimiento * delta;
+
+            RaycastHit2D hit = Physics2D.Raycast( transform.position,direccion,movimientoFrame.magnitude,LayerMask.GetMask("Wall"));
+
+            if (!hit)
+            {
+                transform.position += (Vector3)movimientoFrame;
+            }
+        }
+        if (theWorld && direccion != Vector2.zero)
+        {
+            trail.emitting = true;
+        }
+        else
+        {
+            trail.emitting = false;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (!puedeMoverse || theWorld) return;
+
+        float delta = Time.deltaTime;
+
+        Vector2 movimientoFrame = direccion * movimiento * delta;
+        Vector2 nuevaPos = rbg.position + movimientoFrame;
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            rbg.position,
+            direccion,
+            movimientoFrame.magnitude,
+            LayerMask.GetMask("Wall")
+        );
+
+        if (!hit)
+        {
+            rbg.MovePosition(nuevaPos);
+
+        }
+    }
+    public void ActivarModoTiempoDetenido()
+    {
+        rbg.simulated = false;
+    }
+
+    public void DesactivarModoTiempoDetenido()
+    {
+        rbg.simulated = true;
     }
     public void RecibirDaño(Vector2 origen)
     {
@@ -98,9 +145,11 @@ public class Player : MonoBehaviour
     {
         puedeMoverse = false;
 
+        StartCoroutine(Parpadeo());
+
         float tiempo = 0f;
         Vector2 inicio = transform.position;
-        Vector2 destino = inicio + direccion * fuerzaEmpuje; 
+        Vector2 destino = inicio + direccion * fuerzaEmpuje;
 
         while (tiempo < tiempoEmpuje)
         {
@@ -113,12 +162,39 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         invulnerable = false;
     }
-    private void FixedUpdate()
+    IEnumerator Parpadeo()
     {
-        if(!theWorld)
+        float tiempo = 0f;
+
+        while (tiempo < tiempoParpadeo)
         {
-            rbg.MovePosition(rbg.position + direccion * movimiento * Time.unscaledDeltaTime);
+            sprite.color = Color.red;
+
+            yield return new WaitForSecondsRealtime(intervaloParpadeo);
+
+            sprite.color = colorOriginal;
+
+            yield return new WaitForSecondsRealtime(intervaloParpadeo);
+
+            tiempo += intervaloParpadeo * 2;
         }
+
+        sprite.color = colorOriginal;
     }
+
+    //IEnumerator Parpadeo()
+    //{
+    //    float tiempo = 0f;
+
+    //    while (tiempo < tiempoParpadeo)
+    //    {
+    //        sprite.enabled = !sprite.enabled;
+
+    //        yield return new WaitForSecondsRealtime(intervaloParpadeo);
+    //        tiempo += intervaloParpadeo;
+    //    }
+
+    //    sprite.enabled = true;
+    //}
 }
 
