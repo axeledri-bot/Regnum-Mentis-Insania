@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Pausa : MonoBehaviour
 {
-    private GameObject pauser;
+    //private GameObject pauser;
     [SerializeField]private Animator animator;
 
     private bool paused;
@@ -16,7 +16,7 @@ public class Pausa : MonoBehaviour
 
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
         {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Inventario : MonoBehaviour
+public class AgarrarObjetos : MonoBehaviour
 {
     [SerializeField] private Transform agarre;
     private GameObject objeto;

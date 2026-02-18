@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CambioNivel : MonoBehaviour
 {
-    public string escena;
+    [SerializeField]private string escena;
     //public int colNecesarios = 3;
     //public GameObject mensaje;
 

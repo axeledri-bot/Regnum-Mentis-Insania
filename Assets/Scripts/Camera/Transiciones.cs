@@ -31,7 +31,7 @@ public class Transiciones : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         movimiento = player.GetComponent<Player>();
     }
-    private void Update()
+    private void LateUpdate()
     {
         if (isOpen && Input.GetKeyDown(KeyCode.E) && !enTransicion)
         {

@@ -20,7 +20,7 @@ public class MagiaDeLuz : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && puedeUsar)
+        if (Input.GetKeyDown(KeyCode.Q) && puedeUsar)
         {
             StartCoroutine(ActivarLuz());
         }
