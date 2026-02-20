@@ -56,5 +56,8 @@ TagManager:
   - name: Furniture
     uniqueID: 3280849787
     locked: 0
+  - name: ForeGround
+    uniqueID: 3479046657
+    locked: 0
   m_RenderingLayers:
   - Default

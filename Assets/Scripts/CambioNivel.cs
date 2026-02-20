@@ -12,7 +12,7 @@ public class CambioNivel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (collision.CompareTag("Player") /*&& Input.GetKeyDown(KeyCode.E)*/)
         {
             //if (GameManager.instance.moneda >= colNecesarios)
             //{
