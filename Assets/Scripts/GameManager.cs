@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
 
     private Efectos efectos;
 
-
+    public bool tieneLlave = false;
+    public bool intentoPuerta;
     public bool EnUI { get; private set; }
     private void OnEnable()
     {
@@ -91,6 +92,10 @@ public class GameManager : MonoBehaviour
 
         if (hud != null)
             hud.ResetHUD();
+    }
+    public void RegistrarIntentoCocina()
+    {
+        intentoPuerta = true;
     }
     public void ActivarUI()
     {

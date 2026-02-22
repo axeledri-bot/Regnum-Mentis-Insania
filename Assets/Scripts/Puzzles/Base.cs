@@ -2,26 +2,29 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Base : MonoBehaviour, IDropHandler
-{ 
+{
+    public int idCorrecto;
+    private bool ocupada;
 
-    private void Start()
-    {
-        
-    }
+    public PuzzleManager puzzle;
+
     public void OnDrop(PointerEventData eventData)
     {
+        if (ocupada) return;
 
-        if (eventData.pointerDrag != null)
-        {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            this.gameObject.SetActive(false);
-            Time.timeScale = 1f;    
-        }
+        RompecabezasBase pieza = eventData.pointerDrag.GetComponent<RompecabezasBase>();
+        if (pieza == null) return;
 
+        pieza.GetComponent<RectTransform>().anchoredPosition =GetComponent<RectTransform>().anchoredPosition;
+
+        pieza.enabled = false;
+        ocupada = true;
+
+        puzzle.RegistrarColocacion(pieza, this);
     }
-    public void Cerrar()
+    public void ResetearBase()
     {
-        this.gameObject.SetActive(false);
-        Time.timeScale = 1f;
+        ocupada = false;
     }
+  
 }

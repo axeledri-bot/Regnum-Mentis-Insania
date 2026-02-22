@@ -9,12 +9,27 @@ public class RompecabezasBase : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    public int idPieza;
+    private Vector2 posicionInicial;
+
+    public PuzzleManager puzzle;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
+    private void Start()
+    {
+        posicionInicial = rectTransform.anchoredPosition;
+    }
 
+    public void Resetear()
+    {
+        rectTransform.anchoredPosition = posicionInicial;
+        enabled = true;
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = .6f;

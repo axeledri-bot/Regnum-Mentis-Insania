@@ -14,10 +14,6 @@ public class Transiciones : MonoBehaviour
     private bool enTransicion;
 
     [SerializeField] private bool requiereLlave;
-
-    [HideInInspector]
-    public bool tieneLlave;
-
     [SerializeField] private bool requiereCodigo;
     [SerializeField] private bool desbloqueada;
     [SerializeField] private string codigoCorrecto = "1234";
@@ -25,6 +21,13 @@ public class Transiciones : MonoBehaviour
     private bool panelAbierto;
     public string CodigoCorrecto => codigoCorrecto;
 
+
+    [SerializeField] private bool requiereCamaraTapada;
+    [SerializeField] private Ojo camara;
+
+    [SerializeField] private bool esPuertaCocina;
+
+    [SerializeField] private bool requiereIrCocina;
     private void Awake()
     {
         confiner = Object.FindFirstObjectByType<CinemachineConfiner2D>();
@@ -33,11 +36,28 @@ public class Transiciones : MonoBehaviour
     }
     private void LateUpdate()
     {
+
         if (isOpen && Input.GetKeyDown(KeyCode.E) && !enTransicion)
         {
+            if (requiereIrCocina && !GameManager.instance.intentoPuerta)
+            {
+                Debug.Log("No puedes abrir esta puerta todavía.");
+                return;
+            }
+            if (esPuertaCocina && !GameManager.instance.intentoPuerta)
+            {
+                GameManager.instance.RegistrarIntentoCocina();
+            }
+
             if (requiereLlave)
             {
-                return;
+                if (!GameManager.instance.tieneLlave)
+                {
+                  
+
+                    Debug.Log("Necesitas una llave");
+                    return;
+                }
             }
             if (requiereCodigo && !desbloqueada)
             {
@@ -51,6 +71,14 @@ public class Transiciones : MonoBehaviour
                 GameManager.instance.ActivarUI();
                 player.GetComponent<Player>().puedeMoverse = false;
                 return;
+            }
+            if (requiereCamaraTapada)
+            {
+                if (camara.EstaViendoJugador())
+                {
+                    Debug.Log("La cámara te está viendo...");
+                    return;
+                }
             }
             StartCoroutine(Transicion());
         }

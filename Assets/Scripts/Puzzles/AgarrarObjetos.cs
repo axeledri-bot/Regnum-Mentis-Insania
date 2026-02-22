@@ -48,28 +48,31 @@ public class AgarrarObjetos : MonoBehaviour
     private void AgarrarObjeto()
     {
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, distancia, Vector2.zero, 0f, objetos);
-        if (hit.collider != null)
-        {
-            objeto = hit.collider.gameObject;
+        if (hit.collider == null)
+            return;
 
-            objeto.transform.SetParent(agarre);
-            objeto.transform.localPosition = Vector3.zero;
+        Librero librero = hit.collider.GetComponentInParent<Librero>();
 
-            sosteniendo = true;
-            Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
-            if (rb)
-            {
-                rb.simulated = false;
-            }
-            SpriteRenderer srObjeto = objeto.GetComponent<SpriteRenderer>();
-            SpriteRenderer srPlayer = GetComponent<SpriteRenderer>();
+        if (librero != null && librero.bloqueado)
+            return;
 
-            if (srObjeto && srPlayer)
-            {
-                srObjeto.sortingOrder = srPlayer.sortingOrder + 1;
-            }
+        objeto = hit.collider.gameObject;
 
-        }
+        objeto.transform.SetParent(agarre);
+        objeto.transform.localPosition = Vector3.zero;
+
+        sosteniendo = true;
+
+        Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
+        if (rb)
+            rb.simulated = false;
+
+        SpriteRenderer srObjeto = objeto.GetComponent<SpriteRenderer>();
+        SpriteRenderer srPlayer = GetComponent<SpriteRenderer>();
+
+        if (srObjeto && srPlayer)
+            srObjeto.sortingOrder = srPlayer.sortingOrder + 1;
+
 
     }
 
@@ -79,13 +82,16 @@ public class AgarrarObjetos : MonoBehaviour
 
         if (posicionActual != null)
         {
-
             objeto.transform.SetParent(posicionActual.transform);
             objeto.transform.position = posicionActual.transform.position;
 
             if (rb)
-            {
                 rb.simulated = false;
+
+            Libros libro = objeto.GetComponent<Libros>();
+            if (libro != null)
+            {
+                posicionActual.libroColocado = libro;
             }
         }
         else

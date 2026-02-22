@@ -12,7 +12,8 @@ public class Alquimia : MonoBehaviour, IDropHandler
 
     [SerializeField]private GameObject parteCodigo;
 
-    private bool recetaCompletada;
+    [HideInInspector]
+    public bool recetaCompletada;
     public void AbrirPuzzle()
     {
         this.gameObject.SetActive(true);

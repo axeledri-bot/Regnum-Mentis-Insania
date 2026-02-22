@@ -3,6 +3,7 @@ using UnityEngine;
 public class Librero : MonoBehaviour
 {
     public Libros libroColocado;
+    public bool bloqueado;
 
     private void OnTriggerEnter2D(Collider2D collision)
     { 
