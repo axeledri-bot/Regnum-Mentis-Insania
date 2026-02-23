@@ -48,3 +48,5 @@ MonoBehaviour:
   hud: {fileID: 0}
   escena: Nivel1
   mov: {fileID: 0}
+  tieneLlave: 0
+  intentoPuerta: 0

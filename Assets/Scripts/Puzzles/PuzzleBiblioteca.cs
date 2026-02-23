@@ -9,7 +9,7 @@ public class PuzzleBiblioteca : MonoBehaviour
     [SerializeField] private Librero atras2;
 
 
-
+    [SerializeField] private GameObject luzVerde;
     [HideInInspector]
     public bool puzzleResuelto;
     private void Update()
@@ -45,6 +45,7 @@ public class PuzzleBiblioteca : MonoBehaviour
                 atras1.bloqueado = true;
                 atras2.bloqueado = true;
 
+                luzVerde.SetActive(true);
                 Debug.Log("Puzzle completo correctamente");
             }
         }

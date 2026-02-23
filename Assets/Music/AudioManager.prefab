@@ -46,7 +46,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sonidos:
   - nombre: Menu
-    audio: {fileID: 8300000, guid: fb34b8844d1fd3a4982369c915c7f59f, type: 3}
+    audio: {fileID: 8300000, guid: 8e9b753576c06234ea7a0b3b71799ba1, type: 3}
+    loop: 1
+    volume: 0.8
+    audioSource: {fileID: 0}
+  - nombre: Nivel 1
+    audio: {fileID: 8300000, guid: a5a7c932c3e9f794c9c9de5a5b329ec4, type: 3}
+    loop: 1
+    volume: 0.8
+    audioSource: {fileID: 0}
+  - nombre: Nivel 2
+    audio: {fileID: 8300000, guid: 1b9ab8d07d7298c41bf903282cd4a164, type: 3}
+    loop: 1
+    volume: 0.8
+    audioSource: {fileID: 0}
+  - nombre: Nivel 3
+    audio: {fileID: 8300000, guid: b95d9323cebbebe4785a81654f184bf4, type: 3}
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}

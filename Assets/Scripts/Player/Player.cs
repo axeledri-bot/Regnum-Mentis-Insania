@@ -151,10 +151,16 @@ public class Player : MonoBehaviour
         Vector2 inicio = transform.position;
         Vector2 destino = inicio + direccion * fuerzaEmpuje;
 
+        RaycastHit2D hit = Physics2D.Raycast(inicio, direccion, fuerzaEmpuje, LayerMask.GetMask("Wall"));
+        if (hit.collider != null)
+        {
+            destino = hit.point; 
+        }
+
         while (tiempo < tiempoEmpuje)
         {
             tiempo += Time.unscaledDeltaTime;
-            transform.position = Vector2.Lerp(inicio, destino, tiempo / tiempoEmpuje);
+            transform.position = Vector2.MoveTowards(transform.position, destino, (fuerzaEmpuje / tiempoEmpuje) * Time.unscaledDeltaTime);
             yield return null;
         }
         puedeMoverse = true;

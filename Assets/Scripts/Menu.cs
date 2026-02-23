@@ -8,13 +8,17 @@ public class Menu : MonoBehaviour
     private GameObject creditos;
     private void Start()
     {
+        AudioManager.instance.Play("Menu");
         menu = transform.GetChild(1).gameObject;
         selector = transform.GetChild(2).gameObject;
         creditos = transform.GetChild(3).gameObject;
     }
     public void Inicio()
     {
+        AudioManager.instance.Stop("Menu");
+ 
         SceneManager.LoadScene("Nivel1");
+        AudioManager.instance.Play("Nivel 1");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -37,11 +41,15 @@ public class Menu : MonoBehaviour
     }
     public void Nivel2()
     {
+        AudioManager.instance.Stop("Menu");
         SceneManager.LoadScene("Nivel2");
+        AudioManager.instance.Play("Nivel 2");
     }
     public void Nivel3()
     {
+        AudioManager.instance.Stop("Menu");
         SceneManager.LoadScene("Nivel3");
+        AudioManager.instance.Play("Nivel 3");
     }
     public void Salir()
     {
