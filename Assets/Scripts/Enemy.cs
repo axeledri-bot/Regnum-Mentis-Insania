@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer sprite;
 
     [Header("Movimiento")]
     [SerializeField] private float velocidad;
@@ -24,6 +25,9 @@ public class Enemy : MonoBehaviour
     [Header("Aturdido")]
     [SerializeField] private float tiempoAturdido;
     [HideInInspector] public bool aturdido;
+    [SerializeField] private float tiempoParpadeo = 0.2f;
+    [SerializeField] private float intervaloParpadeo = 0.1f;
+
 
     [Header("Comportamiento")]
     [SerializeField] private bool usarPatrullaje = true;
@@ -38,6 +42,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
@@ -165,10 +170,25 @@ public class Enemy : MonoBehaviour
     {
         aturdido = true;
         yield return new WaitForSeconds(tiempoAturdido);
+        StartCoroutine(Parpadeo());
         aturdido = false;
+
     }
+ 
+    IEnumerator Parpadeo()
+    {
+        float tiempo = 0f;
 
+        while (tiempo < tiempoParpadeo)
+        {
+            sprite.enabled = !sprite.enabled;
 
+            yield return new WaitForSeconds(intervaloParpadeo);
+            tiempo += intervaloParpadeo;
+        }
+
+        sprite.enabled = true;
+    }
 
     private void Flip(bool playerRight)
     {

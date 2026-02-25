@@ -9,6 +9,7 @@ public class Notas : MonoBehaviour
     private GameObject Nota3;
     private GameObject Nota4;
     private GameObject Nota5;
+    private GameObject Nota6;
     void Start()
     {
         Nota = transform.GetChild(0).gameObject;
@@ -17,6 +18,7 @@ public class Notas : MonoBehaviour
         Nota3 = transform.GetChild(3).gameObject;
         Nota4 = transform.GetChild(4).gameObject;
         Nota5 = transform.GetChild(5).gameObject;
+        Nota6 = transform.GetChild(6).gameObject;
     }
     public void Regresar()
     {
@@ -26,6 +28,7 @@ public class Notas : MonoBehaviour
         Nota3.SetActive(false);
         Nota4.SetActive(false);
         Nota5.SetActive(false);
+        Nota6.SetActive(false);
         GameManager.instance.ActivarGameplay();
     }
 }
