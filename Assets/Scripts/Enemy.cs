@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sprite;
+    [SerializeField]private GameObject imagen;
 
     [Header("Movimiento")]
     [SerializeField] private float velocidad;
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+
     }
 
     private void Start()
@@ -169,8 +171,10 @@ public class Enemy : MonoBehaviour
     IEnumerator Aturdir()
     {
         aturdido = true;
+        imagen.SetActive(true);
         yield return new WaitForSeconds(tiempoAturdido);
         StartCoroutine(Parpadeo());
+        imagen.SetActive(false);
         aturdido = false;
 
     }

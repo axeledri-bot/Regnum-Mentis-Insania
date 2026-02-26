@@ -9,6 +9,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
     public List<string> recetaCorrecta;
     public Transform contenedorUI;
     public GameObject prefabIngredienteUI;
+    public RectTransform aleatorio;
 
     [SerializeField]private GameObject parteCodigo;
 
@@ -22,6 +23,11 @@ public class Alquimia : MonoBehaviour, IDropHandler
         foreach (string ing in InventarioJugador.instance.ingredientes)
         {
             GameObject nuevo = Instantiate(prefabIngredienteUI, contenedorUI);
+            nuevo.transform.SetParent(aleatorio, false);
+            RectTransform rectTransform = nuevo.GetComponent<RectTransform>();
+            float randomX = Random.Range(-aleatorio.rect.width / 2, aleatorio.rect.width/ 2);
+            float randomY = Random.Range(-aleatorio.rect.height / 2, aleatorio.rect.height/ 2);
+            rectTransform.anchoredPosition = new Vector2(randomX, randomY);
             ObjetosMouse obj = nuevo.GetComponent<ObjetosMouse>();
             obj.Configurar(ing);
         }
