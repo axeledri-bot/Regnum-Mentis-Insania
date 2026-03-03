@@ -107,11 +107,7 @@ public class Player : MonoBehaviour
         Vector2 movimientoFrame = direccion * movimiento * delta;
         Vector2 nuevaPos = rbg.position + movimientoFrame;
 
-        RaycastHit2D hit = Physics2D.Raycast(
-            rbg.position,
-            direccion,
-            movimientoFrame.magnitude,
-            LayerMask.GetMask("Wall")
+        RaycastHit2D hit = Physics2D.Raycast(rbg.position, direccion,movimientoFrame.magnitude,LayerMask.GetMask("Wall")
         );
 
         if (!hit)

@@ -210,11 +210,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject
-                .GetComponent<Player>()
-                .RecibirDaño(transform.position);
+            collision.gameObject.GetComponent<Player>() .RecibirDaño(transform.position);
 
-            CameraShake.instance.Shake(0.6f);
+            CameraShake.instance.Shake(0.4f);
         }
     }
 

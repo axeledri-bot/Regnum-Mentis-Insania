@@ -283,7 +283,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -20
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2956644718500360172, guid: 30e5b00ea6f06be40add450f79f73d17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -382,10 +382,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimiento: 3
   theWorld: 0
+  trail: {fileID: 4353740826943878759}
   fuerzaEmpuje: 1
   tiempoEmpuje: 0.2
   puedeMoverse: 1
-  trail: {fileID: 4353740826943878759}
+  tiempoParpadeo: 0.5
+  intervaloParpadeo: 0.1
 --- !u!114 &2533310238571649625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +407,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8820756828624484486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dd49f232d96781449c0d74402f02c2b, type: 3}
   m_Name: 
@@ -420,7 +422,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8820756828624484486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a81cb7f207eb30a409015d4bc54efeac, type: 3}
   m_Name: 
