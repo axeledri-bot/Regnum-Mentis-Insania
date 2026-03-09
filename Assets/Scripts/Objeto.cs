@@ -17,6 +17,7 @@ public class Objeto : MonoBehaviour
         if (objeto != null)
         {
             objeto.SetActive(true);
+            AudioManager.instance.Play("Hojas");
         }
 
        GameManager.instance.ActivarUI();

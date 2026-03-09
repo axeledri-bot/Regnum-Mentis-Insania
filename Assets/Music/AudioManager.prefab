@@ -75,3 +75,13 @@ MonoBehaviour:
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}
+  - nombre: Hojas
+    audio: {fileID: 8300000, guid: 2056bdad2cf37f441b0ce599f69c46cd, type: 3}
+    loop: 0
+    volume: 0.735
+    audioSource: {fileID: 0}
+  - nombre: Puerta
+    audio: {fileID: 8300000, guid: c8a63eb491a68cc4794e9624b5120e9f, type: 3}
+    loop: 0
+    volume: 0.735
+    audioSource: {fileID: 0}

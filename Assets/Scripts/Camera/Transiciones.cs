@@ -104,7 +104,7 @@ public class Transiciones : MonoBehaviour
         movimiento.puedeMoverse = false;
 
         yield return FadeController.Instance.FadeOut();
-
+        AudioManager.instance.Play("Puerta");
         confiner.enabled = false;
 
         Vector3 oldPos = player.transform.position;
@@ -127,6 +127,7 @@ public class Transiciones : MonoBehaviour
 
         movimiento.puedeMoverse = true;
         enTransicion = false;
+        AudioManager.instance.Stop("Puerta");
     }
     public void AbrirConCodigo()
     {
