@@ -9,9 +9,9 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         AudioManager.instance.Play("Menu");
-        menu = transform.GetChild(1).gameObject;
-        selector = transform.GetChild(2).gameObject;
-        creditos = transform.GetChild(3).gameObject;
+        menu = transform.GetChild(4).gameObject;
+        selector = transform.GetChild(5).gameObject;
+        creditos = transform.GetChild(6).gameObject;
     }
     public void Inicio()
     {
