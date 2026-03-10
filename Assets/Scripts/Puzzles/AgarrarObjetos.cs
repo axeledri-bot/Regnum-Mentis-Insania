@@ -2,118 +2,73 @@ using UnityEngine;
 
 public class AgarrarObjetos : MonoBehaviour
 {
-    [SerializeField] private Transform agarre;
-    private GameObject objeto;
-    [SerializeField] private float distancia = 1f;
-    [SerializeField] private LayerMask objetos;
-    private bool sosteniendo;
+    public Libros libroEnMano;
+    bool cercaPuerta;
 
-    private Librero posicionActual;
+    [SerializeField]private Transform agarre;
+    [SerializeField] private LayerMask interactuableLayer;
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (sosteniendo)
+            if (cercaPuerta) return; 
+
+            InteractuarLibros();
+        }
+        
+    }
+    void InteractuarLibros()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, 1f, interactuableLayer);
+
+        if (!hit) return;
+
+        Libros libro = hit.GetComponent<Libros>();
+        Librero librero = hit.GetComponent<Librero>();
+        Debug.Log(hit.name);
+        if (libro != null && libroEnMano == null)
+        {
+            libroEnMano = libro;
+            Rigidbody2D rb = libro.GetComponent<Rigidbody2D>();
+            if (rb) rb.simulated = false;
+
+            libro.transform.SetParent(agarre);
+            libro.transform.localPosition = Vector3.zero;
+            return;
+        }
+
+        if (librero != null)
+        {
+            if (libroEnMano != null && librero.libroActual == null)
             {
-                SoltarObjeto();
+                librero.ColocarLibro(libroEnMano);
+                libroEnMano = null;
             }
-            else
+            else if (libroEnMano == null && librero.libroActual != null)
             {
-                AgarrarObjeto();
+                libroEnMano = librero.QuitarLibro();
+                Rigidbody2D rb = libroEnMano.GetComponent<Rigidbody2D>();
+                if (rb) rb.simulated = false;
+                libroEnMano.transform.SetParent(agarre);
+                libroEnMano.transform.localPosition = Vector3.zero;
             }
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Librero librero = collision.GetComponent<Librero>();
-
-        if (librero != null)
+        if (collision.GetComponent<Transiciones>() != null)
         {
-            posicionActual = librero;
+            cercaPuerta = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Librero librero = collision.GetComponent<Librero>();
-
-        if (librero != null)
+        if (collision.GetComponent<Transiciones>() != null)
         {
-            posicionActual = null;
+            cercaPuerta = false;
         }
-    }
-
-
-    private void AgarrarObjeto()
-    {
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, distancia, Vector2.zero, 0f, objetos);
-        if (hit.collider == null)
-            return;
-
-        Librero librero = hit.collider.GetComponentInParent<Librero>();
-
-        if (librero != null && librero.bloqueado)
-            return;
-
-        objeto = hit.collider.gameObject;
-
-        objeto.transform.SetParent(agarre);
-        objeto.transform.localPosition = Vector3.zero;
-
-        sosteniendo = true;
-
-        Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
-        if (rb)
-            rb.simulated = false;
-
-        SpriteRenderer srObjeto = objeto.GetComponent<SpriteRenderer>();
-        SpriteRenderer srPlayer = GetComponent<SpriteRenderer>();
-
-        if (srObjeto && srPlayer)
-            srObjeto.sortingOrder = srPlayer.sortingOrder + 1;
-
-
-    }
-
-    private void SoltarObjeto()
-    {
-        Rigidbody2D rb = objeto.GetComponent<Rigidbody2D>();
-
-        if (posicionActual != null)
-        {
-            objeto.transform.SetParent(posicionActual.transform);
-            objeto.transform.position = posicionActual.transform.position;
-
-            if (rb)
-                rb.simulated = false;
-
-            Libros libro = objeto.GetComponent<Libros>();
-            if (libro != null)
-            {
-                posicionActual.libroColocado = libro;
-            }
-        }
-        else
-        {
-
-            objeto.transform.SetParent(null);
-
-            if (rb)
-            {
-                rb.simulated = true;
-
-                Vector2 direccion = (objeto.transform.position - transform.position).normalized;
-                rb.linearVelocity = direccion * 2f;
-            }
-        }
-
-        objeto = null;
-        sosteniendo = false;
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, distancia);
     }
 }
+

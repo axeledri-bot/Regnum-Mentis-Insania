@@ -8,6 +8,7 @@ public class Objeto : MonoBehaviour
     public Alquimia alquimia;
     public void Interactuar()
     {
+        AudioManager.instance.Play("Hojas");
         if (alquimia != null)
         {
             alquimia.AbrirPuzzle();
@@ -17,7 +18,6 @@ public class Objeto : MonoBehaviour
         if (objeto != null)
         {
             objeto.SetActive(true);
-            AudioManager.instance.Play("Hojas");
         }
 
        GameManager.instance.ActivarUI();

@@ -100,11 +100,12 @@ public class Transiciones : MonoBehaviour
     IEnumerator Transicion()
     {
         enTransicion = true;
+        //AudioManager.instance.Play("Puerta");
 
         movimiento.puedeMoverse = false;
 
         yield return FadeController.Instance.FadeOut();
-        AudioManager.instance.Play("Puerta");
+
         confiner.enabled = false;
 
         Vector3 oldPos = player.transform.position;
