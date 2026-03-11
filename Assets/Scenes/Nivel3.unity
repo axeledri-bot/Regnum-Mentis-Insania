@@ -5536,7 +5536,7 @@ Transform:
   m_GameObject: {fileID: 540283984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.25, y: 0.05, z: -5}
+  m_LocalPosition: {x: -23.226988, y: 0.049999997, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7430,7 +7430,7 @@ Transform:
   m_GameObject: {fileID: 758280922}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.829382, y: 7.0919304, z: 0}
+  m_LocalPosition: {x: 11.829382, y: 7.19221, z: 0}
   m_LocalScale: {x: -1.0003333, y: -2.0001001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8532,7 +8532,7 @@ Transform:
   m_GameObject: {fileID: 896088780}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.8563595, y: 0.6997702, z: 0}
+  m_LocalPosition: {x: 8.8563595, y: 0.8000001, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8713,6 +8713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambioNivel
   escena: Menu
+  musicStop: Nivel 3
+  musicPlay: 
 --- !u!61 &921876283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10295,6 +10297,10 @@ PrefabInstance:
     - target: {fileID: 3329700439809627605, guid: 1d48e452666bec9438053279b942e905, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810327858637479179, guid: 1d48e452666bec9438053279b942e905, type: 3}
+      propertyPath: music
+      value: Nivel 3
       objectReference: {fileID: 0}
     - target: {fileID: 4810327858637479179, guid: 1d48e452666bec9438053279b942e905, type: 3}
       propertyPath: escena

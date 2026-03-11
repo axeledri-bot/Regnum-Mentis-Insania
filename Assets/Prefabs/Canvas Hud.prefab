@@ -2843,6 +2843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pausa
   animator: {fileID: 8097642620552859476}
   escena: Nivel1
+  music: Nivel 1
 --- !u!114 &2322934426413809084
 MonoBehaviour:
   m_ObjectHideFlags: 0

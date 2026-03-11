@@ -19,6 +19,15 @@ public class Notas : MonoBehaviour
         Nota4 = transform.GetChild(4).gameObject;
         Nota5 = transform.GetChild(5).gameObject;
         Nota6 = transform.GetChild(6).gameObject;
+
+       
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Regresar();
+        }
     }
     public void Regresar()
     {

@@ -1,10 +1,11 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CambioNivel : MonoBehaviour
 {
-    [SerializeField]private string escena;
+    [SerializeField] private string escena;
+    [SerializeField] private string musicStop;
+    [SerializeField] private string musicPlay;
     //public int colNecesarios = 3;
     //public GameObject mensaje;
 
@@ -16,7 +17,10 @@ public class CambioNivel : MonoBehaviour
         {
             //if (GameManager.instance.moneda >= colNecesarios)
             //{
-                SceneManager.LoadScene(escena);
+            AudioManager.instance.Stop(musicStop);
+            AudioManager.instance.Play(musicPlay);
+            SceneManager.LoadScene(escena);
+         
             //}
             //else 
             //{
