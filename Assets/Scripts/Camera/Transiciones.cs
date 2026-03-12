@@ -100,7 +100,7 @@ public class Transiciones : MonoBehaviour
     IEnumerator Transicion()
     {
         enTransicion = true;
-        //AudioManager.instance.Play("Puerta");
+        AudioManager.instance.Play("Puerta");
 
         movimiento.puedeMoverse = false;
 

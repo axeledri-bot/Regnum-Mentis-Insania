@@ -13,10 +13,19 @@ public class Librero : MonoBehaviour
     [SerializeField] Sprite amarillo;
 
     public PuzzleBiblioteca puzzle;
+    
+    private Animator animator;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+
+    }
 
     public void ColocarLibro(Libros libro)
     {
         if (libroActual != null) return;
+
+        animator.SetBool("Vacio", false);
 
         libroActual = libro;
 
@@ -29,6 +38,8 @@ public class Librero : MonoBehaviour
     public Libros QuitarLibro()
     {
         if (libroActual == null) return null;
+
+        animator.SetBool("Vacio", true);
 
         Libros libro = libroActual;
 
@@ -44,11 +55,26 @@ public class Librero : MonoBehaviour
     {
         switch (color)
         {
-            case "Rojo": spriteRenderer.sprite = rojo; break;
-            case "Azul": spriteRenderer.sprite = azul; break;
-            case "Blanco": spriteRenderer.sprite = blanco; break;
-            case "Amarillo": spriteRenderer.sprite = amarillo; break;
+            case "Rojo":
+                animator.SetBool("Rojo", true);
+                break;
+            case "Azul":
+                animator.SetBool("Azul", true);
+                break;
+            case "Blanco":
+                animator.SetBool("Blanco", true);
+                break;
+            case "Amarillo":
+                animator.SetBool("Amarillo", true);
+                break;
         }
+        //switch (color)
+        //{
+        //    case "Rojo": spriteRenderer.sprite = rojo; break;
+        //    case "Azul": spriteRenderer.sprite = azul; break;
+        //    case "Blanco": spriteRenderer.sprite = blanco; break;
+        //    case "Amarillo": spriteRenderer.sprite = amarillo; break;
+        //}
     }
 }
 
