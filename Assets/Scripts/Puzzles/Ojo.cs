@@ -67,7 +67,7 @@ public class Ojo : MonoBehaviour
         //cama.sprite = cama2;
         AudioManager.instance.Play("Manta");
         luz.SetActive(false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
     
         yield return FadeController.Instance.FadeIn();
     }

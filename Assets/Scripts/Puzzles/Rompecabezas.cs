@@ -32,7 +32,7 @@ public class RompecabezasBase : MonoBehaviour,IBeginDragHandler, IDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .6f;
+        //canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
     public void OnDrag(PointerEventData eventData)
