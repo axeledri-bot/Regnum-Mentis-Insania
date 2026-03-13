@@ -6,11 +6,6 @@ public class Librero : MonoBehaviour
 
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    [SerializeField] Sprite vacio;
-    [SerializeField] Sprite rojo;
-    [SerializeField] Sprite azul;
-    [SerializeField] Sprite blanco;
-    [SerializeField] Sprite amarillo;
 
     public PuzzleBiblioteca puzzle;
     
@@ -40,12 +35,16 @@ public class Librero : MonoBehaviour
         if (libroActual == null) return null;
 
         animator.SetBool("Vacio", true);
+        animator.SetBool("Azul", false);
+        animator.SetBool("Blanco", false);
+        animator.SetBool("Amarillo", false);
+        animator.SetBool("Rojo", false);
 
         Libros libro = libroActual;
 
         libroActual = null;
 
-        spriteRenderer.sprite = vacio;
+        //spriteRenderer.sprite = vacio;
 
         libro.gameObject.SetActive(true);
 
