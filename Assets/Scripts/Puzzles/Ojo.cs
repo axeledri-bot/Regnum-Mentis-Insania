@@ -9,31 +9,38 @@ public class Ojo : MonoBehaviour
     [SerializeField] private LayerMask silla;
     [SerializeField] private Transiciones puerta;
 
-    private SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite ojoTapado;
-    private bool enAccion;
-
     [SerializeField]private float cerca = 2f;
+    [SerializeField]private float deteccion = 1f;
     [SerializeField] private LayerMask player;
 
+
+    private SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite ojoTapado;
+    //[SerializeField] Sprite cama2;
+    private bool enAccion;
+    [SerializeField] private GameObject luz;
+    [SerializeField] private GameObject cama;
 
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     private void Update()
     {
         Vector2 origen = transform.position;
- 
+        Vector2 direccion = Vector2.down;
 
-        //RaycastHit2D hit = Physics2D.OverlapCircle(origen, cerca, player);
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    StartCoroutine(Accion());
-        //}
-
+        RaycastHit2D hit = Physics2D.CircleCast(origen, cerca, direccion, deteccion, player);
+        if (hit.collider != null)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(Accion());
+            }
+        }
     }
     private void LateUpdate()
     {
@@ -56,11 +63,13 @@ public class Ojo : MonoBehaviour
         yield return FadeController.Instance.FadeOut();
 
         spriteRenderer.sprite = ojoTapado;
-
+        cama.SetActive(true);
+        //cama.sprite = cama2;
+        AudioManager.instance.Play("Manta");
+        luz.SetActive(false);
+        yield return new WaitForSeconds(1f);
+    
         yield return FadeController.Instance.FadeIn();
-
-
-
     }
     public bool EstaViendoJugador()
     {
@@ -76,6 +85,11 @@ public class Ojo : MonoBehaviour
         }
         return false;
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
 
+        Gizmos.DrawWireSphere(transform.position, cerca);
+    }
 }
 
