@@ -22,19 +22,25 @@ public class AgarrarObjetos : MonoBehaviour
     {
         Collider2D hit = Physics2D.OverlapCircle(transform.position, 1f, interactuableLayer);
 
-        if (!hit) return;
+        Libros libro = null;
+        Librero librero = null;
 
-        Libros libro = hit.GetComponent<Libros>();
-        Librero librero = hit.GetComponent<Librero>();
-        Debug.Log(hit.name);
+        if (hit)
+        {
+            libro = hit.GetComponent<Libros>();
+            librero = hit.GetComponent<Librero>();
+        }
+
         if (libro != null && libroEnMano == null)
         {
             libroEnMano = libro;
+
             Rigidbody2D rb = libro.GetComponent<Rigidbody2D>();
             if (rb) rb.simulated = false;
 
             libro.transform.SetParent(agarre);
             libro.transform.localPosition = Vector3.zero;
+
             return;
         }
 
@@ -44,15 +50,31 @@ public class AgarrarObjetos : MonoBehaviour
             {
                 librero.ColocarLibro(libroEnMano);
                 libroEnMano = null;
+                return;
             }
             else if (libroEnMano == null && librero.libroActual != null)
             {
                 libroEnMano = librero.QuitarLibro();
+
                 Rigidbody2D rb = libroEnMano.GetComponent<Rigidbody2D>();
                 if (rb) rb.simulated = false;
+
                 libroEnMano.transform.SetParent(agarre);
                 libroEnMano.transform.localPosition = Vector3.zero;
+
+                return;
             }
+        }
+
+        if (libroEnMano != null)
+        {
+            Rigidbody2D rb = libroEnMano.GetComponent<Rigidbody2D>();
+
+            libroEnMano.transform.SetParent(null);
+
+            if (rb) rb.simulated = true;
+
+            libroEnMano = null;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

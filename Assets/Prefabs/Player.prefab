@@ -285,7 +285,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2956644718500360172, guid: 30e5b00ea6f06be40add450f79f73d17, type: 3}
+  m_Sprite: {fileID: -6928599839367074359, guid: 08e21b38f077fcd4ebb00ee94f8eef2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -333,7 +333,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5625, y: 0.9375}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -433,6 +433,7 @@ MonoBehaviour:
   intensity: 2
   volume: {fileID: 0}
   ondaPrefab: {fileID: 7800420966845796805, guid: e6d9c585d1120b84c84ed57f1a641e78, type: 3}
+  fade: {fileID: 0}
 --- !u!95 &4022050951067502646
 Animator:
   serializedVersion: 7
@@ -467,9 +468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca5de2d5c359484cb7e9cc416ae50ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventario
+  libroEnMano: {fileID: 0}
   agarre: {fileID: 3513690187619915136}
-  distancia: 1
-  objetos:
+  interactuableLayer:
     serializedVersion: 2
     m_Bits: 128
 --- !u!114 &6420920532166290327

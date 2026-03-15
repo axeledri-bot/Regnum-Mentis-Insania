@@ -11,6 +11,8 @@ public class TimeStop : MonoBehaviour
 
     private bool puedeUsar = true;
     private Player jugador;
+
+    [SerializeField] private GameObject fade;
     private void Start()
     {
         jugador = GetComponent<Player>();
@@ -26,6 +28,8 @@ public class TimeStop : MonoBehaviour
     IEnumerator DetenerTiempo()
     {
         puedeUsar = false;
+        fade.SetActive(true);
+
         activo = true;
 
         jugador.theWorld = true;
@@ -67,6 +71,7 @@ public class TimeStop : MonoBehaviour
        
         yield return new WaitForSecondsRealtime(coolDown);
 
+        fade.SetActive(false);
         puedeUsar = true;
     }
 }

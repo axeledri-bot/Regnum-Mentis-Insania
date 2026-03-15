@@ -14,6 +14,7 @@ public class MagiaDeLuz : MonoBehaviour
 
     [SerializeField] private GameObject ondaPrefab;
     private bool puedeUsar = true;
+    [SerializeField] private GameObject fade;
     private void Awake()
     {
         volume.profile.TryGet(out bloom);
@@ -29,6 +30,7 @@ public class MagiaDeLuz : MonoBehaviour
     IEnumerator ActivarLuz()
     {
         puedeUsar = false;
+        fade.SetActive(true);
         luz.gameObject.SetActive(true);
         Instantiate(ondaPrefab, transform.position, Quaternion.identity);
         float tiempo = 0f;
@@ -49,6 +51,7 @@ public class MagiaDeLuz : MonoBehaviour
         luz.gameObject.SetActive (false);
         yield return new WaitForSeconds(coolDown);
 
+        fade.SetActive(false);
         puedeUsar = true;
     }
 }

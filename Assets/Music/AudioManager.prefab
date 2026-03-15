@@ -60,6 +60,11 @@ MonoBehaviour:
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}
+  - nombre: Lluvia
+    audio: {fileID: 8300000, guid: 72a511a1f010fe74dbe291b3f40f20a4, type: 3}
+    loop: 1
+    volume: 0.5
+    audioSource: {fileID: 0}
   - nombre: Nivel 3
     audio: {fileID: 8300000, guid: b95d9323cebbebe4785a81654f184bf4, type: 3}
     loop: 1

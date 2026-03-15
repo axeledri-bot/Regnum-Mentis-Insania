@@ -20,8 +20,6 @@ public class Librero : MonoBehaviour
     {
         if (libroActual != null) return;
 
-        animator.SetBool("Vacio", false);
-
         libroActual = libro;
 
         libro.gameObject.SetActive(false);
@@ -34,11 +32,7 @@ public class Librero : MonoBehaviour
     {
         if (libroActual == null) return null;
 
-        animator.SetBool("Vacio", true);
-        animator.SetBool("Azul", false);
-        animator.SetBool("Blanco", false);
-        animator.SetBool("Amarillo", false);
-        animator.SetBool("Rojo", false);
+        animator.SetTrigger("Quitar");
 
         Libros libro = libroActual;
 
@@ -55,16 +49,16 @@ public class Librero : MonoBehaviour
         switch (color)
         {
             case "Rojo":
-                animator.SetBool("Rojo", true);
+                animator.SetTrigger("Rojo");
                 break;
             case "Azul":
-                animator.SetBool("Azul", true);
+                animator.SetTrigger("Azul");
                 break;
             case "Blanco":
-                animator.SetBool("Blanco", true);
+                animator.SetTrigger("Blanco");
                 break;
             case "Amarillo":
-                animator.SetBool("Amarillo", true);
+                animator.SetTrigger("Amarillo");
                 break;
         }
         //switch (color)
