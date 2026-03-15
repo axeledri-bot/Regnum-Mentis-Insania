@@ -42,6 +42,7 @@ public class Transiciones : MonoBehaviour
             if (requiereIrCocina && !GameManager.instance.intentoPuerta)
             {
                 Debug.Log("No puedes abrir esta puerta todavía.");
+                Pensamientos.instance.Mostrar("Deberia ir a la cocina primero...");
                 return;
             }
             if (esPuertaCocina && !GameManager.instance.intentoPuerta)
