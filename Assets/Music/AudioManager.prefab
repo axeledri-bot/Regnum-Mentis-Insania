@@ -85,8 +85,8 @@ MonoBehaviour:
     loop: 0
     volume: 0.735
     audioSource: {fileID: 0}
-  - nombre: Puerta
-    audio: {fileID: 8300000, guid: 07313e73c3cff4a49b503c9c0df68850, type: 3}
+  - nombre: Manta
+    audio: {fileID: 8300000, guid: d8e7c47adc8a0c74995bbbdc9a00032c, type: 3}
     loop: 0
     volume: 0.735
     audioSource: {fileID: 0}

@@ -16,10 +16,9 @@ public class Ojo : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     [SerializeField] Sprite ojoTapado;
-    //[SerializeField] Sprite cama2;
     private bool enAccion;
     [SerializeField] private GameObject luz;
-    [SerializeField] private GameObject cama;
+
 
 
     private void Start()
@@ -36,7 +35,7 @@ public class Ojo : MonoBehaviour
         RaycastHit2D hit = Physics2D.CircleCast(origen, cerca, direccion, deteccion, player);
         if (hit.collider != null)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && RecojerManta.tieneManta)
             {
                 StartCoroutine(Accion());
             }
@@ -63,13 +62,12 @@ public class Ojo : MonoBehaviour
         yield return FadeController.Instance.FadeOut();
 
         spriteRenderer.sprite = ojoTapado;
-        cama.SetActive(true);
-        //cama.sprite = cama2;
         AudioManager.instance.Play("Manta");
         luz.SetActive(false);
         yield return new WaitForSeconds(2f);
     
         yield return FadeController.Instance.FadeIn();
+        RecojerManta.tieneManta = false;
     }
     public bool EstaViendoJugador()
     {
