@@ -88,7 +88,7 @@ MonoBehaviour:
   - nombre: Reloj
     audio: {fileID: 8300000, guid: 89d7f0cbb8c08b942ad8df622b7ad20b, type: 3}
     loop: 1
-    volume: 0.8
+    volume: 0.9
     audioSource: {fileID: 0}
   - nombre: Puerta
     audio: {fileID: 8300000, guid: 6fc8ffb81712eb34bb6f78d68af7a92f, type: 3}

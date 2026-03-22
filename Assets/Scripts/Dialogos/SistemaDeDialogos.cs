@@ -54,7 +54,7 @@ public class SistemaDeDialogos : MonoBehaviour
         {
             dialogoActual = dialogoForzado;
         }
-        else if ((puzzle.puzzleResuelto) || (alquimia != null && alquimia.recetaCompletada))
+        else if ((puzzle != null && puzzle.puzzleResuelto) || (alquimia != null && alquimia.recetaCompletada))
         {
             dialogoActual = dialogoFinal;
         }

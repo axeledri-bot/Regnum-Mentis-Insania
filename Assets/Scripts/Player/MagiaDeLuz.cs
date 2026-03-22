@@ -33,10 +33,10 @@ public class MagiaDeLuz : MonoBehaviour
 
     IEnumerator ActivarLuz()
     {
+        AudioManager.instance.Play("Daños Luz");
         puedeUsar = false;
         fade.SetActive(true);
         luz.gameObject.SetActive(true);
-        AudioManager.instance.Play("Daños Luz");
         Instantiate(ondaPrefab, transform.position, Quaternion.identity);
         float tiempo = 0f;
     
