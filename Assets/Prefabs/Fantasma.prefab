@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1791089499369740860}
   - component: {fileID: 2382793382946559359}
   - component: {fileID: 5361295769628133650}
+  - component: {fileID: 5700219530137683004}
   m_Layer: 0
   m_Name: Fantasma
   m_TagString: Untagged
@@ -182,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   imagen: {fileID: 8559519493594096554}
-  velocidad: 2
-  radius: 3
+  velocidad: 1
+  radius: 5
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
@@ -216,6 +217,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5700219530137683004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359573269870424141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68a39dc1229df47bd39fc058952f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Layers
 --- !u!1 &8559519493594096554
 GameObject:
   m_ObjectHideFlags: 0

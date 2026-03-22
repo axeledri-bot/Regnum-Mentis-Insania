@@ -21,6 +21,8 @@ public class Base : MonoBehaviour, IDropHandler
         ocupada = true;
 
         puzzle.RegistrarColocacion(pieza, this);
+        AudioManager.instance.Play("Rompecabezas");
+
     }
     public void ResetearBase()
     {

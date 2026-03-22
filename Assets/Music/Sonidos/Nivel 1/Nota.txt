@@ -1,0 +1,16 @@
+Explicación de los sonidos: 
+
+"Antorcha" en este caso tenia pensado que fuera un sonido que se escuchara bajito únicamente cuando te encuentras cerca de una de las lámparas que se encuentran en la sala principal.
+
+"Candado" es una opción que puse para cuando se este tecleando el código del candado del comedor.
+
+"Cocina" es para la puerta una vez que el jugador ya consiga la llave y pueda entrar por esta puerta.
+
+Ignora los que digan "Manta" son únicamente para tenerlos de respaldo en caso de que pase cualquier cosa (Ya que hasta donde recuerdo ya habíamos elegido uno definitivo).
+
+"NPC" tenia pensado que se usara para los pequeños diálogos que tendrá en la biblioteca y la sala de alquimia.
+
+"Puerta cocina" pues es para cuando el jugador este intentando abrir la puerta antes de conseguir la llave.
+
+
+"Puerta" es la opción final (desde mi punto de vista) para todas las demás puerta que no sean la del comedor y la cocina (En caso de que no te convenza me avisas y busco otro).

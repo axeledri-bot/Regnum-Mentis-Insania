@@ -19,6 +19,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
     {
         this.gameObject.SetActive(true);
         GameManager.instance.ActivarUI();
+        AudioManager.instance.Play("Alquimia");
 
         foreach (string ing in InventarioJugador.instance.ingredientes)
         {
@@ -68,7 +69,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
                 return;
             }
         }
-
+        AudioManager.instance.Stop("Alquimia");
         Debug.Log("¡Poción creada!");
         Recompensa();
     }
@@ -85,6 +86,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
 
         this.gameObject.SetActive(false);
         GameManager.instance.ActivarUI();
+        AudioManager.instance.Play("Exito");
 
         parteCodigo.SetActive(true);
     }
@@ -100,6 +102,8 @@ public class Alquimia : MonoBehaviour, IDropHandler
 
         this.gameObject.SetActive(false);
         GameManager.instance.ActivarGameplay();
+        AudioManager.instance.Stop("Alquimia");
+
     }
     private void Fallo()
     {
@@ -125,6 +129,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
         {
             Destroy(hijo.gameObject);
         }
+        AudioManager.instance.Stop("Alquimia");
 
         recetaCompletada = false;
     }

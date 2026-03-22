@@ -953,14 +953,14 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -2399,7 +2399,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.53
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -6806,14 +6806,14 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 1
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -8252,7 +8252,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.53
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -15945,6 +15945,14 @@ PrefabInstance:
     - target: {fileID: 1700381401938602024, guid: 56f166c760e85864497f01d81cddc091, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308066324966443830, guid: 56f166c760e85864497f01d81cddc091, type: 3}
+      propertyPath: sonidos.Array.data[2].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308066324966443830, guid: 56f166c760e85864497f01d81cddc091, type: 3}
+      propertyPath: sonidos.Array.data[6].volume
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6842109006738051967, guid: 56f166c760e85864497f01d81cddc091, type: 3}
       propertyPath: m_LocalPosition.x

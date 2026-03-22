@@ -50,6 +50,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (todoCorrecto)
         {
+            AudioManager.instance.Play("Exito");
             CompletarPuzzle();
         }
         else
@@ -89,7 +90,7 @@ public class PuzzleManager : MonoBehaviour
     IEnumerator CerrarConDelay()
     {
  
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
 
         bool darLlave = Llave.Instance.RegistrarPuzzleCompletado();
 

@@ -31,6 +31,7 @@ public class PuzzleBiblioteca : MonoBehaviour
             puzzleResuelto = true;
 
             luzVerde.SetActive(true);
+            AudioManager.instance.Play("Exito");
 
             Debug.Log("Puzzle resuelto");
         }

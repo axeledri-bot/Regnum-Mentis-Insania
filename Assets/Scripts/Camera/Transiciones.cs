@@ -28,6 +28,8 @@ public class Transiciones : MonoBehaviour
     [SerializeField] private bool esPuertaCocina;
 
     [SerializeField] private bool requiereIrCocina;
+
+    [SerializeField] private string sonidoPuerta = "Puerta";
     private void Awake()
     {
         confiner = Object.FindFirstObjectByType<CinemachineConfiner2D>();
@@ -54,8 +56,7 @@ public class Transiciones : MonoBehaviour
             {
                 if (!GameManager.instance.tieneLlave)
                 {
-                  
-
+                    AudioManager.instance.Play("Puerta Cocina");
                     Debug.Log("Necesitas una llave");
                     return;
                 }
@@ -101,7 +102,7 @@ public class Transiciones : MonoBehaviour
     IEnumerator Transicion()
     {
         enTransicion = true;
-        AudioManager.instance.Play("Puerta");
+        AudioManager.instance.Play(sonidoPuerta);
 
         movimiento.puedeMoverse = false;
 
@@ -129,7 +130,7 @@ public class Transiciones : MonoBehaviour
 
         movimiento.puedeMoverse = true;
         enTransicion = false;
-        AudioManager.instance.Stop("Puerta");
+        AudioManager.instance.Stop(sonidoPuerta);
     }
     public void AbrirConCodigo()
     {

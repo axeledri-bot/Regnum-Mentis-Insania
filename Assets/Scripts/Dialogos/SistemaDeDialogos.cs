@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,15 +35,20 @@ public class SistemaDeDialogos : MonoBehaviour
     [SerializeField] private PuzzleBiblioteca puzzle;
     [SerializeField] private Alquimia alquimia;
     [SerializeField] private Player player;
+
+    [Header("Efecto texto")]
+    [SerializeField] private float velocidadTexto = 0.02f;
+    private Coroutine escribirCoroutine;
+    private bool estaEscribiendo = false;
+    private int lineaActualMostrada = 0;
+
     private void Update()
     {
         inside = Physics2D.OverlapCircle(transform.position, radio, personaje);
 
-
         if (!inside && !usandoDialogoForzado) return;
 
         Palabras[] dialogoActual;
-
 
         if (usandoDialogoForzado)
         {
@@ -61,34 +67,50 @@ public class SistemaDeDialogos : MonoBehaviour
             dialogoActual = dialogoIntroduccion;
         }
 
-
-        if (Input.GetKeyDown(KeyCode.E) && linea < dialogoActual.Length)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            sistemaDialogos.SetActive(true);
-
-            nombre.text = dialogoActual[linea].nombre;
-            texto.text = dialogoActual[linea].dialogo;
-            pers1.sprite = dialogoActual[linea].pers1;
-            pers2.sprite = dialogoActual[linea].pers2;
-            caja.sprite = dialogoActual[linea].caja;
-
-            linea++;
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            sistemaDialogos.SetActive(false);
-            if (usandoDialogoForzado)
+            if (estaEscribiendo)
             {
-                usandoDialogoForzado = false;
+                StopCoroutine(escribirCoroutine);
+                texto.text = dialogoActual[lineaActualMostrada].dialogo;
+                estaEscribiendo = false;
+                return;
             }
 
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().puedeMoverse = true;
-            if (!yaHabloPrimeraVez)
+            if (linea < dialogoActual.Length)
             {
-                yaHabloPrimeraVez = true;
-            }
+                sistemaDialogos.SetActive(true);
 
-            linea = 0;
+                nombre.text = dialogoActual[linea].nombre;
+                pers1.sprite = dialogoActual[linea].pers1;
+                pers2.sprite = dialogoActual[linea].pers2;
+                caja.sprite = dialogoActual[linea].caja;
+
+                lineaActualMostrada = linea;
+
+                if (escribirCoroutine != null)
+                    StopCoroutine(escribirCoroutine);
+
+                escribirCoroutine = StartCoroutine(
+                    EscribirTexto(dialogoActual[linea].dialogo)
+                );
+
+                linea++;
+            }
+            else
+            {
+                sistemaDialogos.SetActive(false);
+
+                if (usandoDialogoForzado)
+                    usandoDialogoForzado = false;
+
+                player.puedeMoverse = true;
+
+                if (!yaHabloPrimeraVez)
+                    yaHabloPrimeraVez = true;
+
+                linea = 0;
+            }
         }
     }
 
@@ -108,4 +130,31 @@ public class SistemaDeDialogos : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().puedeMoverse = true;
     }
 
+    IEnumerator EscribirTexto(string contenido)
+    {
+        estaEscribiendo = true;
+        texto.text = "";
+
+        int contador = 0;
+
+        foreach (char letra in contenido)
+        {
+            texto.text += letra;
+
+
+            if (!char.IsWhiteSpace(letra))
+            {
+                contador++;
+                if (contador % 2 == 0)
+                {
+                    AudioManager.instance.Play("Dialogo");
+                }
+            }
+
+            yield return new WaitForSeconds(velocidadTexto);
+        }
+
+        AudioManager.instance.Stop("Dialogo");
+        estaEscribiendo = false;
+    }
 }

@@ -30,6 +30,7 @@ public class CodigoDePuerta : MonoBehaviour
 
     public void AgregarNumero(string numero)
     {
+        AudioManager.instance.Play("Candado");
         if (codigoIngresado.Length >= 4)
         {
             return;

@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     {
         hud = FindFirstObjectByType<Hud>();
         mov = FindFirstObjectByType<Player>();
+
+        SincronizarHUD();
     }
 
     private void Awake()
@@ -75,13 +77,30 @@ public class GameManager : MonoBehaviour
         {
             return false;
         }
-        hud.ActivarVida(vidas);
         vidas += 1;
+        hud.ActivarVida(vidas - 1);
         mov.movimiento = 3f;
         AudioManager.instance.Stop("Latidos");
 
         efectos.Desactivar();
         return true;
+    }
+
+    void SincronizarHUD()
+    {
+        if (hud == null) return;
+
+
+        for (int i = 0; i < hud.vidas.Length; i++)
+        {
+            hud.vidas[i].SetActive(false);
+        }
+
+
+        for (int i = 0; i < vidas; i++)
+        {
+            hud.vidas[i].SetActive(true);
+        }
     }
     public void ResetGame()
     {

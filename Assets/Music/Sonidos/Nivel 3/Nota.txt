@@ -1,0 +1,5 @@
+"Nivel 3" es el sonido ambiental que se escuchara durante este nivel
+
+Nota de la nota:
+
+Aquí me puse a pensar si seria necesario un sonido para cuando el jugador se encuentre arrastrando/jalando un objeto pero no encontré ninguno que me gustara T-T igual continuare buscando y te aviso si encuentro algo

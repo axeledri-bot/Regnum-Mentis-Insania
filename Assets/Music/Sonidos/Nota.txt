@@ -1,0 +1,3 @@
+"Dejar libro" es el sonido que se va a escuchar cuando cierre un libro que contenga info.
+
+"Notas" se usaría para cuando recoja una nota de papel o libro (en este caso se escucharía el mismo sonido cuando deje la hoja de papel)

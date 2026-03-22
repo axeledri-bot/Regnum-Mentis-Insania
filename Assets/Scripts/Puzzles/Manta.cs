@@ -16,6 +16,7 @@ public class Manta : MonoBehaviour
                 RecojerManta.tieneManta = true;
 
                 cama.SetActive(true);
+                AudioManager.instance.Play("Manta 2");
                 recogida = true;
             }
         }

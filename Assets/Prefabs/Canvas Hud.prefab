@@ -2863,7 +2863,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!114 &6141145578271171090
 MonoBehaviour:
@@ -2920,6 +2920,7 @@ MonoBehaviour:
   animator: {fileID: 8097642620552859476}
   escena: Nivel1
   music: Nivel 1
+  efecto: Ambiente Nivel 1
 --- !u!114 &2322934426413809084
 MonoBehaviour:
   m_ObjectHideFlags: 0

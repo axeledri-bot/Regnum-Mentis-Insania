@@ -55,6 +55,11 @@ MonoBehaviour:
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}
+  - nombre: Ambiente Nivel 1
+    audio: {fileID: 8300000, guid: eb0cef29bd427ef4a8dc43499262b209, type: 3}
+    loop: 1
+    volume: 0.5
+    audioSource: {fileID: 0}
   - nombre: Nivel 2
     audio: {fileID: 8300000, guid: 1b9ab8d07d7298c41bf903282cd4a164, type: 3}
     loop: 1
@@ -70,6 +75,11 @@ MonoBehaviour:
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}
+  - nombre: Ambiente Nivel 3
+    audio: {fileID: 8300000, guid: 72961d70e90d37447bbbff1ae8567997, type: 3}
+    loop: 1
+    volume: 0.5
+    audioSource: {fileID: 0}
   - nombre: Latidos
     audio: {fileID: 8300000, guid: 6e9543d8d456e1f489cfd40d65dffd98, type: 3}
     loop: 1
@@ -80,13 +90,88 @@ MonoBehaviour:
     loop: 1
     volume: 0.8
     audioSource: {fileID: 0}
-  - nombre: Hojas
-    audio: {fileID: 8300000, guid: 273bb2fc01282ef45b3645d50d50f2e2, type: 3}
+  - nombre: Puerta
+    audio: {fileID: 8300000, guid: 6fc8ffb81712eb34bb6f78d68af7a92f, type: 3}
     loop: 0
-    volume: 0.735
+    volume: 0.9
+    audioSource: {fileID: 0}
+  - nombre: Alquimia
+    audio: {fileID: 8300000, guid: 8a58e657008cfc54cb797f0031882306, type: 3}
+    loop: 1
+    volume: 0.7
+    audioSource: {fileID: 0}
+  - nombre: Rompecabezas
+    audio: {fileID: 8300000, guid: 7d9327783d76bf848a9948151183e734, type: 3}
+    loop: 0
+    volume: 0.7
+    audioSource: {fileID: 0}
+  - nombre: Exito
+    audio: {fileID: 8300000, guid: 67eddc1a9fe3d404f87f535227bb9ed5, type: 3}
+    loop: 0
+    volume: 0.7
+    audioSource: {fileID: 0}
+  - nombre: Antorcha
+    audio: {fileID: 8300000, guid: 76ac222d81ac7e44cba83c98b37f6fa6, type: 3}
+    loop: 0
+    volume: 0.3
+    audioSource: {fileID: 0}
+  - nombre: Dialogo
+    audio: {fileID: 8300000, guid: 7b843cf789e5ed043808d7d929ce8bc5, type: 3}
+    loop: 0
+    volume: 0.2
+    audioSource: {fileID: 0}
+  - nombre: Candado
+    audio: {fileID: 8300000, guid: 114f5b37080f0b94d9542018d33db66a, type: 3}
+    loop: 0
+    volume: 0.3
+    audioSource: {fileID: 0}
+  - nombre: Puerta Cocina
+    audio: {fileID: 8300000, guid: 49a680f61e6ae004eb0dcdb29ce27c55, type: 3}
+    loop: 0
+    volume: 0.6
+    audioSource: {fileID: 0}
+  - nombre: Abrir Cocina
+    audio: {fileID: 8300000, guid: dda56ad7fa7e33c4a8c68b3508108181, type: 3}
+    loop: 0
+    volume: 0.6
+    audioSource: {fileID: 0}
+  - nombre: Puerta
+    audio: {fileID: 8300000, guid: 6fc8ffb81712eb34bb6f78d68af7a92f, type: 3}
+    loop: 0
+    volume: 0.9
+    audioSource: {fileID: 0}
+  - nombre: Notas
+    audio: {fileID: 8300000, guid: bc12ce67dceaca94a8396e902c8a20d1, type: 3}
+    loop: 0
+    volume: 0.5
     audioSource: {fileID: 0}
   - nombre: Manta
     audio: {fileID: 8300000, guid: d8e7c47adc8a0c74995bbbdc9a00032c, type: 3}
     loop: 0
-    volume: 0.735
+    volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: Manta 2
+    audio: {fileID: 8300000, guid: 2729932ef5ebb954590a2caf77340a7f, type: 3}
+    loop: 0
+    volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: Libro
+    audio: {fileID: 8300000, guid: 0ccb693058f2dae4a8093dd0da606ab3, type: 3}
+    loop: 0
+    volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: Explosion
+    audio: {fileID: 8300000, guid: 9fe705037dd65154caf41ed589649003, type: 3}
+    loop: 0
+    volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: Fuego
+    audio: {fileID: 8300000, guid: 3031f37ee0627174abbea16d5c786257, type: 3}
+    loop: 1
+    volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: "Da\xF1os Luz"
+    audio: {fileID: 8300000, guid: 732a3934af9083a4db29e79767c07354, type: 3}
+    loop: 0
+    volume: 0.5
     audioSource: {fileID: 0}

@@ -36,6 +36,7 @@ public class MagiaDeLuz : MonoBehaviour
         puedeUsar = false;
         fade.SetActive(true);
         luz.gameObject.SetActive(true);
+        AudioManager.instance.Play("Daños Luz");
         Instantiate(ondaPrefab, transform.position, Quaternion.identity);
         float tiempo = 0f;
     
@@ -76,6 +77,7 @@ public class MagiaDeLuz : MonoBehaviour
             bloom.intensity.value = Mathf.Lerp(0f, 1f, tiempo);
             yield return null;
         }
+        AudioManager.instance.Play("Daños Luz");
 
         Instantiate(ondaPrefab, transform.position, Quaternion.identity);
 
@@ -94,7 +96,7 @@ public class MagiaDeLuz : MonoBehaviour
 
             yield return null;
         }
-
+        AudioManager.instance.Play("Daños Luz");
         Instantiate(ondaPrefab, transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(0.3f);
@@ -103,14 +105,13 @@ public class MagiaDeLuz : MonoBehaviour
         luz.intensity = 3f;
         bloom.intensity.value = 6f;
 
-
-
-
         yield return new WaitForSeconds(0.2f);
 
 
         luz.intensity = 2f;
         bloom.intensity.value = 1.5f;
+        AudioManager.instance.Play("Daños Luz");
+
 
         fade.SetActive(false);
 

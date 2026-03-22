@@ -6,9 +6,12 @@ public class Objeto : MonoBehaviour
     public GameObject objeto;
     [SerializeField] private bool destruir;
     public Alquimia alquimia;
+
+    [SerializeField] private string sonidoAbrir = "Notas";
+    [SerializeField] private string sonidoCerrar = "Notas";
     public void Interactuar()
     {
-        AudioManager.instance.Play("Hojas");
+
         if (alquimia != null)
         {
             alquimia.AbrirPuzzle();
@@ -18,9 +21,16 @@ public class Objeto : MonoBehaviour
         if (objeto != null)
         {
             objeto.SetActive(true);
+
+            Notas notas = objeto.GetComponent<Notas>();
+            if (notas != null)
+            {
+                notas.SetSonidos(sonidoAbrir, sonidoCerrar); 
+            }
         }
 
-       GameManager.instance.ActivarUI();
+        AudioManager.instance.Play(sonidoAbrir);
+        GameManager.instance.ActivarUI();
 
         if (destruir)
         {

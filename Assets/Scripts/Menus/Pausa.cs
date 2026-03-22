@@ -10,6 +10,7 @@ public class Pausa : MonoBehaviour
     public string escena;
 
     [SerializeField] private string music;
+    [SerializeField] private string efecto;
 
     private void Start()
     {
@@ -62,9 +63,9 @@ public class Pausa : MonoBehaviour
     public void Menu()
     {
         AudioManager.instance.Stop(music);
+        AudioManager.instance.Stop(efecto);
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
-        AudioManager.instance.Stop("Menu");
 
     }
 }

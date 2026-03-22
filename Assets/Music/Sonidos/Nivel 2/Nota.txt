@@ -1,0 +1,9 @@
+"Explosión" va a ser el sonido que se escuche cuando el jugador haga explotar la muralla para escapar al nivel 3.
+
+"Fuego" será únicamente un pequeño sonido ambiental que se escuchara después de que ocurra la explosión.
+
+"Nivel 2" es el sonido ambiental que ya habíamos puesto.
+
+Nota de la nota:
+
+No se si será necesario un sonido para cuando los fantasmas te golpeen pero mientras buscaba no encontré ninguno bueno así que de momento seguiré buscando.

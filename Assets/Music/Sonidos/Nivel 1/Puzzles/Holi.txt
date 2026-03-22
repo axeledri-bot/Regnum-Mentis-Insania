@@ -1,0 +1,9 @@
+Explicación de los sonidos:
+
+El de alquimia es el que se escucharía cuando el jugador se encuentre realizando el puzzle de mezclar los ingredientes.
+
+El del comedor tenia pensado que se escuchara cada que se coloca una pieza del rompecabezas.
+
+El de la Biblioteca te quería preguntar si seria posible que se repitiera mientras se van colocando los libros en la estantería (si es complicado igual puedo buscar otro ntp UwU)
+
+Y el que dice "éxito" es mas que todo para cada vez que el jugador complete correctamente un desafío (en lo personal me gusta mas como se escucha el primero pero igual si no te gusta ninguno de los dos puedo buscar otro uwu)

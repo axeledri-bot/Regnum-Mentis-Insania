@@ -5,6 +5,8 @@ public class Notas : MonoBehaviour
 {
     [SerializeField] private GameObject[] notas;
 
+    private string sonidoCerrar = "Notas";
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -21,6 +23,11 @@ public class Notas : MonoBehaviour
                 nota.SetActive(false);
         }
 
+        AudioManager.instance.Play(sonidoCerrar);
         GameManager.instance.ActivarGameplay();
+    }
+    public void SetSonidos(string abrir, string cerrar)
+    {
+        sonidoCerrar = cerrar;
     }
 }
