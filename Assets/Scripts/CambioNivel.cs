@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,8 +20,8 @@ public class CambioNivel : MonoBehaviour
             //{
             AudioManager.instance.Stop(musicStop);
             AudioManager.instance.Play(musicPlay);
-            SceneManager.LoadScene(escena);
-         
+            FadeController.Instance.CambiarEscena(escena);
+
             //}
             //else 
             //{
@@ -28,6 +29,7 @@ public class CambioNivel : MonoBehaviour
             //}
         }
     }
+   
     //private void OnTriggerExit2D(Collider2D collision)
     //{
     //    if (collision.CompareTag("Player"))

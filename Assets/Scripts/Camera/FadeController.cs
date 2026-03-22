@@ -1,6 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FadeController : MonoBehaviour
 {
@@ -11,8 +12,14 @@ public class FadeController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public IEnumerator FadeOut()
@@ -25,6 +32,18 @@ public class FadeController : MonoBehaviour
         yield return Fade(1f, 0f);
     }
 
+    public IEnumerator CambioEscena(string escena)
+    {
+        yield return StartCoroutine(FadeOut());
+        SceneManager.LoadScene(escena);
+        yield return null;
+        yield return StartCoroutine(FadeIn());
+
+    }
+    public void CambiarEscena(string escena)
+    {
+        StartCoroutine(CambioEscena(escena));
+    }
     IEnumerator Fade(float from, float to)
     {
         float t = 0f;

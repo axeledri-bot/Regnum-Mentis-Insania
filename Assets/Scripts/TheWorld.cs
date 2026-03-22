@@ -4,6 +4,7 @@ public class TheWorld : MonoBehaviour
 {
     [SerializeField] private TimeStop timeStop;
     [SerializeField] private GameObject tMHud;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

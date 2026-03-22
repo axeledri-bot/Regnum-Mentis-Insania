@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -83,6 +84,13 @@ public class PuzzleManager : MonoBehaviour
 
     void CompletarPuzzle()
     {
+        StartCoroutine(CerrarConDelay());
+    }
+    IEnumerator CerrarConDelay()
+    {
+ 
+        yield return new WaitForSeconds(1.5f);
+
         bool darLlave = Llave.Instance.RegistrarPuzzleCompletado();
 
         if (darLlave)
@@ -94,6 +102,10 @@ public class PuzzleManager : MonoBehaviour
         CerrarPuzzle();
     }
 
+    public void ReiniciarDesdeBoton()
+    {
+        ReiniciarPuzzle();
+    }
     public void CerrarPuzzle()
     {
        rompecabezas.SetActive(false);

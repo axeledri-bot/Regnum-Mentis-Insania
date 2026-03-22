@@ -24,9 +24,7 @@ public class Ojo : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
-
     private void Update()
     {
         Vector2 origen = transform.position;
@@ -79,7 +77,6 @@ public class Ojo : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Player"))
         {
             return true;
-
         }
         return false;
     }

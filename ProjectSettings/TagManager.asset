@@ -62,5 +62,8 @@ TagManager:
   - name: Puertas
     uniqueID: 2800723269
     locked: 0
+  - name: Wall
+    uniqueID: 2748512685
+    locked: 0
   m_RenderingLayers:
   - Default

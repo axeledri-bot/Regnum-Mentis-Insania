@@ -21,7 +21,7 @@ public class Pausa : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
         {
-            if (GameManager.instance.EnUI) return;
+            if (GameManager.instance.EnUI && !paused) return;
             //pauser.SetActive(true);
             paused = !paused;
             animator.SetBool("MostrarMenu", paused);
