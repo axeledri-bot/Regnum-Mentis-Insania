@@ -33,6 +33,7 @@ public class TimeStop : MonoBehaviour
         activo = true;
 
         jugador.theWorld = true;
+        AudioManager.instance.Stop("Lluvia");
         jugador.ActivarModoTiempoDetenido();
         float t = 0f;
         while (t < 0.15f)
@@ -58,6 +59,8 @@ public class TimeStop : MonoBehaviour
         jugador.theWorld = false;
         jugador.DesactivarModoTiempoDetenido();
         AudioManager.instance.Stop("Reloj");
+
+        AudioManager.instance.Play("Lluvia");
 
         t = 0f;
         while (t < 0.2f)
