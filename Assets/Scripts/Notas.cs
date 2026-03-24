@@ -20,7 +20,9 @@ public class Notas : MonoBehaviour
         foreach (GameObject nota in notas)
         {
             if (nota != null)
+            {
                 nota.SetActive(false);
+            }
         }
 
         AudioManager.instance.Play(sonidoCerrar);
