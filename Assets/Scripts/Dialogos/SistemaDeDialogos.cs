@@ -157,4 +157,9 @@ public class SistemaDeDialogos : MonoBehaviour
         AudioManager.instance.Stop("Dialogo");
         estaEscribiendo = false;
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, radio);
+    }
 }
