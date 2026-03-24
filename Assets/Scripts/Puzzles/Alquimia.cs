@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Alquimia : MonoBehaviour, IDropHandler
 {
@@ -15,6 +16,18 @@ public class Alquimia : MonoBehaviour, IDropHandler
 
     [HideInInspector]
     public bool recetaCompletada;
+
+
+    [SerializeField]private Sprite Vaca;
+    [SerializeField]private Sprite Flor;
+    [SerializeField]private Sprite Lavanda;
+    [SerializeField]private Sprite Luna;
+
+    private Image image;
+    private void Start()
+    {
+        image = GetComponent<Image>();
+    }
     public void AbrirPuzzle()
     {
         this.gameObject.SetActive(true);
@@ -45,6 +58,26 @@ public class Alquimia : MonoBehaviour, IDropHandler
                 ingredientesActuales.Add(ingrediente.nombreIngrediente);
 
                 ingrediente.gameObject.SetActive(false);
+
+                switch (ingrediente.nombreIngrediente)
+                {
+                    case "Vaca":
+
+                        image.sprite = Vaca;
+                        break;
+                    case "Flor":
+
+                        image.sprite = Flor;
+                        break;
+                    case "Lavanda":
+
+                        image.sprite = Lavanda;
+                        break;
+                    case "Luna":
+
+                        image.sprite = Luna;
+                        break;
+                }
 
                 VerificarReceta();
             }
