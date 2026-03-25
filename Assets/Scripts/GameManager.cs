@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -111,6 +110,8 @@ public class GameManager : MonoBehaviour
 
         if (hud != null)
             hud.ResetHUD();
+        intentoPuerta = false;
+
     }
     public void RegistrarIntentoCocina()
     {

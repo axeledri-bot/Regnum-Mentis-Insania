@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float intervaloParpadeo = 0.1f;
     private Color colorOriginal;
 
+
     private void Start()
     {
         rbg = GetComponent<Rigidbody2D>();
@@ -114,6 +115,21 @@ public class Player : MonoBehaviour
         {
             rbg.MovePosition(nuevaPos);
 
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Empujable"))
+        {
+            anim.SetBool("IsPushing", true);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Empujable"))
+        {
+            anim.SetBool("IsPushing", false);
         }
     }
     public void ActivarModoTiempoDetenido()

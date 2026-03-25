@@ -1073,7 +1073,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5669,7 +5669,7 @@ Transform:
   m_GameObject: {fileID: 211666161}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 928.70593, z: 0}
+  m_LocalPosition: {x: 260, y: 928.70593, z: 0}
   m_LocalScale: {x: 3.4163702, y: 3.4163702, z: 3.4163702}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15945,14 +15945,6 @@ PrefabInstance:
     - target: {fileID: 1700381401938602024, guid: 56f166c760e85864497f01d81cddc091, type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308066324966443830, guid: 56f166c760e85864497f01d81cddc091, type: 3}
-      propertyPath: sonidos.Array.data[2].volume
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3308066324966443830, guid: 56f166c760e85864497f01d81cddc091, type: 3}
-      propertyPath: sonidos.Array.data[6].volume
-      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6842109006738051967, guid: 56f166c760e85864497f01d81cddc091, type: 3}
       propertyPath: m_LocalPosition.x

@@ -57,7 +57,6 @@ public class Pausa : MonoBehaviour
         GameManager.instance.ResetGame();
         SceneManager.LoadScene(escena);
         GameManager.instance.ActivarGameplay();
-
     }
 
     public void Menu()

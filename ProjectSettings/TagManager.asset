@@ -7,6 +7,7 @@ TagManager:
   - Objeto
   - Enemigo
   - Ingrediente
+  - Empujable
   layers:
   - Default
   - TransparentFX

@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 55595041}
   m_Layer: 0
   m_Name: correcto (4)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,7 +698,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.010890007, y: 0}
+  m_Offset: {x: 0.010890007, y: -0.19916877}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -708,7 +708,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.91288185, y: 1}
+  m_Size: {x: 0.91288185, y: 0.60166246}
   m_EdgeRadius: 0
 --- !u!114 &55595040
 MonoBehaviour:
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 73322902}
   m_Layer: 0
   m_Name: correcto (10)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1393,7 +1393,7 @@ GameObject:
   - component: {fileID: 87011572}
   m_Layer: 0
   m_Name: correcto (11)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1506,7 +1506,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.16664666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1516,7 +1516,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8845272, y: 1}
+  m_Size: {x: 0.8845272, y: 0.6667067}
   m_EdgeRadius: 0
 --- !u!114 &87011571
 MonoBehaviour:
@@ -2626,7 +2626,7 @@ GameObject:
   - component: {fileID: 190372384}
   m_Layer: 0
   m_Name: correcto (7)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5230,7 +5230,7 @@ GameObject:
   - component: {fileID: 525168203}
   m_Layer: 0
   m_Name: correcto (13)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5343,7 +5343,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.18319818}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5353,7 +5353,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.63360363}
   m_EdgeRadius: 0
 --- !u!114 &525168202
 MonoBehaviour:
@@ -5687,7 +5687,7 @@ Transform:
   m_GameObject: {fileID: 540283984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.228682, y: 0.049999997, z: -5}
+  m_LocalPosition: {x: -23.2262, y: 0.049999997, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8201,7 +8201,7 @@ GameObject:
   - component: {fileID: 851642815}
   m_Layer: 0
   m_Name: correcto (9)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8314,7 +8314,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0045547485, y: 0}
+  m_Offset: {x: -0.0045547485, y: -0.21115538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8324,7 +8324,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.88157654, y: 1}
+  m_Size: {x: 0.88157654, y: 0.57768923}
   m_EdgeRadius: 0
 --- !u!114 &851642814
 MonoBehaviour:
@@ -8682,7 +8682,7 @@ GameObject:
   - component: {fileID: 896088786}
   m_Layer: 0
   m_Name: correcto (12)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12613,7 +12613,7 @@ GameObject:
   - component: {fileID: 1018517397}
   m_Layer: 0
   m_Name: correcto (2)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14290,7 +14290,7 @@ GameObject:
   - component: {fileID: 1147054863}
   m_Layer: 0
   m_Name: correcto (5)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14403,7 +14403,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.22093093}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14413,7 +14413,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9425812, y: 1}
+  m_Size: {x: 0.9425812, y: 0.55813813}
   m_EdgeRadius: 0
 --- !u!114 &1147054862
 MonoBehaviour:
@@ -18964,7 +18964,7 @@ GameObject:
   - component: {fileID: 1586981530}
   m_Layer: 0
   m_Name: correcto (1)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19143,7 +19143,7 @@ GameObject:
   - component: {fileID: 1598427630}
   m_Layer: 0
   m_Name: correcto
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20214,7 +20214,7 @@ GameObject:
   - component: {fileID: 1738343063}
   m_Layer: 0
   m_Name: correcto (8)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21928,7 +21928,7 @@ GameObject:
   - component: {fileID: 1911604156}
   m_Layer: 0
   m_Name: correcto (3)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24241,7 +24241,7 @@ GameObject:
   - component: {fileID: 2131999341}
   m_Layer: 0
   m_Name: correcto (6)
-  m_TagString: Untagged
+  m_TagString: Empujable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

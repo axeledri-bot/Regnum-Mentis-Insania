@@ -14,7 +14,11 @@ public class PuzzleManager : MonoBehaviour
 
     private List<(RompecabezasBase pieza, Base baseSlot)> colocaciones = new List<(RompecabezasBase, Base)>();
 
- public GameObject rompecabezas;
+    public GameObject rompecabezas;
+    private void Awake()
+    {
+     
+    }
     public void PiezaCorrecta()
     {
         piezasCorrectas++;
@@ -54,7 +58,7 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-           FallarPuzzle();
+            FallarPuzzle();
         }
     }
     public void FallarPuzzle()
@@ -88,7 +92,6 @@ public class PuzzleManager : MonoBehaviour
     }
     IEnumerator CerrarConDelay()
     {
-
         AudioManager.instance.Play("Exito");
         yield return new WaitForSecondsRealtime(1f);
         bool darLlave = Llave.Instance.RegistrarPuzzleCompletado();
@@ -108,7 +111,7 @@ public class PuzzleManager : MonoBehaviour
     }
     public void CerrarPuzzle()
     {
-       rompecabezas.SetActive(false);
-        Time.timeScale = 1f;
+        rompecabezas.SetActive(false);
+        GameManager.instance.ActivarGameplay();
     }
 }

@@ -58,7 +58,7 @@ MonoBehaviour:
   - nombre: Ambiente Nivel 1
     audio: {fileID: 8300000, guid: eb0cef29bd427ef4a8dc43499262b209, type: 3}
     loop: 1
-    volume: 0.5
+    volume: 0.4
     audioSource: {fileID: 0}
   - nombre: Nivel 2
     audio: {fileID: 8300000, guid: 1b9ab8d07d7298c41bf903282cd4a164, type: 3}
@@ -78,7 +78,7 @@ MonoBehaviour:
   - nombre: Ambiente Nivel 3
     audio: {fileID: 8300000, guid: 72961d70e90d37447bbbff1ae8567997, type: 3}
     loop: 1
-    volume: 0.5
+    volume: 0.4
     audioSource: {fileID: 0}
   - nombre: Latidos
     audio: {fileID: 8300000, guid: 6e9543d8d456e1f489cfd40d65dffd98, type: 3}

@@ -9,6 +9,7 @@ public class Llave : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        puzzlesCompletados = 0;
     }
 
     public bool RegistrarPuzzleCompletado()

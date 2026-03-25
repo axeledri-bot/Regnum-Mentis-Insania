@@ -10,6 +10,7 @@ public class InventarioJugador : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        ingredientes.Clear();
     }
 
     public void AgregarIngrediente(string nombre)
