@@ -13,6 +13,8 @@ public class Menu : MonoBehaviour
         menu = transform.GetChild(3).gameObject;
         selector = transform.GetChild(4).gameObject;
         creditos = transform.GetChild(5).gameObject;
+        Cursor.visible = true;
+
     }
     public void Inicio()
     {
