@@ -20,6 +20,7 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Nivel1");
         AudioManager.instance.Play("Nivel 1");
         AudioManager.instance.Play("Ambiente Nivel 1");
+        GameManager.instance.ActivarGameplay();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
@@ -44,6 +45,7 @@ public class Menu : MonoBehaviour
     {
         AudioManager.instance.Stop("Menu");
         SceneManager.LoadScene("Nivel2");
+        GameManager.instance.ActivarGameplay();
         AudioManager.instance.Play("Lluvia");
         AudioManager.instance.Play("Nivel 2");
     }
@@ -51,6 +53,7 @@ public class Menu : MonoBehaviour
     {
         AudioManager.instance.Stop("Menu");
         SceneManager.LoadScene("Nivel3");
+        GameManager.instance.ActivarGameplay();
         AudioManager.instance.Play("Ambiente Nivel 3");
         AudioManager.instance.Play("Nivel 3");
     }

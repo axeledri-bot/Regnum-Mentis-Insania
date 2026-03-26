@@ -4,6 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class Efectos : MonoBehaviour
 {
+    
     [SerializeField] private Volume volume;
     private Vignette vignette;
     private ChromaticAberration chroma;

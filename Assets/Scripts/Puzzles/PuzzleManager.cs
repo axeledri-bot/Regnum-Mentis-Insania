@@ -17,7 +17,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject rompecabezas;
     private void Awake()
     {
-     
+     GameManager.instance.tieneLlave = false;
     }
     public void PiezaCorrecta()
     {
