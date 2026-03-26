@@ -20,8 +20,6 @@ public class Menu : MonoBehaviour
     {
         AudioManager.instance.Stop("Menu");
         FadeController.Instance.CambiarEscena("Nivel1");
-        AudioManager.instance.Play("Nivel 1");
-        AudioManager.instance.Play("Ambiente Nivel 1");
         GameManager.instance.ActivarGameplay();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -48,16 +46,12 @@ public class Menu : MonoBehaviour
         AudioManager.instance.Stop("Menu");
         FadeController.Instance.CambiarEscena("Nivel2");
         GameManager.instance.ActivarGameplay();
-        AudioManager.instance.Play("Lluvia");
-        AudioManager.instance.Play("Nivel 2");
     }
     public void Nivel3()
     {
         AudioManager.instance.Stop("Menu");
         FadeController.Instance.CambiarEscena("Nivel3");
         GameManager.instance.ActivarGameplay();
-        AudioManager.instance.Play("Ambiente Nivel 3");
-        AudioManager.instance.Play("Nivel 3");
     }
     public void Salir()
     {
