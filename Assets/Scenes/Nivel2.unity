@@ -12584,6 +12584,7 @@ MonoBehaviour:
   objeto: {fileID: 841505203}
   destruir: 1
   alquimia: {fileID: 0}
+  idNota: 10
   sonidoAbrir: Notas
   sonidoCerrar: Notas
 --- !u!61 &521281969
@@ -29480,6 +29481,7 @@ MonoBehaviour:
   objeto: {fileID: 2095418131}
   destruir: 1
   alquimia: {fileID: 0}
+  idNota: 9
   sonidoAbrir: Notas
   sonidoCerrar: Notas
 --- !u!61 &1216465589
@@ -33278,6 +33280,7 @@ MonoBehaviour:
   objeto: {fileID: 827883815}
   destruir: 1
   alquimia: {fileID: 0}
+  idNota: 8
   sonidoAbrir: Notas
   sonidoCerrar: Notas
 --- !u!61 &1499265499

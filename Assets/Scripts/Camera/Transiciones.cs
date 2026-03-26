@@ -105,6 +105,8 @@ public class Transiciones : MonoBehaviour
         AudioManager.instance.Play(sonidoPuerta);
 
         movimiento.puedeMoverse = false;
+        movimiento.DetenerMovimiento();
+        Input.ResetInputAxes();
 
         yield return FadeController.Instance.FadeOut();
 
@@ -112,6 +114,7 @@ public class Transiciones : MonoBehaviour
 
         Vector3 oldPos = player.transform.position;
         player.transform.position = puntoSpawn.position;
+        movimiento.DetenerMovimiento();
 
         confiner.BoundingShape2D = mapa;
         isOpen = false;
@@ -125,7 +128,6 @@ public class Transiciones : MonoBehaviour
         confiner.enabled = false;
         yield return null;
         confiner.enabled = true;
-
         yield return FadeController.Instance.FadeIn();
 
         movimiento.puedeMoverse = true;

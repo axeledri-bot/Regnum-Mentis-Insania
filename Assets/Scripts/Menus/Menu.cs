@@ -19,7 +19,7 @@ public class Menu : MonoBehaviour
     public void Inicio()
     {
         AudioManager.instance.Stop("Menu");
-        SceneManager.LoadScene("Nivel1");
+        FadeController.Instance.CambiarEscena("Nivel1");
         AudioManager.instance.Play("Nivel 1");
         AudioManager.instance.Play("Ambiente Nivel 1");
         GameManager.instance.ActivarGameplay();
@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
     public void Nivel2()
     {
         AudioManager.instance.Stop("Menu");
-        SceneManager.LoadScene("Nivel2");
+        FadeController.Instance.CambiarEscena("Nivel2");
         GameManager.instance.ActivarGameplay();
         AudioManager.instance.Play("Lluvia");
         AudioManager.instance.Play("Nivel 2");
@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour
     public void Nivel3()
     {
         AudioManager.instance.Stop("Menu");
-        SceneManager.LoadScene("Nivel3");
+        FadeController.Instance.CambiarEscena("Nivel3");
         GameManager.instance.ActivarGameplay();
         AudioManager.instance.Play("Ambiente Nivel 3");
         AudioManager.instance.Play("Nivel 3");
@@ -65,6 +65,6 @@ public class Menu : MonoBehaviour
     }
     public void MenuInicio()
     {
-        SceneManager.LoadScene("Menu");
+        FadeController.Instance.CambiarEscena("Menu");
     }
 }

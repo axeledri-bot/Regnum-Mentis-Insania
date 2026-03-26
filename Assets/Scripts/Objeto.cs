@@ -7,6 +7,8 @@ public class Objeto : MonoBehaviour
     [SerializeField] private bool destruir;
     public Alquimia alquimia;
 
+    [SerializeField] private int idNota;
+
     [SerializeField] private string sonidoAbrir = "Notas";
     [SerializeField] private string sonidoCerrar = "Notas";
     public void Interactuar()
@@ -27,6 +29,7 @@ public class Objeto : MonoBehaviour
             {
                 notas.SetSonidos(sonidoAbrir, sonidoCerrar); 
             }
+            GameManager.instance.GuardarNota(idNota);
         }
 
         AudioManager.instance.Play(sonidoAbrir);

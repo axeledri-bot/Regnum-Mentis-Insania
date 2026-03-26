@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public bool tieneLlave = false;
     public bool intentoPuerta;
+
+    public List<int> notasRecogidas = new List<int>();
     public bool EnUI { get; private set; }
     private void OnEnable()
     {
@@ -30,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         hud = FindFirstObjectByType<Hud>();
         mov = FindFirstObjectByType<Player>();
-
+        efectos = FindFirstObjectByType<Efectos>();
         SincronizarHUD();
     }
 
@@ -110,12 +113,21 @@ public class GameManager : MonoBehaviour
 
         if (hud != null)
             hud.ResetHUD();
+        if (efectos != null)
+            efectos.Desactivar();
         intentoPuerta = false;
 
     }
     public void RegistrarIntentoCocina()
     {
         intentoPuerta = true;
+    }
+    public void GuardarNota(int id)
+    {
+        if (!notasRecogidas.Contains(id))
+        {
+            notasRecogidas.Add(id);
+        }
     }
     public void ActivarUI()
     {

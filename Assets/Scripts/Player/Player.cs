@@ -180,6 +180,21 @@ public class Player : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         invulnerable = false;
     }
+    public void DetenerMovimiento()
+    {
+        direccion = Vector2.zero;
+        direccionX = 0;
+        direccionY = 0;
+
+        if (rbg != null)
+        {
+            rbg.linearVelocity = Vector2.zero;
+            rbg.angularVelocity = 0f;
+            rbg.Sleep();
+        }
+
+        anim.SetBool("Moving", false);
+    }
     IEnumerator Parpadeo()
     {
         float tiempo = 0f;

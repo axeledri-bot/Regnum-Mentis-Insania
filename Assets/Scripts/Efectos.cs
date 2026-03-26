@@ -10,7 +10,7 @@ public class Efectos : MonoBehaviour
     private ChromaticAberration chroma;
     private DepthOfField dof;
 
-    void Start()
+    void Awake()
     {
         volume.profile.TryGet(out vignette);
         volume.profile.TryGet(out chroma);

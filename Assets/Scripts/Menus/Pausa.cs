@@ -55,7 +55,7 @@ public class Pausa : MonoBehaviour
     public void Reiniciar()
     { 
         GameManager.instance.ResetGame();
-        SceneManager.LoadScene(escena);
+        FadeController.Instance.CambiarEscena(escena);
         GameManager.instance.ActivarGameplay();
     }
 
@@ -64,7 +64,7 @@ public class Pausa : MonoBehaviour
         AudioManager.instance.Stop(music);
         AudioManager.instance.Stop(efecto);
         Time.timeScale = 1;
-        SceneManager.LoadScene("Menu");
+        FadeController.Instance.CambiarEscena("Menu");
 
     }
 }
