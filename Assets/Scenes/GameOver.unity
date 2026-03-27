@@ -290,7 +290,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Se les pide a todos los cuidadanos que tengan extremo cuidado ya que el
+    dia de hoy XX de Febrero se regitro la fuga de una paciente del Hospital psiquiatrico
+    \"Federico Mora\". Presuntamente responsable del asesinato de sus padres el anterior
+    XX de Febrero.\n  \nDicha paciente presenta ataques de esquizofrenia haciendo
+    que vea las cosas diferente a nosotros provocando que reaccione de manera volatile
+    ante las cosas que suceden a su alrededor. \n\nPor favor absteneos de intentar
+    confrontarla y reportar cualquier avistamiento de ella."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
   m_sharedMaterial: {fileID: -838268191918995991, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
