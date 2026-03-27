@@ -47,6 +47,10 @@ public class AgarrarObjetos : MonoBehaviour
             Rigidbody2D rb = libro.GetComponent<Rigidbody2D>();
             if (rb) rb.simulated = false;
 
+            SpriteRenderer sr = libro.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            { sr.enabled = false; }
+
             libro.transform.SetParent(agarre);
             libro.transform.localPosition = Vector3.zero;
 
@@ -59,6 +63,10 @@ public class AgarrarObjetos : MonoBehaviour
             {
                 //animator.SetBool("IsCarryng", false);
                 librero.ColocarLibro(libroEnMano);
+
+                SpriteRenderer sr = libroEnMano.GetComponentInChildren<SpriteRenderer>();
+                if (sr != null) sr.enabled = true;
+
                 libroEnMano = null;
                 return;
             }
@@ -71,6 +79,9 @@ public class AgarrarObjetos : MonoBehaviour
                 Rigidbody2D rb = libroEnMano.GetComponent<Rigidbody2D>();
                 if (rb) rb.simulated = false;
 
+                SpriteRenderer sr = libroEnMano.GetComponent<SpriteRenderer>();
+                if (sr != null) sr.enabled = false;
+
                 libroEnMano.transform.SetParent(agarre);
                 libroEnMano.transform.localPosition = Vector3.zero;
 
@@ -81,10 +92,11 @@ public class AgarrarObjetos : MonoBehaviour
         if (libroEnMano != null)
         {
             Rigidbody2D rb = libroEnMano.GetComponent<Rigidbody2D>();
-
-            libroEnMano.transform.SetParent(null);
-
             if (rb) rb.simulated = true;
+
+            SpriteRenderer sr = libroEnMano.GetComponent<SpriteRenderer>();
+            if (sr != null) sr.enabled = true;
+            libroEnMano.transform.SetParent(null);
 
             libroEnMano = null;
         }

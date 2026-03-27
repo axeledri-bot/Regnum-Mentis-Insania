@@ -5,6 +5,16 @@ public class Ingrediente : MonoBehaviour
     public string nombreIngrediente;
     private bool jugadorCerca = false;
 
+
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Sprite original;
+    [SerializeField] private Sprite interactuable;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     private void Update()
     {
         if (jugadorCerca && Input.GetKeyDown(KeyCode.E))
@@ -24,6 +34,7 @@ public class Ingrediente : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            spriteRenderer.sprite = interactuable;
             jugadorCerca = true;
         }
     }
@@ -32,6 +43,7 @@ public class Ingrediente : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            spriteRenderer.sprite = original;
             jugadorCerca = false;
         }
     }
