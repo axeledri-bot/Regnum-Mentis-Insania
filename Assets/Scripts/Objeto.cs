@@ -1,4 +1,4 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Objeto : MonoBehaviour
@@ -11,6 +11,23 @@ public class Objeto : MonoBehaviour
 
     [SerializeField] private string sonidoAbrir = "Notas";
     [SerializeField] private string sonidoCerrar = "Notas";
+
+    private SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite spriteOriginal;
+    [SerializeField] Sprite interactuable;
+
+    private bool adentro;
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void Update()
+    {
+        if(adentro && Input.GetKeyDown(KeyCode.E))
+        {
+            Interactuar();
+        }
+    }
     public void Interactuar()
     {
 
@@ -27,7 +44,7 @@ public class Objeto : MonoBehaviour
             Notas notas = objeto.GetComponent<Notas>();
             if (notas != null)
             {
-                notas.SetSonidos(sonidoAbrir, sonidoCerrar); 
+                notas.SetSonidos(sonidoAbrir, sonidoCerrar);
             }
             GameManager.instance.GuardarNota(idNota);
         }
@@ -39,6 +56,24 @@ public class Objeto : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-       
+
+    }
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            adentro = true;
+            spriteRenderer.sprite = interactuable;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            adentro = false;
+            spriteRenderer.sprite = spriteOriginal;
+        }
     }
 }

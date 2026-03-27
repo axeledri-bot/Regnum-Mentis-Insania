@@ -7,8 +7,7 @@ public class CambioNivel : MonoBehaviour
     [SerializeField] private string escena;
     [SerializeField] private string musicStop;
     [SerializeField] private string effectStop;
-    [SerializeField] private string musicPlay;
-    [SerializeField] private string effectPlay;
+
     //public int colNecesarios = 3;
     //public GameObject mensaje;
 
@@ -24,8 +23,6 @@ public class CambioNivel : MonoBehaviour
             AudioManager.instance.Stop(effectStop);
             AudioManager.instance.Stop("Fuego");
             FadeController.Instance.CambiarEscena(escena);
-            AudioManager.instance.Play(musicPlay);
-            AudioManager.instance.Play(effectPlay);
 
 
             //}

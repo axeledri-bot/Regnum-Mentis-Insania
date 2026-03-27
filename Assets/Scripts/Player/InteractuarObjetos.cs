@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class InteraccionJugador : MonoBehaviour
 {
-    private Objeto interactuar; 
+    private Objeto interactuar;
+
+ 
 
     void Update()
     {

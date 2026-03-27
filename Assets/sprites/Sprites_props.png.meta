@@ -344,8 +344,8 @@ TextureImporter:
       name: Sprites_props_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 88
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -366,9 +366,9 @@ TextureImporter:
       name: Sprites_props_11
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 32
-        width: 32
+        width: 64
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
