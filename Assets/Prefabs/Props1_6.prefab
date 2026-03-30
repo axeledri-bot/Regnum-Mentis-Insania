@@ -165,3 +165,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingrediente
   nombreIngrediente: Lavanda
+  original: {fileID: 5501123211717252435, guid: 85a1462bd003c934792e2e006004bf20, type: 3}
+  interactuable: {fileID: -9113297358139671489, guid: c0396b6be78b9d245bde0e7b5f9616e5, type: 3}

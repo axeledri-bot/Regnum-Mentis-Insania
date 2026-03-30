@@ -165,3 +165,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingrediente
   nombreIngrediente: Luna
+  original: {fileID: 4325057956216550945, guid: c0396b6be78b9d245bde0e7b5f9616e5, type: 3}
+  interactuable: {fileID: -388557216665022219, guid: c0396b6be78b9d245bde0e7b5f9616e5, type: 3}

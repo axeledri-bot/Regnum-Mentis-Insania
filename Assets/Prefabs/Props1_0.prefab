@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingrediente
   nombreIngrediente: Vaca
+  original: {fileID: -3373613091113208570, guid: 85a1462bd003c934792e2e006004bf20, type: 3}
+  interactuable: {fileID: -3934260588618857552, guid: c0396b6be78b9d245bde0e7b5f9616e5, type: 3}
 --- !u!114 &7104698244397758854
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingrediente
   nombreIngrediente: Flor
+  original: {fileID: -2409883962262243170, guid: 85a1462bd003c934792e2e006004bf20, type: 3}
+  interactuable: {fileID: 4245120129172598248, guid: c0396b6be78b9d245bde0e7b5f9616e5, type: 3}
 --- !u!114 &1286087809988117796
 MonoBehaviour:
   m_ObjectHideFlags: 0
