@@ -160,21 +160,17 @@ public class Player : MonoBehaviour
         StartCoroutine(Parpadeo());
 
         float tiempo = 0f;
-        Vector2 inicio = transform.position;
-        Vector2 destino = inicio + direccion * fuerzaEmpuje;
-
-        RaycastHit2D hit = Physics2D.Raycast(inicio, direccion, fuerzaEmpuje, LayerMask.GetMask("Wall"));
-        if (hit.collider != null)
-        {
-            destino = hit.point; 
-        }
 
         while (tiempo < tiempoEmpuje)
         {
             tiempo += Time.unscaledDeltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, destino, (fuerzaEmpuje / tiempoEmpuje) * Time.unscaledDeltaTime);
+            rbg.linearVelocity = direccion * (fuerzaEmpuje / tiempoEmpuje);
             yield return null;
         }
+        rbg.linearVelocity = Vector2.zero;
+
+
+        rbg.position += direccion * 0.1f;
         puedeMoverse = true;
 
         yield return new WaitForSecondsRealtime(0.5f);

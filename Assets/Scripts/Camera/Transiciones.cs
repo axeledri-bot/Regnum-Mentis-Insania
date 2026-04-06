@@ -13,6 +13,7 @@ public class Transiciones : MonoBehaviour
     private bool isOpen;
     private bool enTransicion;
 
+    [SerializeField] private string llaveRequerida;
     [SerializeField] private bool requiereLlave;
     [SerializeField] private bool requiereCodigo;
     [SerializeField] private bool desbloqueada;
@@ -29,6 +30,9 @@ public class Transiciones : MonoBehaviour
 
     [SerializeField] private bool requiereIrCocina;
 
+
+
+    
     [SerializeField] private string sonidoPuerta = "Puerta";
     private void Awake()
     {
@@ -54,10 +58,21 @@ public class Transiciones : MonoBehaviour
 
             if (requiereLlave)
             {
-                if (!GameManager.instance.tieneLlave)
+                if (!GameManager.instance.llavePuzzles)
                 {
                     AudioManager.instance.Play("Puerta Cocina");
-                    Debug.Log("Necesitas una llave");
+                    Debug.Log("Necesitas la llave de los puzzles");
+                    return;
+                }
+            }
+
+      
+            if (!string.IsNullOrEmpty(llaveRequerida))
+            {
+                if (!GameManager.instance.llaves.Contains(llaveRequerida))
+                {
+                    AudioManager.instance.Play("Puerta Cocina");
+                    Debug.Log("Necesitas otra llave");
                     return;
                 }
             }
@@ -70,7 +85,7 @@ public class Transiciones : MonoBehaviour
                 
                 panelAbierto = true;
                 panelCodigo.SetActive(true);
-                GameManager.instance.ActivarUI();
+                GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
                 player.GetComponent<Player>().puedeMoverse = false;
                 return;
             }

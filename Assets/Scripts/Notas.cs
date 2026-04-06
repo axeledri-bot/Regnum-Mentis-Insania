@@ -8,13 +8,17 @@ public class Notas : MonoBehaviour
     private int index = 0;
 
     private string sonidoCerrar = "Notas";
+    private string sonidoAbrir = "Notas";
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            Regresar();
-        }
+        if (GameManager.instance.uiActual != GameManager.TipoUI.Notas)
+            return;
+        Debug.Log(GameManager.instance.uiActual);
+        //if (Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    Regresar();
+        //}
         if (Input.GetKeyDown(KeyCode.N))
         {
             VerSiguienteNota();
@@ -49,7 +53,7 @@ public class Notas : MonoBehaviour
             notas[id].SetActive(true);
         }
 
-        GameManager.instance.ActivarUI();
+        GameManager.instance.ActivarUI(GameManager.TipoUI.Notas);
     }
     public void VerSiguienteNota()
     {
@@ -64,6 +68,7 @@ public class Notas : MonoBehaviour
     }
     public void SetSonidos(string abrir, string cerrar)
     {
+        sonidoAbrir = abrir;
         sonidoCerrar = cerrar;
     }
 }

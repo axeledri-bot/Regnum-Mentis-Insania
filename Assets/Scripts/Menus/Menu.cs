@@ -19,11 +19,11 @@ public class Menu : MonoBehaviour
     public void Inicio()
     {
         AudioManager.instance.Stop("Menu");
+        GameManager.instance.ResetGame();
         FadeController.Instance.CambiarEscena("Nivel1");
         GameManager.instance.ActivarGameplay();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
     }
     public void Seleccion()
     {
@@ -45,12 +45,14 @@ public class Menu : MonoBehaviour
     {
         AudioManager.instance.Stop("Menu");
         FadeController.Instance.CambiarEscena("Nivel2");
+        GameManager.instance.ResetGame();
         GameManager.instance.ActivarGameplay();
     }
     public void Nivel3()
     {
         AudioManager.instance.Stop("Menu");
         FadeController.Instance.CambiarEscena("Nivel3");
+        GameManager.instance.ResetGame();
         GameManager.instance.ActivarGameplay();
     }
     public void Salir()

@@ -29,7 +29,7 @@ public class Pausa : MonoBehaviour
             //paused = true;
           if( paused )
             {
-                GameManager.instance.ActivarUI();
+                GameManager.instance.ActivarUI(GameManager.TipoUI.Pausa);
             }
           else
             {
@@ -53,10 +53,12 @@ public class Pausa : MonoBehaviour
         GameManager.instance.ActivarGameplay();
     }
     public void Reiniciar()
-    { 
-        GameManager.instance.ResetGame();
+    {
+
+  
         FadeController.Instance.CambiarEscena(escena);
         GameManager.instance.ActivarGameplay();
+
     }
 
     public void Menu()

@@ -17,7 +17,17 @@ public class PuzzleManager : MonoBehaviour
     public GameObject rompecabezas;
     private void Awake()
     {
-     GameManager.instance.tieneLlave = false;
+
+
+    }
+    private void Update()
+    {
+        if (!rompecabezas.activeInHierarchy) return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            CerrarPuzzle();
+        }
     }
     public void PiezaCorrecta()
     {
@@ -98,7 +108,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (darLlave)
         {
-            GameManager.instance.tieneLlave = true;
+            //GameManager.instance.tieneLlave = true;
             Debug.Log("Llave obtenida");
         }
 

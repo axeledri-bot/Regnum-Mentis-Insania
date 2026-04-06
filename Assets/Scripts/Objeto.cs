@@ -16,6 +16,10 @@ public class Objeto : MonoBehaviour
     [SerializeField] Sprite spriteOriginal;
     [SerializeField] Sprite interactuable;
 
+    [SerializeField] private bool esNota;
+
+
+
     private bool adentro;
     private void Start()
     {
@@ -34,6 +38,7 @@ public class Objeto : MonoBehaviour
         if (alquimia != null)
         {
             alquimia.AbrirPuzzle();
+            GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
             return;
         }
 
@@ -42,15 +47,28 @@ public class Objeto : MonoBehaviour
             objeto.SetActive(true);
 
             Notas notas = objeto.GetComponent<Notas>();
-            if (notas != null)
+            if (esNota)
             {
-                notas.SetSonidos(sonidoAbrir, sonidoCerrar);
+                if (notas != null)
+                {
+                    notas.SetSonidos(sonidoAbrir, sonidoCerrar);
+                    notas.AbrirNotaGuardada(idNota);
+        
+                }
+
+                AudioManager.instance.Play(sonidoAbrir);
+                GameManager.instance.GuardarNota(idNota);
+                GameManager.instance.uiAbierta = objeto;
+                GameManager.instance.ActivarUI(GameManager.TipoUI.Notas);
             }
-            GameManager.instance.GuardarNota(idNota);
+            else
+            {
+
+                GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
+            }
         }
 
-        AudioManager.instance.Play(sonidoAbrir);
-        GameManager.instance.ActivarUI();
+        
 
         if (destruir)
         {

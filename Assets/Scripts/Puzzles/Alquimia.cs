@@ -27,11 +27,15 @@ public class Alquimia : MonoBehaviour, IDropHandler
     private void Start()
     {
         image = GetComponent<Image>();
+
     }
+   
+    
     public void AbrirPuzzle()
     {
         this.gameObject.SetActive(true);
-        GameManager.instance.ActivarUI();
+        GameManager.instance.uiAbierta = this.gameObject;
+        GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
         AudioManager.instance.Play("Alquimia");
 
         foreach (string ing in InventarioJugador.instance.ingredientes)
@@ -118,7 +122,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
         }
 
         this.gameObject.SetActive(false);
-        GameManager.instance.ActivarUI();
+        GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
         AudioManager.instance.Play("Exito");
 
         parteCodigo.SetActive(true);

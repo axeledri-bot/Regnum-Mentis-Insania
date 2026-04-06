@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,11 +15,16 @@ public class GameManager : MonoBehaviour
 
     private Efectos efectos;
 
-    public bool tieneLlave = false;
+    public bool llavePuzzles = false;
+    public List<string> llaves = new List<string>();
+    [SerializeField] private GameObject uiLlave;
     public bool intentoPuerta;
 
     public List<int> notasRecogidas = new List<int>();
     public bool EnUI { get; private set; }
+
+    public GameObject uiAbierta;
+ 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -34,9 +40,78 @@ public class GameManager : MonoBehaviour
         hud = FindFirstObjectByType<Hud>();
         mov = FindFirstObjectByType<Player>();
         efectos = FindFirstObjectByType<Efectos>();
+
+        ResetGame();
         SincronizarHUD();
+
+        ActivarGameplay();
+    }
+    public enum TipoUI
+    {
+        Ninguna,
+        Notas,
+        Puzzle,
+        GameOver, 
+        Pausa
     }
 
+    public TipoUI uiActual { get; private set; } = TipoUI.Ninguna;
+    private void Update()
+    {
+        if (!EnUI) return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            CerrarUIActual();
+        }
+    }
+
+    public void ObtenerLlave(string id)
+    {
+        if (!llaves.Contains(id))
+        {
+            llaves.Add(id);
+        }
+    }
+    public void MostrarLlaveUI()
+    {
+        StartCoroutine(MostrarLlave());
+    }
+
+    IEnumerator MostrarLlave()
+    {
+        uiLlave.SetActive(true);
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        uiLlave.SetActive(false);
+    }
+    public void CerrarUIActual()
+    {
+        if (uiAbierta != null)
+        {
+            Notas notas = uiAbierta.GetComponent<Notas>();
+            if (notas != null)
+            {
+                notas.Regresar();
+                uiAbierta = null;
+                return;
+            }
+
+
+            Alquimia alquimia = uiAbierta.GetComponent<Alquimia>();
+            if (alquimia != null)
+            {
+                alquimia.CerrarPuzzle();
+                uiAbierta = null;
+                return;
+            }
+
+            uiAbierta.SetActive(false);
+            ActivarGameplay();
+            uiAbierta = null;
+        }
+    }
     private void Awake()
     {
         efectos = FindFirstObjectByType<Efectos>();
@@ -64,7 +139,7 @@ public class GameManager : MonoBehaviour
         if (vidas == 0)
         {
             hud.transform.GetChild(2).gameObject.SetActive(true);
-            ActivarUI();
+            ActivarUI(TipoUI.GameOver);
             mov.movimiento = 3f;
             AudioManager.instance.Stop("Latidos");
             efectos.Desactivar();
@@ -117,7 +192,15 @@ public class GameManager : MonoBehaviour
             efectos.Desactivar();
         intentoPuerta = false;
 
+        llavePuzzles = false;
+        llaves.Clear();
+
+        if (Llave.Instance != null)
+        {
+            Llave.Instance.Resetear();
+        }
     }
+    
     public void RegistrarIntentoCocina()
     {
         intentoPuerta = true;
@@ -129,9 +212,10 @@ public class GameManager : MonoBehaviour
             notasRecogidas.Add(id);
         }
     }
-    public void ActivarUI()
+    public void ActivarUI(TipoUI tipo)
     {
         EnUI = true;
+        uiActual = tipo;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 0f;
@@ -140,6 +224,7 @@ public class GameManager : MonoBehaviour
     public void ActivarGameplay()
     {
         EnUI = false;
+        uiActual = TipoUI.Ninguna;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Time.timeScale = 1f;

@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 3666096114470852006}
   - component: {fileID: 6420920532166290327}
   - component: {fileID: 3171899674083799598}
+  - component: {fileID: 3035556512781403419}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -285,7 +286,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6928599839367074359, guid: 08e21b38f077fcd4ebb00ee94f8eef2c, type: 3}
+  m_Sprite: {fileID: -2586222739578983752, guid: e5dcd35b438865a4bb719a7198ada905, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -305,7 +306,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06892f1ea773f574d8218dedfc756ec4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -395,7 +396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8820756828624484486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3067911bfb2d0df4c8ac78c5113f83aa, type: 3}
   m_Name: 
@@ -499,6 +500,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventarioJugador
   ingredientes: []
+--- !u!114 &3035556512781403419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820756828624484486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e5cb1661dcb049b23d755b45cef80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &9119329350977418965
 GameObject:
   m_ObjectHideFlags: 0

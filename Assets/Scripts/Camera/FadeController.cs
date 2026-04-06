@@ -37,7 +37,7 @@ public class FadeController : MonoBehaviour
         yield return StartCoroutine(FadeOut());
         SceneManager.LoadScene(escena);
         yield return null;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSecondsRealtime(1f);
         yield return StartCoroutine(FadeIn());
 
     }

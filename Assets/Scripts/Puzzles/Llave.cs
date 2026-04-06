@@ -9,7 +9,7 @@ public class Llave : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        puzzlesCompletados = 0;
+
     }
 
     public bool RegistrarPuzzleCompletado()
@@ -18,9 +18,15 @@ public class Llave : MonoBehaviour
 
         if (puzzlesCompletados >= 3)
         {
+            GameManager.instance.llavePuzzles = true;
+            GameManager.instance.MostrarLlaveUI();
             return true;
         }
 
         return false;
+    }
+    public void Resetear()
+    {
+        puzzlesCompletados = 0;
     }
 }
