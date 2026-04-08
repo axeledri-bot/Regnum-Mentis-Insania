@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public List<int> notasRecogidas = new List<int>();
     public bool EnUI { get; private set; }
 
-    public GameObject uiAbierta;
+    //public GameObject uiAbierta;
  
     private void OnEnable()
     {
@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
     public TipoUI uiActual { get; private set; } = TipoUI.Ninguna;
     private void Update()
     {
-        if (!EnUI) return;
+        //if (!EnUI) return;
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            CerrarUIActual();
-        }
+        //    if (Input.GetKeyDown(KeyCode.Return))
+        //    {
+        //        CerrarUIActual();
+        //    }
     }
 
     public void ObtenerLlave(string id)
@@ -86,32 +86,33 @@ public class GameManager : MonoBehaviour
 
         uiLlave.SetActive(false);
     }
-    public void CerrarUIActual()
-    {
-        if (uiAbierta != null)
-        {
-            Notas notas = uiAbierta.GetComponent<Notas>();
-            if (notas != null)
-            {
-                notas.Regresar();
-                uiAbierta = null;
-                return;
-            }
+    //public void CerrarUIActual()
+    //{
+    //    if (uiAbierta != null)
+    //    {
+    //        Notas notas = uiAbierta.GetComponent<Notas>();
+    //        if (notas != null)
+    //        {
+    //            notas.Regresar();
+    //            uiAbierta = null;
+    //            return;
+    //        }
 
 
-            Alquimia alquimia = uiAbierta.GetComponent<Alquimia>();
-            if (alquimia != null)
-            {
-                alquimia.CerrarPuzzle();
-                uiAbierta = null;
-                return;
-            }
+    //        Alquimia alquimia = uiAbierta.GetComponent<Alquimia>();
+    //        if (alquimia != null)
+    //        {
+    //            alquimia.CerrarPuzzle();
+    //            alquimia.recetaCompletada = true;
+    //            uiAbierta = null;
+    //            return;
+    //        }
 
-            uiAbierta.SetActive(false);
-            ActivarGameplay();
-            uiAbierta = null;
-        }
-    }
+    //        uiAbierta.SetActive(false);
+    //        ActivarGameplay();
+    //        uiAbierta = null;
+    //    }
+    //}
     private void Awake()
     {
         efectos = FindFirstObjectByType<Efectos>();

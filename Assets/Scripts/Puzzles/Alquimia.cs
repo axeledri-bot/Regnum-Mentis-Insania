@@ -29,12 +29,21 @@ public class Alquimia : MonoBehaviour, IDropHandler
         image = GetComponent<Image>();
 
     }
-   
-    
+
+    private void Update()
+    {
+        if (!gameObject.activeInHierarchy) return;
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            CerrarPuzzle();
+        }
+    }
+
     public void AbrirPuzzle()
     {
         this.gameObject.SetActive(true);
-        GameManager.instance.uiAbierta = this.gameObject;
+        //GameManager.instance.uiAbierta = this.gameObject;
         GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
         AudioManager.instance.Play("Alquimia");
 

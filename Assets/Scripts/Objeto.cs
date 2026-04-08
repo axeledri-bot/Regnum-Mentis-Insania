@@ -52,13 +52,11 @@ public class Objeto : MonoBehaviour
                 if (notas != null)
                 {
                     notas.SetSonidos(sonidoAbrir, sonidoCerrar);
-                    notas.AbrirNotaGuardada(idNota);
-        
                 }
 
                 AudioManager.instance.Play(sonidoAbrir);
                 GameManager.instance.GuardarNota(idNota);
-                GameManager.instance.uiAbierta = objeto;
+                //GameManager.instance.uiAbierta = objeto;
                 GameManager.instance.ActivarUI(GameManager.TipoUI.Notas);
             }
             else
@@ -67,8 +65,6 @@ public class Objeto : MonoBehaviour
                 GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
             }
         }
-
-        
 
         if (destruir)
         {

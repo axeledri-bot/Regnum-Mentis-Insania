@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Notas : MonoBehaviour
@@ -10,19 +8,33 @@ public class Notas : MonoBehaviour
     private string sonidoCerrar = "Notas";
     private string sonidoAbrir = "Notas";
 
+
+    private bool abierta = false;
     private void Update()
     {
         if (GameManager.instance.uiActual != GameManager.TipoUI.Notas)
+
+        {
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                if (GameManager.instance.notasRecogidas.Count == 0) return;
+
+                index = 0;
+                AbrirNotaGuardada(GameManager.instance.notasRecogidas[index]);
+            }
             return;
-        Debug.Log(GameManager.instance.uiActual);
-        //if (Input.GetKeyDown(KeyCode.Return))
-        //{
-        //    Regresar();
-        //}
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Regresar();
+        }
+
         if (Input.GetKeyDown(KeyCode.N))
         {
             VerSiguienteNota();
         }
+
     }
 
     public void Regresar()
@@ -34,7 +46,7 @@ public class Notas : MonoBehaviour
                 nota.SetActive(false);
             }
         }
-
+        abierta = false;
         AudioManager.instance.Play(sonidoCerrar);
         GameManager.instance.ActivarGameplay();
     }
@@ -51,7 +63,9 @@ public class Notas : MonoBehaviour
         if (id >= 0 && id < notas.Length)
         {
             notas[id].SetActive(true);
+            //notaAbierta = true;
         }
+        abierta = true;
 
         GameManager.instance.ActivarUI(GameManager.TipoUI.Notas);
     }
