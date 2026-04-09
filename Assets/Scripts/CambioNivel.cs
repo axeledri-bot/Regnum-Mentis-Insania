@@ -20,8 +20,8 @@ public class CambioNivel : MonoBehaviour
             //if (GameManager.instance.moneda >= colNecesarios)
             //{
             AudioManager.instance.Stop(musicStop);
-            AudioManager.instance.Stop(effectStop);
             AudioManager.instance.Stop("Fuego");
+            AudioManager.instance.Stop(effectStop);
             FadeController.Instance.CambiarEscena(escena);
 
 
