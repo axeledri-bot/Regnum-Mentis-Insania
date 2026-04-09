@@ -35,6 +35,8 @@ public class SistemaDeDialogos : MonoBehaviour
     [SerializeField] private PuzzleBiblioteca puzzle;
     [SerializeField] private Alquimia alquimia;
     [SerializeField] private Player player;
+    [SerializeField] private Transiciones puertaCodigo;
+    [SerializeField] private bool primeraMitad;
 
     [Header("Efecto texto")]
     [SerializeField] private float velocidadTexto = 0.02f;
@@ -42,6 +44,8 @@ public class SistemaDeDialogos : MonoBehaviour
     private bool estaEscribiendo = false;
     private int lineaActualMostrada = 0;
 
+
+  
     private void Update()
     {
         inside = Physics2D.OverlapCircle(transform.position, radio, personaje);
@@ -72,7 +76,8 @@ public class SistemaDeDialogos : MonoBehaviour
             if (estaEscribiendo)
             {
                 StopCoroutine(escribirCoroutine);
-                texto.text = dialogoActual[lineaActualMostrada].dialogo;
+                string textoFinal = ProcesarTexto(dialogoActual[lineaActualMostrada].dialogo);
+                texto.text = textoFinal;
                 estaEscribiendo = false;
                 return;
             }
@@ -91,9 +96,9 @@ public class SistemaDeDialogos : MonoBehaviour
                 if (escribirCoroutine != null)
                     StopCoroutine(escribirCoroutine);
 
-                escribirCoroutine = StartCoroutine(
-                    EscribirTexto(dialogoActual[linea].dialogo)
-                );
+                string textoFinal = ProcesarTexto(dialogoActual[linea].dialogo);
+
+                escribirCoroutine = StartCoroutine( EscribirTexto(textoFinal));
 
                 linea++;
             }
@@ -114,6 +119,19 @@ public class SistemaDeDialogos : MonoBehaviour
         }
     }
 
+    private string ProcesarTexto(string textoOriginal)
+    {
+        if (puertaCodigo == null) return textoOriginal;
+
+        if (textoOriginal.Contains("{codigo}"))
+        {
+            string parte = primeraMitad? puertaCodigo.CodigoParte1: puertaCodigo.CodigoParte2;
+
+            textoOriginal = textoOriginal.Replace("{codigo}", parte);
+        }
+
+        return textoOriginal;
+    }
     public void MostrarDialogoPersonalizado(Palabras[] nuevoDialogo)
     {
         if (nuevoDialogo == null || nuevoDialogo.Length == 0)

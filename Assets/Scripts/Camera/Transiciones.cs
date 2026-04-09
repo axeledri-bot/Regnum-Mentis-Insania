@@ -30,8 +30,6 @@ public class Transiciones : MonoBehaviour
 
     [SerializeField] private bool requiereIrCocina;
 
-
-
     
     [SerializeField] private string sonidoPuerta = "Puerta";
     private void Awake()
@@ -40,6 +38,20 @@ public class Transiciones : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         movimiento = player.GetComponent<Player>();
     }
+    private void Start()
+    {
+        if (string.IsNullOrEmpty(codigoCorrecto))
+        {
+            GenerarCodigo();
+        }
+    }
+    private void GenerarCodigo()
+    {
+        codigoCorrecto = Random.Range(1000, 9999).ToString();
+        Debug.Log("Código generado: " + codigoCorrecto);
+    }
+    public string CodigoParte1 => codigoCorrecto.Substring(0, 2);
+    public string CodigoParte2 => codigoCorrecto.Substring(2, 2);
     private void LateUpdate()
     {
 

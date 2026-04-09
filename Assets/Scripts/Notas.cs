@@ -10,7 +10,7 @@ public class Notas : MonoBehaviour
 
 
 
-    private bool abierta = false;
+    //private bool abierta = false;
 
     private void Update()
     {
@@ -48,7 +48,7 @@ public class Notas : MonoBehaviour
                 nota.SetActive(false);
             }
         }
-        abierta = false;
+        //abierta = false;
         AudioManager.instance.Play(sonidoCerrar);
         GameManager.instance.ActivarGameplay();
     }
@@ -67,7 +67,7 @@ public class Notas : MonoBehaviour
             notas[id].SetActive(true);
             //notaAbierta = true;
         }
-        abierta = true;
+        //abierta = true;
 
         GameManager.instance.ActivarUI(GameManager.TipoUI.Notas);
     }
