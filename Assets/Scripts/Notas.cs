@@ -9,7 +9,9 @@ public class Notas : MonoBehaviour
     private string sonidoAbrir = "Notas";
 
 
+
     private bool abierta = false;
+
     private void Update()
     {
         if (GameManager.instance.uiActual != GameManager.TipoUI.Notas)

@@ -24,6 +24,8 @@ public class Alquimia : MonoBehaviour, IDropHandler
     [SerializeField]private Sprite Luna;
 
     private Image image;
+
+    [SerializeField] private Objeto obj;
     private void Start()
     {
         image = GetComponent<Image>();
@@ -147,6 +149,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
         ResetearPuzzle();
 
         this.gameObject.SetActive(false);
+        obj.abierta = false;
         GameManager.instance.ActivarGameplay();
         AudioManager.instance.Stop("Alquimia");
 

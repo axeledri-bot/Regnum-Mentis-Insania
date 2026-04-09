@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Objeto : MonoBehaviour
@@ -18,7 +17,8 @@ public class Objeto : MonoBehaviour
 
     [SerializeField] private bool esNota;
 
-
+    [HideInInspector]
+    public bool abierta;
 
     private bool adentro;
     private void Start()
@@ -27,7 +27,7 @@ public class Objeto : MonoBehaviour
     }
     private void Update()
     {
-        if(adentro && Input.GetKeyDown(KeyCode.E))
+        if (adentro && Input.GetKeyDown(KeyCode.E))
         {
             Interactuar();
         }
@@ -37,8 +37,12 @@ public class Objeto : MonoBehaviour
 
         if (alquimia != null)
         {
-            alquimia.AbrirPuzzle();
-            GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
+            if (!abierta)
+            {
+                alquimia.AbrirPuzzle();
+                GameManager.instance.ActivarUI(GameManager.TipoUI.Puzzle);
+                abierta = true;
+            }
             return;
         }
 
@@ -73,7 +77,7 @@ public class Objeto : MonoBehaviour
 
     }
 
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

@@ -5,6 +5,7 @@ public class Menu : MonoBehaviour
 {
     private GameObject menu;
     private GameObject selector;
+    private GameObject controles;
     private GameObject creditos;
     private void Start()
     {
@@ -12,7 +13,8 @@ public class Menu : MonoBehaviour
         AudioManager.instance.Play("Menu");
         menu = transform.GetChild(3).gameObject;
         selector = transform.GetChild(4).gameObject;
-        creditos = transform.GetChild(5).gameObject;
+        controles = transform.GetChild(5).gameObject;
+        creditos = transform.GetChild(6).gameObject;
         Cursor.visible = true;
 
     }
@@ -30,6 +32,11 @@ public class Menu : MonoBehaviour
         menu.SetActive(false);
         selector.SetActive(true);
     }
+    public void Controles()
+    {
+        menu.SetActive(false);
+        controles.SetActive(true);
+    }
     public void Creditos()
     {
         menu.SetActive(false);
@@ -40,6 +47,7 @@ public class Menu : MonoBehaviour
         menu.SetActive(true);
         selector.SetActive(false);
         creditos.SetActive(false);
+        controles.SetActive(false);
     }
     public void Nivel2()
     {
