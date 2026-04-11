@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1958006
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2006,8 +2006,8 @@ MonoBehaviour:
     la buscar\xEDa yo pero mi turno termina en 5 minutos y debo llegar temprano a
     casa para jugar un poco de **** the ***** II"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
-  m_sharedMaterial: {fileID: -838268191918995991, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.95
+  m_fontSize: 50.75
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4419,8 +4419,8 @@ MonoBehaviour:
     de colapso, el material para repararla se encuentra en el almac\xE9n ubicado
     al final del laberinto, ya deben saber cual es el camino correcto para llegar"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
-  m_sharedMaterial: {fileID: -838268191918995991, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4444,7 +4444,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 55.6
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13191,7 +13191,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.229599, y: -0.5088396}
+  m_Offset: {x: 0.229599, y: -0.98868465}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13201,7 +13201,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.540802, y: 2.0176792}
+  m_Size: {x: 0.540802, y: 2.9773693}
   m_EdgeRadius: 0
 --- !u!212 &519588098
 SpriteRenderer:
@@ -13358,6 +13358,7 @@ MonoBehaviour:
   spriteOriginal: {fileID: -4296411160376662947, guid: 2f63e83656925bf418c9efedb8ef386b, type: 3}
   interactuable: {fileID: 1880519396614787851, guid: e271980cf55a83c42b1a7aefec3cde67, type: 3}
   esNota: 1
+  abierta: 0
 --- !u!61 &521281969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30871,6 +30872,7 @@ MonoBehaviour:
   spriteOriginal: {fileID: -4296411160376662947, guid: 2f63e83656925bf418c9efedb8ef386b, type: 3}
   interactuable: {fileID: 1880519396614787851, guid: e271980cf55a83c42b1a7aefec3cde67, type: 3}
   esNota: 1
+  abierta: 0
 --- !u!61 &1216465589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32329,8 +32331,8 @@ MonoBehaviour:
     intente repararla sin supervisi\xF3n ya que se encuentra en un estado delicado
     y podr\xEDa colapsar f\xE1cilmente!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
-  m_sharedMaterial: {fileID: -838268191918995991, guid: 8d738d0c5ae33ac409e1bc0cdd203313, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -32354,7 +32356,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.5
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -34753,6 +34755,7 @@ MonoBehaviour:
   spriteOriginal: {fileID: -4296411160376662947, guid: 2f63e83656925bf418c9efedb8ef386b, type: 3}
   interactuable: {fileID: 1880519396614787851, guid: e271980cf55a83c42b1a7aefec3cde67, type: 3}
   esNota: 1
+  abierta: 0
 --- !u!61 &1499265499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37399,7 +37402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1712067096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -88144,7 +88147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2044926943
 RectTransform:
   m_ObjectHideFlags: 0

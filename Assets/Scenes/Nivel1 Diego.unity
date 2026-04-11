@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetosMouse
   nombreIngrediente: hierba
+  imagen: {fileID: 0}
 --- !u!114 &20069555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,6 +978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rompecabezas
   Canvas: {fileID: 7191496}
+  idPieza: 0
+  puzzle: {fileID: 0}
 --- !u!225 &32932575
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1578,12 +1581,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 1344406188}
   puntoSpawn: {fileID: 441468589}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &48333631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1864,6 +1872,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1708353778}
   destruir: 1
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!61 &51291577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4253,12 +4269,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 285429140}
   puntoSpawn: {fileID: 1375603085}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &178349420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4917,6 +4938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rompecabezas
   Canvas: {fileID: 7191496}
+  idPieza: 0
+  puzzle: {fileID: 0}
 --- !u!225 &224490616
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6271,6 +6294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e5646aff96f7a49ab2ce5db3518335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanvasUI
+  notas: []
 --- !u!1 &299505867
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,6 +6346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15c83bdbb5d8e04dbdf7e22d35b6d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Base
+  idCorrecto: 0
+  puzzle: {fileID: 0}
 --- !u!225 &299505870
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11682,12 +11708,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 484511684}
   puntoSpawn: {fileID: 1395217881}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &547564995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13549,12 +13580,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 285429140}
   puntoSpawn: {fileID: 488447900}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &638089142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13653,6 +13689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetosMouse
   nombreIngrediente: cosa
+  imagen: {fileID: 0}
 --- !u!114 &638234202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16415,12 +16452,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 285429140}
   puntoSpawn: {fileID: 1218668291}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &733059431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17363,6 +17405,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1936621868}
   destruir: 0
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!114 &774967307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19311,7 +19361,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19321,7 +19371,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19331,7 +19381,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19341,7 +19391,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19351,7 +19401,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19361,7 +19411,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19371,7 +19421,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19381,7 +19431,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19391,7 +19441,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19401,7 +19451,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19411,7 +19461,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19421,7 +19471,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19431,7 +19481,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19441,7 +19491,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19451,7 +19501,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19461,7 +19511,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19471,7 +19521,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19481,7 +19531,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19491,7 +19541,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19501,7 +19551,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19511,7 +19561,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19521,7 +19571,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19531,7 +19581,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19541,7 +19591,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19551,7 +19601,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19561,7 +19611,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19571,7 +19621,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19581,7 +19631,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19591,7 +19641,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19601,7 +19651,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19611,7 +19661,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19621,7 +19671,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19631,7 +19681,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19641,7 +19691,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19651,7 +19701,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19661,7 +19711,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19671,7 +19721,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19681,7 +19731,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19691,7 +19741,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19701,7 +19751,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19711,7 +19761,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19721,7 +19771,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19731,7 +19781,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 4294967295
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -19743,11 +19793,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 43
     m_Data: {fileID: 11400000, guid: c111da0af14675340a42fe79bac6c99a, type: 2}
-  m_TileSpriteArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 43
-    m_Data: {fileID: -1159192794540766676, guid: 333fe223941566249bca6587ab4b7737, type: 3}
+  m_TileSpriteArray: []
   m_TileMatrixArray:
   - m_RefCount: 43
     m_Data:
@@ -20445,12 +20491,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 285429140}
   puntoSpawn: {fileID: 48251215}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &904473195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21747,12 +21798,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 516179794}
   puntoSpawn: {fileID: 1192888385}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &954376001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22199,6 +22255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15c83bdbb5d8e04dbdf7e22d35b6d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Base
+  idCorrecto: 0
+  puzzle: {fileID: 0}
 --- !u!225 &978419205
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22707,12 +22765,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 2009029055}
   puntoSpawn: {fileID: 384791704}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1004026054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23466,6 +23529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15c83bdbb5d8e04dbdf7e22d35b6d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Base
+  idCorrecto: 0
+  puzzle: {fileID: 0}
 --- !u!1 &1049117757
 GameObject:
   m_ObjectHideFlags: 0
@@ -24793,12 +24858,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 49820490}
   puntoSpawn: {fileID: 727406449}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 1
   desbloqueada: 0
   codigoCorrecto: 2602
   panelCodigo: {fileID: 674443087}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1117191833
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25817,6 +25887,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rompecabezas
   Canvas: {fileID: 7191496}
+  idPieza: 0
+  puzzle: {fileID: 0}
 --- !u!225 &1167121629
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25975,6 +26047,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 362850557}
   destruir: 1
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!61 &1167939684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27172,6 +27252,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1732244347}
   destruir: 1
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!61 &1215723849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30602,12 +30690,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 516179794}
   puntoSpawn: {fileID: 481948409}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1369107950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30701,12 +30794,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 73644909}
   puntoSpawn: {fileID: 631627979}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1370075117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33031,6 +33129,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1356627789}
   destruir: 1
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!61 &1465170740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35049,12 +35155,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 2009029055}
   puntoSpawn: {fileID: 1614234430}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1571736535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37057,6 +37168,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1042480035}
   destruir: 0
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!114 &1654457603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37553,6 +37672,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rompecabezas
   Canvas: {fileID: 7191496}
+  idPieza: 0
+  puzzle: {fileID: 0}
 --- !u!225 &1699596803
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -38048,6 +38169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CambioNivel
   escena: Nivel2
+  musicStop: 
+  effectStop: 
 --- !u!61 &1744312566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40647,6 +40770,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 61947471}
   destruir: 0
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!61 &1858602531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41611,12 +41742,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 1461554579}
   puntoSpawn: {fileID: 889282680}
+  llaveRequerida: 
   requiereLlave: 1
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1891270205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42383,6 +42519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetosMouse
   nombreIngrediente: manzana
+  imagen: {fileID: 0}
 --- !u!114 &1936120812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42549,6 +42686,16 @@ MonoBehaviour:
   - agua
   - hierba
   - manzana
+  contenedorUI: {fileID: 0}
+  prefabIngredienteUI: {fileID: 0}
+  aleatorio: {fileID: 0}
+  parteCodigo: {fileID: 0}
+  recetaCompletada: 0
+  Vaca: {fileID: 0}
+  Flor: {fileID: 0}
+  Lavanda: {fileID: 0}
+  Luna: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!114 &1936621870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42881,6 +43028,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Objeto
   objeto: {fileID: 1635601023}
   destruir: 1
+  alquimia: {fileID: 0}
+  idNota: 0
+  sonidoAbrir: Notas
+  sonidoCerrar: Notas
+  spriteOriginal: {fileID: 0}
+  interactuable: {fileID: 0}
+  esNota: 0
+  abierta: 0
 --- !u!212 &1943063929
 SpriteRenderer:
   serializedVersion: 2
@@ -43333,7 +43488,7 @@ Transform:
   m_GameObject: {fileID: 1947081563}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9456515, y: 11.87, z: -5}
+  m_LocalPosition: {x: -6.9458656, y: 11.87, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43508,7 +43663,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1947666905
 Transform:
@@ -44041,6 +44196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjetosMouse
   nombreIngrediente: agua
+  imagen: {fileID: 0}
 --- !u!114 &1954956215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44523,12 +44679,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 285429140}
   puntoSpawn: {fileID: 1298903375}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &1986861070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46487,12 +46648,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transiciones
   mapa: {fileID: 484511684}
   puntoSpawn: {fileID: 791533675}
+  llaveRequerida: 
   requiereLlave: 0
-  tieneLlave: 0
   requiereCodigo: 0
   desbloqueada: 0
   codigoCorrecto: 1234
   panelCodigo: {fileID: 0}
+  requiereCamaraTapada: 0
+  camara: {fileID: 0}
+  esPuertaCocina: 0
+  requiereIrCocina: 0
+  sonidoPuerta: Puerta
 --- !u!61 &2094055752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -46640,6 +46806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15c83bdbb5d8e04dbdf7e22d35b6d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Base
+  idCorrecto: 0
+  puzzle: {fileID: 0}
 --- !u!1 &2104182183
 GameObject:
   m_ObjectHideFlags: 0

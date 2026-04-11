@@ -116,5 +116,11 @@ public class AgarrarObjetos : MonoBehaviour
             cercaPuerta = false;
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, .5f);
+    }
 }
 
