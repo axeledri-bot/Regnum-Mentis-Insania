@@ -5,7 +5,7 @@ public class AgarrarObjetos : MonoBehaviour
     public Libros libroEnMano;
     bool cercaPuerta;
 
-    [SerializeField]private Transform agarre;
+    [SerializeField] private Transform agarre;
     [SerializeField] private LayerMask interactuableLayer;
     //[SerializeField]private Animator animator;
 
@@ -18,26 +18,43 @@ public class AgarrarObjetos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (cercaPuerta) return; 
+            if (cercaPuerta) return;
 
             InteractuarLibros();
         }
-        
+
     }
     void InteractuarLibros()
     {
-        Collider2D hit = Physics2D.OverlapCircle(transform.position, .5f, interactuableLayer);
+        Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, .5f, interactuableLayer);
 
         //animator.SetBool("IsCarryng", true);
 
         Libros libro = null;
         Librero librero = null;
 
-        if (hit)
+        foreach (Collider2D col in hit)
         {
-            libro = hit.GetComponent<Libros>();
-            librero = hit.GetComponent<Librero>();
+            libro = col.GetComponent<Libros>();
+            if (libro != null)
+                break;
         }
+
+        if (libro == null)
+        {
+            foreach (Collider2D col in hit)
+            {
+                librero = col.GetComponent<Librero>();
+                if (librero != null)
+                    break;
+            }
+        }
+        //if (hit)
+        //{
+        //    libro = hit.GetComponent<Libros>();
+        //    librero = hit.GetComponent<Librero>();
+
+        //}
 
         if (libro != null && libroEnMano == null)
         {
