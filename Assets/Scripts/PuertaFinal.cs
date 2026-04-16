@@ -7,6 +7,7 @@ public class PuertaFinal : MonoBehaviour
     [SerializeField] private LayerMask player;
 
     [SerializeField] private GameObject pared;
+    [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject luz;
 
 
@@ -39,6 +40,7 @@ public class PuertaFinal : MonoBehaviour
         CameraShake.instance.Shake(0.4f);
         pared.SetActive(false);
         AudioManager.instance.Play("Explosion");
+        explosion.SetActive(true);
         luz.SetActive(true);
 
         yield return new WaitForSeconds(1.5f);

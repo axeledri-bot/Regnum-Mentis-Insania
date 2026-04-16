@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec9a3ebf48721a441a7da2f011b0ad14
+guid: e9886ab36d3830849845c1108e62c576
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -103,9 +103,9 @@ TextureImporter:
       name: cabana_0
       rect:
         serializedVersion: 2
-        x: 26
+        x: 0
         y: 37
-        width: 177
+        width: 203
         height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
