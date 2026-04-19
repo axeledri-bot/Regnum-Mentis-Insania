@@ -1976,7 +1976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.9208, y: 19.4727}
+  m_AnchoredPosition: {x: -0.000019073, y: 0}
   m_SizeDelta: {x: 781.2171, y: 815.9634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122738917
@@ -2000,14 +2000,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hola ******, se que normalmente vienes aqu\xED al inicio de tu turno por
-    lo que te dejare esta nota aqu\xED esperando que la leas cuando llegues por la
-    ma\xF1ana, lamento tener que decirte esto pero perd\xED la llave para abrir el
-    almac\xE9n, lo bueno es que sospecho se en alguna parte del campo de flores,
-    la buscar\xEDa yo pero mi turno termina en 5 minutos y debo llegar temprano a
-    casa para jugar un poco de **** the ***** II"
+    lo que te dejare esta nota esperando que la leas cuando llegues por la ma\xF1ana,
+    lamento tener que decirte esto pero perd\xED la llave para abrir el almac\xE9n,
+    lo bueno es que sospecho que se encuentra en alguna parte del campo de flores,
+    la buscar\xEDa yo pero mi turno termina en 5 minutos y no tengo pensado irme
+    ni un minuto tarde."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
-  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
+  m_sharedMaterial: {fileID: 8947733221728374288, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.75
+  m_fontSize: 55.35
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 38.214325, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4378,7 +4378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.9208, y: 35.0508}
+  m_AnchoredPosition: {x: -0.000019073, y: 35.0508}
   m_SizeDelta: {x: 781.2171, y: 847.1196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319174626
@@ -4406,8 +4406,8 @@ MonoBehaviour:
     de colapso, el material para repararla se encuentra en el almac\xE9n ubicado
     al final del laberinto, ya deben saber cual es el camino correcto para llegar"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
-  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
+  m_sharedMaterial: {fileID: 8947733221728374288, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4431,7 +4431,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.6
+  m_fontSize: 61.4
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4470,7 +4470,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 45.957184, y: 49.020996, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -30851,7 +30851,7 @@ Transform:
   m_GameObject: {fileID: 1216465585}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.54, y: 21.64, z: 0}
+  m_LocalPosition: {x: 0.01, y: -0.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32170,7 +32170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.9208, y: 19.4727}
+  m_AnchoredPosition: {x: 0.000026703, y: 19.4727}
   m_SizeDelta: {x: 781.2171, y: 815.9634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1323742489
@@ -32198,8 +32198,8 @@ MonoBehaviour:
     intente repararla sin supervisi\xF3n ya que se encuentra en un estado delicado
     y podr\xEDa colapsar f\xE1cilmente!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
-  m_sharedMaterial: {fileID: -2038484907740304024, guid: b3961b6349cbc4c4092505e15651c20a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
+  m_sharedMaterial: {fileID: 8947733221728374288, guid: aff39e098225bc345af9f67cc94b44bc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -32223,7 +32223,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.5
+  m_fontSize: 68.55
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -32262,7 +32262,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 41.639404, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -33408,6 +33408,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1398910708}
   - component: {fileID: 1398910709}
+  - component: {fileID: 1398910711}
+  - component: {fileID: 1398910710}
   m_Layer: 0
   m_Name: Colliders
   m_TagString: Untagged
@@ -33464,7 +33466,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.06831026, y: 0.49528325}
+  m_Offset: {x: -1.8628877, y: 0.5167638}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -33474,7 +33476,99 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.115814, y: 1.9905663}
+  m_Size: {x: 1.9661863, y: 2.0335274}
+  m_EdgeRadius: 0
+--- !u!61 &1398910710
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398910707}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -4.1026793, y: 0.88067937}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.5036008, y: 1.3007183}
+  m_EdgeRadius: 0
+--- !u!61 &1398910711
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398910707}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.20200765, y: 0.86534417}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.1474, y: 1.2986925}
   m_EdgeRadius: 0
 --- !u!1 &1410725395
 GameObject:
@@ -34583,7 +34677,7 @@ Transform:
   m_GameObject: {fileID: 1499265495}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 17.53, y: 21.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
