@@ -166,7 +166,7 @@ public class Alquimia : MonoBehaviour, IDropHandler
 
         this.gameObject.SetActive(false);
         GameManager.instance.ActivarGameplay();
-
+        obj.abierta = false;
         GestorIngredientes.instance.LimpiarIngredientes();
         GestorIngredientes.instance.RespawnIngredientes();
     }
