@@ -31,10 +31,11 @@ public class AgarrarObjetos : MonoBehaviour
 
         Libros libro = null;
         Librero librero = null;
-        AudioManager.instance.Play("Agarrar");
+
         foreach (Collider2D col in hit)
         {
             libro = col.GetComponent<Libros>();
+            AudioManager.instance.Play("Agarrar");
             if (libro != null)
                 break;
         }

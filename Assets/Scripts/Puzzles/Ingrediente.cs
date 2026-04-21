@@ -26,13 +26,13 @@ public class Ingrediente : MonoBehaviour
     private void Recoger()
     {
         InventarioJugador.instance.AgregarIngrediente(nombreIngrediente);
-   
-            AudioManager.instance.Play("Agarrar");
-   
+
+        AudioManager.instance.Play("Agarrar");
+
         Destroy(gameObject);
     }
 
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -50,5 +50,5 @@ public class Ingrediente : MonoBehaviour
             jugadorCerca = false;
         }
     }
-   
+
 }
