@@ -9,6 +9,7 @@ public class Menu : MonoBehaviour
     private GameObject creditos;
     private void Start()
     {
+
         Cursor.lockState = CursorLockMode.None;
         AudioManager.instance.Play("Menu");
         menu = transform.GetChild(3).gameObject;

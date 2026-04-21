@@ -48,12 +48,12 @@ MonoBehaviour:
   - nombre: Menu
     audio: {fileID: 8300000, guid: 8e9b753576c06234ea7a0b3b71799ba1, type: 3}
     loop: 1
-    volume: 0.6
+    volume: 0.5
     audioSource: {fileID: 0}
   - nombre: Nivel 1
     audio: {fileID: 8300000, guid: a5a7c932c3e9f794c9c9de5a5b329ec4, type: 3}
     loop: 1
-    volume: 0.6
+    volume: 0.5
     audioSource: {fileID: 0}
   - nombre: Ambiente Nivel 1
     audio: {fileID: 8300000, guid: eb0cef29bd427ef4a8dc43499262b209, type: 3}
@@ -63,7 +63,7 @@ MonoBehaviour:
   - nombre: Nivel 2
     audio: {fileID: 8300000, guid: 1b9ab8d07d7298c41bf903282cd4a164, type: 3}
     loop: 1
-    volume: 0.6
+    volume: 0.5
     audioSource: {fileID: 0}
   - nombre: Lluvia
     audio: {fileID: 8300000, guid: 72a511a1f010fe74dbe291b3f40f20a4, type: 3}
@@ -73,7 +73,7 @@ MonoBehaviour:
   - nombre: Nivel 3
     audio: {fileID: 8300000, guid: b95d9323cebbebe4785a81654f184bf4, type: 3}
     loop: 1
-    volume: 0.7
+    volume: 0.5
     audioSource: {fileID: 0}
   - nombre: Ambiente Nivel 3
     audio: {fileID: 8300000, guid: 72961d70e90d37447bbbff1ae8567997, type: 3}

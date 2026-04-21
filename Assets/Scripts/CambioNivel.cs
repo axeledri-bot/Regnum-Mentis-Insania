@@ -22,6 +22,7 @@ public class CambioNivel : MonoBehaviour
             AudioManager.instance.Stop(musicStop);
             AudioManager.instance.Stop("Fuego");
             AudioManager.instance.Stop(effectStop);
+            AudioManager.instance.Stop("Latidos");
             FadeController.Instance.CambiarEscena(escena);
 
 
