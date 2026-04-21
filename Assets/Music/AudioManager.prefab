@@ -53,7 +53,7 @@ MonoBehaviour:
   - nombre: Nivel 1
     audio: {fileID: 8300000, guid: a5a7c932c3e9f794c9c9de5a5b329ec4, type: 3}
     loop: 1
-    volume: 0.7
+    volume: 0.6
     audioSource: {fileID: 0}
   - nombre: Ambiente Nivel 1
     audio: {fileID: 8300000, guid: eb0cef29bd427ef4a8dc43499262b209, type: 3}
@@ -63,7 +63,7 @@ MonoBehaviour:
   - nombre: Nivel 2
     audio: {fileID: 8300000, guid: 1b9ab8d07d7298c41bf903282cd4a164, type: 3}
     loop: 1
-    volume: 0.7
+    volume: 0.6
     audioSource: {fileID: 0}
   - nombre: Lluvia
     audio: {fileID: 8300000, guid: 72a511a1f010fe74dbe291b3f40f20a4, type: 3}
@@ -148,12 +148,12 @@ MonoBehaviour:
   - nombre: Manta
     audio: {fileID: 8300000, guid: d8e7c47adc8a0c74995bbbdc9a00032c, type: 3}
     loop: 0
-    volume: 0.5
+    volume: 0.6
     audioSource: {fileID: 0}
   - nombre: Manta 2
     audio: {fileID: 8300000, guid: 2729932ef5ebb954590a2caf77340a7f, type: 3}
     loop: 0
-    volume: 0.5
+    volume: 0.6
     audioSource: {fileID: 0}
   - nombre: Libro
     audio: {fileID: 8300000, guid: 0ccb693058f2dae4a8093dd0da606ab3, type: 3}
@@ -174,4 +174,9 @@ MonoBehaviour:
     audio: {fileID: 8300000, guid: 732a3934af9083a4db29e79767c07354, type: 3}
     loop: 0
     volume: 0.5
+    audioSource: {fileID: 0}
+  - nombre: Boton
+    audio: {fileID: 8300000, guid: c2ade48e590d8d148b3f43db634f6cf3, type: 3}
+    loop: 0
+    volume: 0.6
     audioSource: {fileID: 0}

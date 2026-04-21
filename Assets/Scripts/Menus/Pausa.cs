@@ -48,14 +48,15 @@ public class Pausa : MonoBehaviour
     public void Regresar()
     {
         //pauser.SetActive(false);
+        AudioManager.instance.Play("Boton");
         paused = false;
         animator.SetBool("MostrarMenu", false);
         GameManager.instance.ActivarGameplay();
     }
     public void Reiniciar()
     {
+        AudioManager.instance.Play("Boton");
 
-  
         FadeController.Instance.CambiarEscena(escena);
         GameManager.instance.ActivarGameplay();
 
@@ -63,6 +64,7 @@ public class Pausa : MonoBehaviour
 
     public void Menu()
     {
+        AudioManager.instance.Play("Boton");
         AudioManager.instance.Stop(music);
         AudioManager.instance.Stop(efecto);
         Time.timeScale = 1;
