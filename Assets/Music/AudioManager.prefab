@@ -180,3 +180,18 @@ MonoBehaviour:
     loop: 0
     volume: 0.6
     audioSource: {fileID: 0}
+  - nombre: Agarrar
+    audio: {fileID: 8300000, guid: 1d67285ef26190243a55abc0f15b6420, type: 3}
+    loop: 0
+    volume: 0.6
+    audioSource: {fileID: 0}
+  - nombre: "Da\xF1o"
+    audio: {fileID: 8300000, guid: 8fc01aa1cd239c54f81adb834804aaa1, type: 3}
+    loop: 0
+    volume: 0.6
+    audioSource: {fileID: 0}
+  - nombre: Empujar
+    audio: {fileID: 8300000, guid: 6e2e3ff05e10b2a4c9a8aac151869fef, type: 3}
+    loop: 1
+    volume: 0.6
+    audioSource: {fileID: 0}

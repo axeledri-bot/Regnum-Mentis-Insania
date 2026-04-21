@@ -26,6 +26,7 @@ public class Ingrediente : MonoBehaviour
     private void Recoger()
     {
         InventarioJugador.instance.AgregarIngrediente(nombreIngrediente);
+        AudioManager.instance.Play("Agarrar");
         Destroy(gameObject);
     }
 

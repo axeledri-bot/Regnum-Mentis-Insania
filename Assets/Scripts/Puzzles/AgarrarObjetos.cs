@@ -19,7 +19,6 @@ public class AgarrarObjetos : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (cercaPuerta) return;
-
             InteractuarLibros();
         }
 
@@ -32,7 +31,7 @@ public class AgarrarObjetos : MonoBehaviour
 
         Libros libro = null;
         Librero librero = null;
-
+        AudioManager.instance.Play("Agarrar");
         foreach (Collider2D col in hit)
         {
             libro = col.GetComponent<Libros>();

@@ -122,6 +122,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Empujable"))
         {
+            AudioManager.instance.Play("Empujar");
             anim.SetBool("IsPushing", true);
         }
     }
@@ -129,6 +130,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Empujable"))
         {
+            AudioManager.instance.Stop("Empujar");
             anim.SetBool("IsPushing", false);
         }
     }
@@ -144,7 +146,7 @@ public class Player : MonoBehaviour
     public void RecibirDaño(Vector2 origen)
     {
         if (invulnerable) return;
-
+        AudioManager.instance.Play("Daño");
         invulnerable = true;
         GameManager.instance.PerderVida();
 
