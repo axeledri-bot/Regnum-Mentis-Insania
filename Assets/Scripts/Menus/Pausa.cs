@@ -20,29 +20,33 @@ public class Pausa : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
+        if (GameManager.instance.isDead == false)
         {
-            if (GameManager.instance.EnUI && !paused) return;
-            //pauser.SetActive(true);
-            paused = !paused;
-            animator.SetBool("MostrarMenu", paused);
-            //paused = true;
-          if( paused )
+
+            if (Input.GetKeyDown(KeyCode.Escape) /*&& !paused*/)
             {
-                GameManager.instance.ActivarUI(GameManager.TipoUI.Pausa);
+                if (GameManager.instance.EnUI && !paused) return;
+                //pauser.SetActive(true);
+                paused = !paused;
+                animator.SetBool("MostrarMenu", paused);
+                //paused = true;
+                if (paused)
+                {
+                    GameManager.instance.ActivarUI(GameManager.TipoUI.Pausa);
+                }
+                else
+                {
+                    GameManager.instance.ActivarGameplay();
+                }
             }
-          else
-            {
-                GameManager.instance.ActivarGameplay();
-            }
+            //else if (Input.GetKeyDown(KeyCode.Return) /*&& paused*/)
+            //{
+            //    //pauser.SetActive(false);
+            //    paused = false;
+            //    Time.timeScale = 1;
+            //    Cursor.lockState = CursorLockMode.Locked;
+            //}
         }
-        //else if (Input.GetKeyDown(KeyCode.Return) /*&& paused*/)
-        //{
-        //    //pauser.SetActive(false);
-        //    paused = false;
-        //    Time.timeScale = 1;
-        //    Cursor.lockState = CursorLockMode.Locked;
-        //}
     }
 
     public void Regresar()
@@ -56,7 +60,7 @@ public class Pausa : MonoBehaviour
     public void Reiniciar()
     {
         AudioManager.instance.Play("Boton");
-
+        GameManager.instance.ResetGame();
         FadeController.Instance.CambiarEscena(escena);
         GameManager.instance.ActivarGameplay();
 

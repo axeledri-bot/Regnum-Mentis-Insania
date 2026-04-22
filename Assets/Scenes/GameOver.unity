@@ -844,6 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2818ed9bea74e41b2e5e45b3260afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Final
+  nivel: Menu
 --- !u!1001 &1480478045
 PrefabInstance:
   m_ObjectHideFlags: 0

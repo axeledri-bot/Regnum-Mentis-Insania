@@ -148,12 +148,12 @@ MonoBehaviour:
   - nombre: Manta
     audio: {fileID: 8300000, guid: d8e7c47adc8a0c74995bbbdc9a00032c, type: 3}
     loop: 0
-    volume: 0.6
+    volume: 0.8
     audioSource: {fileID: 0}
   - nombre: Manta 2
     audio: {fileID: 8300000, guid: 2729932ef5ebb954590a2caf77340a7f, type: 3}
     loop: 0
-    volume: 0.6
+    volume: 0.8
     audioSource: {fileID: 0}
   - nombre: Libro
     audio: {fileID: 8300000, guid: 0ccb693058f2dae4a8093dd0da606ab3, type: 3}

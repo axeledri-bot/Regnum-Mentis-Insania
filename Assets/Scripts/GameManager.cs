@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public List<int> notasRecogidas = new List<int>();
     public bool EnUI { get; private set; }
 
+    public bool isDead;
     //public GameObject uiAbierta;
  
     private void OnEnable()
@@ -143,6 +144,7 @@ public class GameManager : MonoBehaviour
             ActivarUI(TipoUI.GameOver);
             mov.movimiento = 3f;
             AudioManager.instance.Stop("Latidos");
+            isDead = true;
             efectos.Desactivar();
         }
 
@@ -183,7 +185,7 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         vidas = 4;
-
+        isDead = false;
         if (mov != null)
             mov.movimiento = 3f;
 

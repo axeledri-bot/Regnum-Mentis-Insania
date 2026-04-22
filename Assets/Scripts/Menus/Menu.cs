@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
         AudioManager.instance.Play("Boton");
         AudioManager.instance.Stop("Menu");
         GameManager.instance.ResetGame();
-        FadeController.Instance.CambiarEscena("Nivel1");
+        FadeController.Instance.CambiarEscena("Cinematica");
         GameManager.instance.ActivarGameplay();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
