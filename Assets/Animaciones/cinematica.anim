@@ -372,7 +372,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9
+  - time: 8.983334
     functionName: CambiarTexto
     data: 
     objectReferenceParameter: {fileID: 0}
