@@ -15,10 +15,12 @@ public class Cinematica : MonoBehaviour
     }    
     public void Sonido2()
     {
+        AudioManager.instance.Stop("Sonido1");
         AudioManager.instance.Play("Sonido2");
     } 
     public void Sonido3()
     {
+        AudioManager.instance.Stop("Sonido2");
         AudioManager.instance.Play("Sonido3");
     }
 }

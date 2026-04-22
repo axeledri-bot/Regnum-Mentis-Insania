@@ -8,6 +8,7 @@ public class Final : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E))
         {
             AudioManager.instance.Stop("Latidos");
+            AudioManager.instance.Stop("Sonido3");
             FadeController.Instance.CambiarEscena(nivel);
 
         }
