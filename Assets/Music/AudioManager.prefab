@@ -195,3 +195,18 @@ MonoBehaviour:
     loop: 1
     volume: 0.6
     audioSource: {fileID: 0}
+  - nombre: Sonido1
+    audio: {fileID: 8300000, guid: 76f38ef1bff844043afc431365d31eff, type: 3}
+    loop: 0
+    volume: 0.8
+    audioSource: {fileID: 0}
+  - nombre: Sonido2
+    audio: {fileID: 8300000, guid: e723b3d91ab7d154992677de2e6c0f50, type: 3}
+    loop: 0
+    volume: 0.8
+    audioSource: {fileID: 0}
+  - nombre: Sonido3
+    audio: {fileID: 8300000, guid: 8da173a7d65a2e7438f545d8fe751ccc, type: 3}
+    loop: 0
+    volume: 0.8
+    audioSource: {fileID: 0}
