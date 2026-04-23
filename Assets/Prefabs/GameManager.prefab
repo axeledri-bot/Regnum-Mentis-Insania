@@ -48,5 +48,9 @@ MonoBehaviour:
   hud: {fileID: 0}
   escena: Nivel1
   mov: {fileID: 0}
-  tieneLlave: 0
+  llavePuzzles: 0
+  llaves: []
+  uiLlave: {fileID: 0}
   intentoPuerta: 0
+  notasRecogidas: 
+  isDead: 0
